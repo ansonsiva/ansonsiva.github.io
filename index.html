@@ -1,105 +1,83 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DayX — Focused Apps</title>
+<meta name="description" content="Two focused apps built for clear everyday utility." />
+<link rel="icon" href="/favicon.ico" /><link rel="stylesheet" href="/styles/main.css" /><link rel="stylesheet" href="/styles/site.css" />
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar"><div class="shell nav">
+  <a href="/" class="brand"><img src="/images/avatar.png" alt="DayX" /><span>DayX</span></a>
+  <nav class="nav-links"><a class="chip" href="#products">Products</a><a class="chip" href="#reviews">Reviews</a><a class="chip" href="/tags/">Privacy</a></nav>
+  <a class="btn btn-primary" href="#products">View Apps →</a>
+</div></header>
 
-  <title>DayX — Apps</title>
-  <meta name="description" content="Two focused apps: Screen TimeLapseZ for macOS and 投资精灵 for iOS." />
-
-  <link rel="icon" href="/favicon.ico" />
-
-  <!-- Keep existing base css (site-wide), then apply Notion-ish skin. -->
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/site.css" />
-
-  <!-- Tailwind via CDN (no build step). -->
-  <script src="/styles/tailwind-cdn.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <header class="site-topbar">
-    <div class="site-topbar-inner">
-      <a class="site-brand" href="/">
-        <img src="/images/avatar.png" alt="DayX" onerror="this.style.display='none'" />
-        <span>DayX</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#products">Products</a>
-        <a href="#highlights">Highlights</a>
-        <a href="/archives/">Archive</a>
-        <a href="/tags/">Tags</a>
-      </nav>
+<main id="main" class="shell">
+  <section class="section">
+    <div class="editorial">
+      <div>
+        <p class="kicker">Focused utilities</p>
+        <h1 class="hero-word">DAYX</h1>
+        <h2 class="h1">Two apps. Do the job.</h2>
+      </div>
+      <aside class="hero-aside">
+        <p>Two products</p><p>No subscriptions</p><p>Built for daily use</p>
+      </aside>
     </div>
-  </header>
+    <p class="lead muted">No subscriptions, no extra noise. Just two small apps that solve specific problems.</p>
+    <div class="rule-punct"><i></i><span></span></div>
+    <div class="cta-row"><a class="btn btn-primary" href="#products">Explore products</a><a class="btn btn-secondary" href="/tags/">Privacy pages</a></div>
+  </section>
 
-  <main class="content-container">
-    <section class="hero">
-      <div class="kicker">Apps by Anson · <span class="muted">Simple, fast, privacy-respecting.</span></div>
-      <h1>Two products. Built to be useful.</h1>
-      <p>
-        Screen TimeLapseZ helps you create clean screen timelapses on macOS.
-        投资精灵 is a lightweight iOS investment tracker.
-      </p>
-      <div class="mt-4 flex flex-wrap gap-2">
-        <a class="btn primary" href="#products">See products</a>
-        <a class="btn" href="https://github.com/ansonsiva" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-    </section>
+  <section class="section stats">
+    <div class="grid grid-3">
+      <article class="stat-box"><p class="kicker">apps</p><p class="stat-n">2</p><p>macOS + iOS</p></article>
+      <article class="stat-box"><p class="kicker">billing</p><p class="stat-n">1x</p><p>One-time purchase</p></article>
+      <article class="stat-box"><p class="kicker">quality</p><p class="stat-n">Clean</p><p>Simple and reliable</p></article>
+    </div>
+  </section>
 
-    <section class="section" id="products">
-      <h2>Products</h2>
-      <div class="grid-2">
-        <article class="card p-4">
-          <div class="flex items-center justify-between gap-2">
-            <h3 class="text-lg font-semibold m-0">Screen TimeLapseZ</h3>
-            <span class="text-xs px-2 py-1 rounded-full border border-zinc-200 bg-zinc-50">macOS</span>
-          </div>
-          <p class="mt-2 text-zinc-700">
-            Turn long sessions into timelapse videos. Great for makers, designers, and anyone who wants a visual progress log.
-          </p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <a class="btn primary" href="https://apps.apple.com/us/app/screen-timelapsez/id1440244990?l=zh-Hans-CN&mt=12" target="_blank" rel="noreferrer">App Store</a>
-            <!-- KEEP URL STABLE -->
-            <a class="btn" href="/post/privacy-policy-timelapsez-and-lite/">Privacy policy</a>
-          </div>
-        </article>
-
-        <article class="card p-4">
-          <div class="flex items-center justify-between gap-2">
-            <h3 class="text-lg font-semibold m-0">投资精灵</h3>
-            <span class="text-xs px-2 py-1 rounded-full border border-zinc-200 bg-zinc-50">iOS</span>
-          </div>
-          <p class="mt-2 text-zinc-700">
-            A lightweight investment tracker. Keep positions and performance visible without turning your phone into a terminal.
-          </p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <a class="btn primary" href="https://apps.apple.com/us/app/%E6%8A%95%E8%B5%84%E7%B2%BE%E7%81%B5/id6446110050?l=zh-Hans-CN" target="_blank" rel="noreferrer">App Store</a>
-            <!-- KEEP URL STABLE -->
-            <a class="btn" href="/post/investmentgenietracker-privacy-and-policy/">Privacy policy</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="highlights">
-      <h2>Highlights</h2>
-      <div class="grid-2">
-        <div class="card p-4">
-          <h3 class="text-base font-semibold m-0">Notion-ish clarity</h3>
-          <p class="mt-2 text-zinc-700">Light background, clean typography, minimal chrome.</p>
+  <section id="products" class="section">
+    <p class="kicker">Products</p><h2 class="h2">Built like tools, not toys.</h2>
+    <div class="grid grid-2">
+      <article class="card">
+        <div class="app-head"><div class="app-meta"><img src="/images/apps/screen-timelapsez/icon-512.png" alt="Screen TimeLapseZ icon" /><div><h3 class="h3">Screen TimeLapseZ</h3><p class="muted">macOS · one-time</p></div></div><span class="badge">Utilities</span></div>
+        <p class="muted">Turn long sessions into compact timelapse videos for tutorials and progress logs.</p>
+        <ul class="feat"><li>Lightweight recording</li><li>Custom watermark</li><li>Multi-screen capture</li></ul>
+        <div class="shots">
+          <img src="/images/apps/screen-timelapsez/shot-1.jpg" alt="Screen TimeLapseZ screenshot 1" />
+          <img src="/images/apps/screen-timelapsez/shot-2.jpg" alt="Screen TimeLapseZ screenshot 2" />
+          <img src="/images/apps/screen-timelapsez/shot-3.jpg" alt="Screen TimeLapseZ screenshot 3" />
+          <img src="/images/apps/screen-timelapsez/shot-4.jpg" alt="Screen TimeLapseZ screenshot 4" />
         </div>
-        <div class="card p-4">
-          <h3 class="text-base font-semibold m-0">Stable compliance links</h3>
-          <p class="mt-2 text-zinc-700">Privacy policy URLs remain unchanged to avoid App Store listing edits.</p>
-        </div>
-      </div>
+        <div class="cta-row"><a class="btn btn-primary" target="_blank" rel="noreferrer" href="https://apps.apple.com/us/app/screen-timelapsez/id1440244990?l=zh-Hans-CN&mt=12">App Store</a><a class="btn btn-secondary" href="/post/privacy-policy-timelapsez-and-lite/">Privacy</a></div>
+      </article>
 
-      <div class="site-footer">
-        <div>© DayX · <a href="https://github.com/ansonsiva" target="_blank" rel="noreferrer">ansonsiva</a></div>
-        <div class="muted">Static site on GitHub Pages.</div>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+      <article class="card">
+        <div class="app-head"><div class="app-meta"><img src="/images/apps/investment-genie/icon-512.jpg" alt="InvestmentGenieTracker icon" /><div><h3 class="h3">InvestmentGenieTracker</h3><p class="muted">iOS · one-time</p></div></div><span class="badge">Finance</span></div>
+        <p class="muted">Portfolio snapshot tool built for quick daily checks and clean readability.</p>
+        <ul class="feat"><li>Multi-account tracking</li><li>Readable charts</li><li>Fast review loop</li></ul>
+        <div class="shots four">
+          <img class="is-ios" src="/images/apps/investment-genie/shot-1.png" alt="InvestmentGenieTracker screenshot 1" />
+          <img class="is-ios" src="/images/apps/investment-genie/shot-2.png" alt="InvestmentGenieTracker screenshot 2" />
+          <img class="is-ios" src="/images/apps/investment-genie/shot-3.png" alt="InvestmentGenieTracker screenshot 3" />
+          <img class="is-ios" src="/images/apps/investment-genie/shot-4.png" alt="InvestmentGenieTracker screenshot 4" />
+        </div>
+        <div class="cta-row"><a class="btn btn-primary" target="_blank" rel="noreferrer" href="https://apps.apple.com/us/app/%E6%8A%95%E8%B5%84%E7%B2%BE%E7%81%B5/id6446110050?l=zh-Hans-CN">App Store</a><a class="btn btn-secondary" href="/post/investmentgenietracker-privacy-and-policy/">Privacy</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="reviews" class="section">
+    <p class="kicker">Reviews</p><h2 class="h2">What users actually said.</h2>
+    <div class="grid grid-3">
+      <article class="card"><p class="quote">Pretty good, saves every hour reliably.</p><p class="muted review-meta">★★★★☆ — App Store reviewer</p></article>
+      <article class="card"><p class="quote">Worth it.</p><p class="muted review-meta">★★★★★ — App Store reviewer</p></article>
+      <article class="card"><p class="quote">Super simple. Works great.</p><p class="muted review-meta">★★★★★ — App Store reviewer</p></article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer"><div class="shell inner"><p>© DayX</p><p><a href="/archives/">Archive</a> · <a href="/tags/">Tags</a> · <a href="/atom.xml">RSS</a></p></div></footer>
+</body></html>
