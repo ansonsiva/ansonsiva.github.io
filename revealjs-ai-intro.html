@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>别再只会做 PPT：用 reveal.js + AI 打造更现代的企业汇报</title>
+  <meta name="description" content="面向仍在使用 PPT 的用户，介绍 reveal.js 的能力、效果与 AI 制作工作流。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/css/print/pdf.css" media="print">
+  <style>
+    :root {
+      --bg: #f7f2eb;
+      --bg-soft: #f2e8db;
+      --paper: rgba(255,255,255,0.96);
+      --paper-soft: rgba(252,249,245,0.98);
+      --line: rgba(143, 117, 88, 0.14);
+      --text: #243142;
+      --muted: #6d7785;
+      --primary: #1f4e79;
+      --accent: #c97a43;
+      --accent-soft: #f3e5d8;
+      --green: #3f7d62;
+      --danger: #b66767;
+      --shadow: 0 14px 36px rgba(100, 79, 52, 0.08);
+      --radius: 24px;
+    }
+
+    html, body {
+      background:
+        radial-gradient(circle at 15% 18%, rgba(201, 122, 67, 0.10), transparent 26%),
+        radial-gradient(circle at 85% 10%, rgba(31, 78, 121, 0.08), transparent 22%),
+        linear-gradient(180deg, #fbf8f4 0%, #f6efe7 55%, #f2e8dc 100%);
+      color: var(--text);
+      font-family: Inter, "Noto Sans SC", system-ui, sans-serif;
+    }
+
+    .reveal {
+      color: var(--text);
+      font-family: Inter, "Noto Sans SC", system-ui, sans-serif;
+      font-size: 30px;
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      height: 100%;
+      padding: 18px 30px;
+      box-sizing: border-box;
+    }
+
+    .reveal .slides section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(154, 126, 95, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(154, 126, 95, 0.04) 1px, transparent 1px);
+      background-size: 56px 56px;
+      opacity: 0.16;
+      pointer-events: none;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3,
+    .reveal h4 {
+      margin: 0 0 16px 0;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      color: var(--text);
+      font-family: "Noto Sans SC", Inter, sans-serif;
+    }
+
+    .reveal h1 { font-size: 2.18em; font-weight: 900; }
+    .reveal h2 { font-size: 1.48em; font-weight: 800; }
+    .reveal h3 {
+      font-size: 0.62em;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .reveal p,
+    .reveal li,
+    .reveal td,
+    .reveal th {
+      font-size: 0.74em;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    .reveal strong { color: var(--primary); font-weight: 800; }
+    .reveal a { color: var(--primary); }
+    .muted, .tiny { color: var(--muted); }
+    .tiny { font-size: 0.46em; line-height: 1.55; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(201, 122, 67, 0.16);
+      background: rgba(255,255,255,0.88);
+      color: #8a6548;
+      font-size: 0.42em;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      font-size: 0.86em;
+      color: #344254;
+      max-width: 920px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 34px;
+      align-items: center;
+      min-height: 100%;
+    }
+
+    .hero-title { font-size: 2.28em; max-width: 860px; }
+
+    .panel,
+    .card,
+    .side,
+    .step,
+    .pillar,
+    .browser,
+    .timeline,
+    .code-window,
+    .quote,
+    .gradient-panel,
+    .gallery-card {
+      background: linear-gradient(180deg, var(--paper) 0%, var(--paper-soft) 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .panel, .card, .side, .step, .pillar, .gradient-panel, .gallery-card { padding: 22px 24px; }
+
+    .hero-card { padding: 28px; position: relative; overflow: hidden; }
+    .hero-card::after,
+    .metric::after,
+    .browser::after {
+      content: "";
+      position: absolute;
+      inset: auto -15% -30% 45%;
+      height: 160px;
+      background: radial-gradient(circle, rgba(201,122,67,0.16), transparent 65%);
+      filter: blur(10px);
+      pointer-events: none;
+    }
+
+    .tag-row, .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .badge,
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.42em;
+      border: 1px solid rgba(31, 78, 121, 0.10);
+      background: rgba(255,255,255,0.90);
+      color: #566273;
+    }
+
+    .metrics,
+    .two-col,
+    .three-col,
+    .four-col,
+    .compare,
+    .pillars,
+    .gallery,
+    .flow {
+      display: grid;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .metrics { grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
+    .two-col { grid-template-columns: 1fr 1fr; }
+    .three-col { grid-template-columns: repeat(3, 1fr); }
+    .four-col { grid-template-columns: repeat(4, 1fr); }
+    .compare { grid-template-columns: 1fr 1fr; margin-top: 20px; }
+    .pillars { grid-template-columns: repeat(3, 1fr); margin-top: 20px; }
+    .gallery { grid-template-columns: repeat(3, 1fr); margin-top: 20px; }
+    .flow { grid-template-columns: repeat(4, 1fr); margin-top: 20px; }
+
+    .metric {
+      position: relative;
+      overflow: hidden;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(248, 242, 235, 0.96);
+      border: 1px solid rgba(201,122,67,0.12);
+    }
+
+    .metric .value {
+      font-size: 1.08em;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .metric .label {
+      font-size: 0.44em;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .card h4,
+    .side-title,
+    .step h4,
+    .timeline h4,
+    .gallery-card h4,
+    .pillar h4 {
+      font-size: 0.72em;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .card p,
+    .card li,
+    .side p,
+    .side li,
+    .step p,
+    .gallery-card p,
+    .pillar p { font-size: 0.58em; color: #4f5c6d; margin: 0; }
+
+    .feature-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      height: 42px;
+      padding: 0 12px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(201,122,67,0.14), rgba(31,78,121,0.10));
+      border: 1px solid rgba(201,122,67,0.14);
+      color: var(--primary);
+      font-size: 0.52em;
+      margin-bottom: 14px;
+    }
+
+    .list-clean { list-style: none; padding: 0; margin: 0; }
+    .list-clean li { position: relative; padding-left: 1.2em; margin-bottom: 0.55em; }
+    .list-clean li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .ppt .side-title { color: #8b5d5d; }
+    .reveal-side .side-title { color: var(--green); }
+
+    .browser,
+    .timeline,
+    .code-window {
+      overflow: hidden;
+      position: relative;
+      padding: 0;
+    }
+
+    .window-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 18px;
+      background: #f4ece2;
+      border-bottom: 1px solid rgba(143,117,88,0.12);
+    }
+
+    .dot { width: 12px; height: 12px; border-radius: 999px; background: #d3c5b6; }
+    .dot.red { background: #d98574; }
+    .dot.yellow { background: #d8b05f; }
+    .dot.green { background: #7eb092; }
+    .window-title { margin-left: 10px; font-size: 0.46em; color: var(--muted); }
+
+    .browser-content { padding: 24px; display: grid; gap: 16px; }
+    .browser-hero {
+      padding: 22px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(243,229,216,0.9), rgba(248,242,235,0.96));
+      border: 1px solid rgba(201,122,67,0.10);
+    }
+
+    .code-window {
+      background: #1f2937;
+      border-color: rgba(31,78,121,0.10);
+    }
+    .code-window .window-bar {
+      background: #243142;
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+    .code-window .window-title { color: rgba(255,255,255,0.72); }
+
+    .reveal pre,
+    .code-window pre {
+      width: 100%;
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0 0 24px 24px;
+      font-size: 0.46em;
+    }
+
+    .reveal code { font-family: "JetBrains Mono", monospace; text-transform: none; }
+    .reveal .hljs { background: #1f2937; }
+
+    .gradient-panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,241,233,0.98));
+      padding: 26px;
+    }
+
+    .step { min-height: 170px; }
+    .step-num {
+      font-size: 0.44em;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .prompt-box {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(201,122,67,0.16);
+      background: linear-gradient(180deg, rgba(255,251,247,0.98), rgba(248,241,233,0.96));
+      font-size: 0.52em;
+      line-height: 1.7;
+      color: #405063;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-card { min-height: 220px; position: relative; overflow: hidden; }
+    .gallery-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -28% auto;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,122,67,0.14), transparent 65%);
+      filter: blur(4px);
+    }
+
+    .quote {
+      padding: 24px 26px;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 20px 20px 0;
+      background: rgba(255,255,255,0.86);
+      font-size: 0.72em;
+      color: #405063;
+      margin-top: 20px;
+    }
+
+    .big-number {
+      font-size: 1.9em;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    table.compact {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+      margin-top: 18px;
+      font-size: 0.52em;
+      box-shadow: var(--shadow);
+    }
+    table.compact th,
+    table.compact td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(143,117,88,0.12);
+      vertical-align: top;
+      background: rgba(255,255,255,0.92);
+    }
+    table.compact th {
+      background: #f5ece2;
+      color: var(--text);
+      font-weight: 800;
+      text-align: left;
+    }
+    table.compact td { color: #4d5968; }
+
+    .centered { text-align: center !important; }
+    .middle { display: flex !important; flex-direction: column; justify-content: center; min-height: 100%; }
+
+    .footnote {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.40em;
+      color: rgba(89, 98, 110, 0.78);
+      z-index: 5;
+    }
+
+    .reveal .progress { color: var(--accent); height: 5px; }
+    .reveal .controls { color: var(--primary); }
+    .reveal .slide-number {
+      right: 24px;
+      bottom: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(201,122,67,0.12);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .reveal .fragment.highlight-red.visible { color: var(--danger); }
+    .reveal .fragment.highlight-green.visible { color: var(--green); }
+    .reveal .fragment.highlight-blue.visible { color: var(--primary); }
+
+    .reveal ul { margin-left: 1.1em; }
+    .reveal li + li { margin-top: 0.28em; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section data-background-gradient="linear-gradient(135deg, #fbf7f1 0%, #f5ede3 52%, #efe2d2 100%)">
+        <div class="hero">
+          <div>
+            <div class="eyebrow">Corporate report style · reveal.js · AI workflow</div>
+            <h1 class="hero-title">别再只会做 <span class="gradient-text">PPT</span><br>用 <span class="gradient-text">reveal.js + AI</span><br>做更现代的企业汇报</h1>
+            <p class="lead">这份汇报面向仍然以 PowerPoint 为主的同事与管理者：<strong>reveal.js</strong> 是一个开源 HTML 演示框架。它让幻灯片从“办公室文件”升级为“可设计、可编排、可自动生成的网页演示系统”。</p>
+            <div class="tag-row">
+              <span class="badge">更像企业汇报</span>
+              <span class="badge">不是炫技网页</span>
+              <span class="badge">支持 AI 协作</span>
+              <span class="badge">也能导出 PDF</span>
+            </div>
+          </div>
+          <div class="hero-card panel">
+            <h3>一句话理解</h3>
+            <p class="tiny">reveal.js 官方首页有一句很关键的话：<strong>“anything you can do on the web, you can do in your presentation”</strong>。翻译成人话：网页能做的视觉层次、动画、代码高亮、嵌入网页、脚本控制，幻灯片也能做。</p>
+            <div class="metrics">
+              <div class="metric"><div class="value">HTML / CSS / JS</div><div class="label">底层就是网页</div></div>
+              <div class="metric"><div class="value">AI 友好</div><div class="label">天然适合生成与迭代</div></div>
+              <div class="metric"><div class="value">Fragments</div><div class="label">同页分步讲解</div></div>
+              <div class="metric"><div class="value">Auto-Animate</div><div class="label">自动转场动画</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="footnote"><span>内容依据 revealjs.com 官方文档整理，并面向企业汇报语境重组</span><span>01</span></div>
+      </section>
+
+      <section data-background-gradient="linear-gradient(135deg, #f8f2ea 0%, #f2e9de 100%)">
+        <div class="middle">
+          <h3>核心判断</h3>
+          <h2>reveal.js 不是 “另一个 PPT”<br>而是把演示文稿放进了 <span class="gradient-text">Web + AI</span> 的生产体系</h2>
+          <div class="compare">
+            <div class="side ppt">
+              <div class="side-title">传统 PPT 方式</div>
+              <ul class="list-clean">
+                <li>很多时间耗在排版、复制页面、调动画</li>
+                <li>复杂视觉与交互效果成本高</li>
+                <li>协作与版本管理不顺手</li>
+                <li>AI 只能帮写字，排版仍得手工收尾</li>
+              </ul>
+            </div>
+            <div class="side reveal-side">
+              <div class="side-title">reveal.js 方式</div>
+              <ul class="list-clean">
+                <li>结构由 HTML 定义，样式由 CSS 统一控制</li>
+                <li>动画、嵌套内容、代码展示、媒体嵌入更灵活</li>
+                <li>天然适合 Git 与文本协作</li>
+                <li>AI 可以直接生成整份 deck 的内容与骨架</li>
+              </ul>
+            </div>
+          </div>
+          <div class="quote fragment fade-up">如果 PPT 更像“做文件”，那 reveal.js 更像“做一个会演讲的网页”。说白了，就是从手工排版转向可编排系统。 </div>
+        </div>
+        <div class="footnote"><span>适合产品汇报、技术分享、课程、路演、方案陈述</span><span>02</span></div>
+      </section>
+
+      <section>
+        <h3>官方首页精华</h3>
+        <h2>reveal.js 到底解决了什么问题</h2>
+        <div class="three-col">
+          <div class="card fragment fade-up">
+            <div class="feature-icon">01</div>
+            <h4>开放技术栈</h4>
+            <p>它是开源 HTML presentation framework。不是黑箱格式，因此更自由，也更适合 AI 与工程化流程。</p>
+          </div>
+          <div class="card fragment fade-up">
+            <div class="feature-icon">02</div>
+            <h4>功能非常完整</h4>
+            <p>官方首页明确列出 nested slides、Markdown、Auto-Animate、PDF export、speaker notes、LaTeX、syntax highlighted code。</p>
+          </div>
+          <div class="card fragment fade-up">
+            <div class="feature-icon">03</div>
+            <h4>从文档变成演示体验</h4>
+            <p>你不再只是翻页，而是在组织“叙事节奏、呈现顺序和观众注意力”。这是企业汇报最缺的东西。</p>
+          </div>
+        </div>
+        <div class="pillars fragment fade-up">
+          <div class="pillar"><div class="big-number">A</div><p><strong>先讲结构</strong><br>让内容有逻辑。</p></div>
+          <div class="pillar"><div class="big-number">B</div><p><strong>再讲视觉</strong><br>让页面有层次。</p></div>
+          <div class="pillar"><div class="big-number">C</div><p><strong>最后讲节奏</strong><br>让演讲更顺。</p></div>
+        </div>
+        <div class="footnote"><span>这也是 AI 更容易帮上忙的原因：结构、样式、节奏都可被描述</span><span>03</span></div>
+      </section>
+
+      <section>
+        <h3>核心能力总览</h3>
+        <h2>对 PPT 用户最有价值的 6 项能力</h2>
+        <table class="compact">
+          <thead>
+            <tr><th>能力</th><th>官方文档重点</th><th>实际业务价值</th></tr>
+          </thead>
+          <tbody>
+            <tr class="fragment highlight-blue"><td><strong>Fragments</strong></td><td>同一页分步揭示内容</td><td>领导汇报时更有节奏，不必把所有信息一次性倒给观众</td></tr>
+            <tr class="fragment highlight-green"><td><strong>Auto-Animate</strong></td><td>相邻页面自动匹配元素并补间</td><td>对比前后状态、展示演进逻辑时非常自然</td></tr>
+            <tr class="fragment highlight-blue"><td><strong>Vertical Slides</strong></td><td>把一个主题拆成主线 + 向下展开</td><td>适合准备“可讲可不讲”的备用内容</td></tr>
+            <tr class="fragment highlight-green"><td><strong>Speaker View</strong></td><td>按 S 打开讲者备注与下一页预览</td><td>更适合正式演讲，而不是死盯稿子</td></tr>
+            <tr class="fragment highlight-blue"><td><strong>Code Highlight</strong></td><td>代码高亮、行号、重点行高亮</td><td>技术汇报体验远胜贴代码截图</td></tr>
+            <tr class="fragment highlight-green"><td><strong>PDF Export</strong></td><td>?print-pdf 即可导出 PDF</td><td>现代演示与传统交付方式可以兼容</td></tr>
+          </tbody>
+        </table>
+        <div class="footnote"><span>下面几页会用 reveal.js 自己演示这些效果</span><span>04</span></div>
+      </section>
+
+      <section>
+        <section data-auto-animate>
+          <h3>效果示范：Fragments</h3>
+          <h2>一页之内，按顺序讲，不要一上来全盘托出</h2>
+          <div class="gradient-panel">
+            <p class="lead">官方 fragments 文档的意思很简单：给元素加上 <code>class="fragment"</code>，它就会在当前页里按步骤依次出现。</p>
+            <ul class="list-clean" style="margin-top:18px;">
+              <li class="fragment fade-up">第一步：先说问题——为什么 PPT 会越改越乱</li>
+              <li class="fragment fade-up">第二步：再说方法——结构、样式、动画分离</li>
+              <li class="fragment fade-up">第三步：再说效率——AI 可直接生成初稿与页面结构</li>
+            </ul>
+          </div>
+          <div class="footnote"><span>相比复制三页近似页面，Fragments 更像真正的“演讲推进”</span><span>05</span></div>
+        </section>
+
+        <section data-auto-animate>
+          <h3>效果示范：Fragments</h3>
+          <h2>不仅能分步出现，还能分步<strong class="gradient-text">强调</strong></h2>
+          <div class="gradient-panel">
+            <ul class="list-clean" style="margin-top:8px;">
+              <li class="fragment highlight-red">重点 1：减少重复页面</li>
+              <li class="fragment highlight-green">重点 2：控制信息释放节奏</li>
+              <li class="fragment highlight-blue">重点 3：让 AI 更容易生成“演讲式”结构</li>
+            </ul>
+          </div>
+          <div class="footnote"><span>同一个页面内完成节奏控制，企业汇报尤其受用</span><span>06</span></div>
+        </section>
+      </section>
+
+      <section>
+        <section data-auto-animate>
+          <h3>效果示范：Auto-Animate</h3>
+          <h2>相邻页面之间，自动把“变化”讲清楚</h2>
+          <div class="two-col" style="margin-top:18px; align-items:center;">
+            <div class="card">
+              <div class="feature-icon">A</div>
+              <h4>官方文档重点</h4>
+              <p>只要相邻两页都加上 <code>data-auto-animate</code>，reveal.js 就会尝试匹配相同元素，并为位置、字号、颜色、边距等变化生成平滑动画。</p>
+            </div>
+            <div class="browser">
+              <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">before</span></div>
+              <div class="browser-content">
+                <div class="browser-hero">
+                  <h2 style="font-size:1.08em; margin:0;">一个普通结论</h2>
+                  <p class="tiny">当前还只是静态展示。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footnote"><span>position / font-size / color / margin 等都能自然过渡</span><span>07</span></div>
+        </section>
+
+        <section data-auto-animate>
+          <h3>效果示范：Auto-Animate</h3>
+          <h2><span class="gradient-text">同一个结论</span>，可以被讲得更有层次</h2>
+          <div class="two-col" style="margin-top:18px; align-items:center;">
+            <div class="card">
+              <div class="feature-icon">B</div>
+              <h4>适用场景</h4>
+              <p>产品前后版本、组织变化、战略拆解、数据对比、流程演进——以前要花很多时间手搓的动画，如今只需合理拆页即可。</p>
+            </div>
+            <div class="browser">
+              <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">after</span></div>
+              <div class="browser-content">
+                <div class="browser-hero" style="padding:32px; background: linear-gradient(135deg, rgba(243,229,216,0.92), rgba(235,244,250,0.95));">
+                  <h2 style="font-size:1.36em; margin:0; color:var(--primary);">一个普通结论</h2>
+                  <p style="font-size:0.54em; margin-top:10px; color:#4b5868;">位置、颜色与说明文字都变化了，但几乎不用写复杂动画。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footnote"><span>这不是花哨，而是让“变化”更容易被理解</span><span>08</span></div>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h3>效果示范：Vertical Slides</h3>
+          <h2>把主线汇报与备用说明分层管理</h2>
+          <div class="two-col">
+            <div class="card">
+              <div class="feature-icon">主</div>
+              <h4>官方 vertical slides 文档重点</h4>
+              <p>左右键走主线；遇到某个主题时，可以通过上下键进入纵向细节页。很适合把“可讲可不讲”的扩展信息收进去。</p>
+            </div>
+            <div class="card">
+              <div class="feature-icon">辅</div>
+              <h4>对企业汇报的价值</h4>
+              <p>面对不同领导、不同会议时长、不同关注重点，你可以保留同一份主 deck，同时准备分层细节，不必到处复制多个版本。</p>
+            </div>
+          </div>
+          <div class="quote">现在按 <strong>↓</strong> 看这个主题下的“展开页”。这就是 vertical stack 的典型使用方式。</div>
+          <div class="footnote"><span>主线更清晰，备用信息也更有秩序</span><span>09</span></div>
+        </section>
+
+        <section>
+          <h3>向下展开 · 细节页 1</h3>
+          <h2>一份 deck，同时兼容不同深度的讲法</h2>
+          <div class="three-col">
+            <div class="card fragment fade-up"><div class="feature-icon">产品</div><h4>汇报价值</h4><p>主线讲目标与结果；向下展开讲产品功能、里程碑与风险。</p></div>
+            <div class="card fragment fade-up"><div class="feature-icon">数据</div><h4>汇报分析</h4><p>主线讲结论；向下展开讲样本、假设、指标口径与推导过程。</p></div>
+            <div class="card fragment fade-up"><div class="feature-icon">技术</div><h4>汇报方案</h4><p>主线讲架构与收益；向下展开讲实现、性能、成本和工程细节。</p></div>
+          </div>
+          <div class="footnote"><span>这类页完全可以在时间不足时跳过</span><span>10</span></div>
+        </section>
+
+        <section>
+          <h3>向下展开 · 细节页 2</h3>
+          <h2>AI 也更容易生成“有层次”的结构</h2>
+          <div class="gradient-panel">
+            <p class="lead">当你告诉 AI：“每个一级主题 1 页，再给每个主题 2 页备用细节”，它就能按 reveal.js 的水平/垂直结构生成更接近真实演讲的布局，而不是平铺直叙地堆一长串页面。</p>
+            <div class="chip-row">
+              <span class="chip">主线可控</span>
+              <span class="chip">细节可展开</span>
+              <span class="chip">版本更统一</span>
+              <span class="chip">适合临场调整</span>
+            </div>
+          </div>
+          <div class="footnote"><span>结构一清楚，AI 的产出质量通常会立刻提升</span><span>11</span></div>
+        </section>
+      </section>
+
+      <section>
+        <h3>代码与技术内容</h3>
+        <h2>技术团队做汇报时，reveal.js 的优势非常明显</h2>
+        <div class="two-col" style="align-items:start;">
+          <div>
+            <div class="card" style="margin-bottom:18px;">
+              <div class="feature-icon">Code</div>
+              <h4>官方 code 文档重点</h4>
+              <p>支持 highlight.js 高亮，<code>data-trim</code> 自动处理缩进，<code>data-line-numbers</code> 可以做行号与重点行高亮。</p>
+            </div>
+            <div class="card fragment fade-up">
+              <div class="feature-icon">Why</div>
+              <h4>实际价值</h4>
+              <p>技术方案汇报、架构分享、培训课程都更自然，不需要再把代码截图塞进 PPT 然后祈祷字体别糊掉。</p>
+            </div>
+          </div>
+          <div class="code-window">
+            <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">minimal reveal.js deck</span></div>
+            <pre><code class="language-html" data-trim data-line-numbers="1-4|6-8|12-16">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"&gt;&lt;/script&gt;
+
+&lt;div class="reveal"&gt;
+  &lt;div class="slides"&gt;
+    &lt;section&gt;Hello reveal.js&lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+Reveal.initialize({
+  hash: true,
+  slideNumber: 'c/t',
+  plugins: [ RevealNotes ]
+});
+&lt;/script&gt;</code></pre>
+          </div>
+        </div>
+        <div class="footnote"><span>如果你的汇报里经常出现代码、接口、架构，reveal.js 基本稳赢</span><span>12</span></div>
+      </section>
+
+      <section>
+        <h3>演讲者模式</h3>
+        <h2>按一下 <code>S</code>，你就拥有更像正式汇报的讲者视图</h2>
+        <div class="two-col">
+          <div class="browser">
+            <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">speaker view</span></div>
+            <div class="browser-content">
+              <div class="browser-hero">
+                <p style="font-size:0.44em; color:#6f7986; margin:0 0 8px 0;">当前页</p>
+                <h4 style="font-size:0.86em; margin-bottom:8px;">为什么 reveal.js 更适合 AI 时代</h4>
+                <p class="tiny">下一页预览 · 计时器 · 讲者备注</p>
+              </div>
+              <div class="card" style="padding:16px 18px; border-radius:18px; box-shadow:none;">
+                <p class="tiny" style="margin:0;"><strong>讲者备注：</strong>这里提醒自己先讲“网页能力”，再讲“AI 工作流”，最后回到“企业汇报落地”。</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <div class="feature-icon">Notes</div>
+              <h4>官方 speaker view 文档重点</h4>
+              <ul class="list-clean">
+                <li>可显示讲者备注</li>
+                <li>可预览下一页</li>
+                <li>会自动启动演讲计时器</li>
+                <li>本地使用时建议通过本地 Web 服务器打开</li>
+              </ul>
+            </div>
+            <div class="card fragment fade-up" style="margin-top:18px;">
+              <div class="feature-icon">Scene</div>
+              <h4>真实价值</h4>
+              <p>这让它更接近正式汇报工具，而不只是“浏览器里能翻页的网页”。讲者体验提升，稳定性和控场能力都会提高。</p>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">按 S 可以打开备注视图。这一页主要讲：备注、下一页预览、计时器。</aside>
+        <div class="footnote"><span>企业场景里，讲者视图比花哨动画更实用</span><span>13</span></div>
+      </section>
+
+      <section>
+        <h3>导出与交付</h3>
+        <h2>现代演示方式，不等于放弃传统交付</h2>
+        <div class="three-col">
+          <div class="card fragment fade-up"><div class="feature-icon">Web</div><h4>在线演示</h4><p>静态部署即可：Vercel、GitHub Pages、内网 Web 服务器都可以。</p></div>
+          <div class="card fragment fade-up"><div class="feature-icon">PDF</div><h4>PDF 导出</h4><p>官方文档说明：在 URL 后追加 <code>?print-pdf</code>，再用 Chrome/Chromium 打印为 PDF。</p></div>
+          <div class="card fragment fade-up"><div class="feature-icon">Git</div><h4>可管理版本</h4><p>因为本质是文本文件，所以可以做版本对比、回溯、多人协作，这点对团队非常重要。</p></div>
+        </div>
+        <div class="prompt-box fragment fade-up"><strong>官方 PDF 导出要点：</strong>打开带 <code>?print-pdf</code> 的链接 → 浏览器打印 → Landscape → Margins None → 开启 Background graphics → 保存为 PDF。如此便能兼顾现代展示与传统归档。</div>
+        <div class="footnote"><span>这点非常适合企业内部“现场汇报 + 事后发 PDF”双需求</span><span>14</span></div>
+      </section>
+
+      <section>
+        <h3>AI 工作流</h3>
+        <h2>为什么 reveal.js 特别适合和 AI 一起协作</h2>
+        <div class="flow">
+          <div class="step fragment fade-up"><div class="step-num">Step 01</div><h4>给定目标</h4><p>明确主题、对象、页数、风格、是否需要动画、是否偏管理汇报还是技术分享。</p></div>
+          <div class="step fragment fade-up"><div class="step-num">Step 02</div><h4>先出大纲</h4><p>要求 AI 先给逻辑结构，而不是一上来就做页面装饰。</p></div>
+          <div class="step fragment fade-up"><div class="step-num">Step 03</div><h4>生成 HTML + CSS</h4><p>让 AI 直接输出 reveal.js 单文件 HTML，随后按需要迭代样式。</p></div>
+          <div class="step fragment fade-up"><div class="step-num">Step 04</div><h4>反复精修</h4><p>结合预览截图，让 AI 逐轮优化字数、留白、卡片密度与动画强度。</p></div>
+        </div>
+        <div class="prompt-box fragment fade-up"><strong>推荐提示词模板：</strong><br>请为我制作一份 reveal.js 单文件 HTML 幻灯片，主题是「向还在使用 PPT 的人介绍 reveal.js」。受众是企业内部汇报场景中的管理者与知识工作者。整体风格稳重、简洁、专业、像领导汇报，不要科技感过强。使用 reveal.js v5 CDN；适度使用 fragments、auto-animate、vertical slides、speaker notes、代码高亮与 PDF 导出说明；页面少堆字，多用卡片与层次。</div>
+        <div class="footnote"><span>AI 擅长结构化输出，而 reveal.js 恰好是可结构化描述的</span><span>15</span></div>
+      </section>
+
+      <section>
+        <h3>落地方法</h3>
+        <h2>一个非常实用的 AI + reveal.js 制作流程</h2>
+        <div class="two-col">
+          <div class="timeline">
+            <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">workflow</span></div>
+            <div class="browser-content">
+              <div class="card" style="padding:16px 18px; box-shadow:none;"><h4>1. 先做人群导向的大纲</h4><p>例如：对领导讲价值、对部门讲计划、对技术团队讲实现。</p></div>
+              <div class="card" style="padding:16px 18px; box-shadow:none;"><h4>2. 再做页面结构</h4><p>哪些页面是两栏，哪些页面是卡片，哪里需要分步 reveal。</p></div>
+              <div class="card" style="padding:16px 18px; box-shadow:none;"><h4>3. 最后统一视觉语言</h4><p>颜色、字体、圆角、网格、阴影、页脚说明、讲者备注一并定型。</p></div>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <div class="feature-icon">Tips</div>
+              <h4>几个很重要的建议</h4>
+              <ul class="list-clean">
+                <li>先要大纲，再要页面，不要一步乱炖</li>
+                <li>要求 AI 减字、增强层次、留足留白</li>
+                <li>明确写“偏企业汇报，不要炫技网页风”</li>
+                <li>每一轮只优化一个维度：内容 / 视觉 / 动效 / 备注</li>
+              </ul>
+            </div>
+            <div class="card fragment fade-up" style="margin-top:18px;">
+              <div class="feature-icon">Role</div>
+              <h4>正确分工</h4>
+              <p>AI 负责提速、起稿、统一风格；人负责判断、删减、取舍、定调。让 AI 做副驾，而不是抢方向盘。</p>
+            </div>
+          </div>
+        </div>
+        <div class="footnote"><span>不是让 AI 替代汇报，而是让它把机械劳动拿走</span><span>16</span></div>
+      </section>
+
+      <section>
+        <h3>可以做出什么效果</h3>
+        <h2>reveal.js 幻灯片，不止是“像 PPT”</h2>
+        <div class="gallery">
+          <div class="gallery-card fragment fade-up"><h4>领导汇报型</h4><p>简洁封面、清晰章节、卡片化信息、适度动效，强调逻辑与结论。</p></div>
+          <div class="gallery-card fragment fade-up"><h4>产品发布型</h4><p>大标题、节奏型转场、视觉焦点清晰，适合对外宣讲。</p></div>
+          <div class="gallery-card fragment fade-up"><h4>技术分享型</h4><p>代码高亮、架构图、版本演进、可展开细节页。</p></div>
+          <div class="gallery-card fragment fade-up"><h4>数据故事型</h4><p>分步揭示结论、前后对比、层层推导，让结论更可信。</p></div>
+          <div class="gallery-card fragment fade-up"><h4>培训课程型</h4><p>结构清晰，可在线打开，可持续维护更新。</p></div>
+          <div class="gallery-card fragment fade-up"><h4>交互演示型</h4><p>可嵌网页、视频、iframe，甚至运行脚本或联动系统。</p></div>
+        </div>
+        <div class="quote fragment fade-up">官方首页那句话值得反复回味：<strong>网页能做什么，reveal.js 幻灯片就能做什么。</strong>区别只在于，你是否愿意从“排版工具思维”升级到“演示系统思维”。</div>
+        <div class="footnote"><span>风格可以非常克制，不一定非得赛博朋克</span><span>17</span></div>
+      </section>
+
+      <section>
+        <h3>适合谁用</h3>
+        <h2>哪些人最适合从 PPT 迁移到 reveal.js</h2>
+        <div class="four-col">
+          <div class="card fragment fade-up"><div class="feature-icon">管理</div><h4>管理者</h4><p>需要稳定、专业、逻辑清晰的内部汇报风格。</p></div>
+          <div class="card fragment fade-up"><div class="feature-icon">产品</div><h4>产品 / 运营</h4><p>需要反复迭代方案、路演稿、汇报提案的人。</p></div>
+          <div class="card fragment fade-up"><div class="feature-icon">技术</div><h4>技术团队</h4><p>经常需要展示架构、代码、流程、平台能力。</p></div>
+          <div class="card fragment fade-up"><div class="feature-icon">AI</div><h4>AI 重度用户</h4><p>希望把“大纲—页面—风格—迭代”整体提速的人。</p></div>
+        </div>
+        <div class="gradient-panel fragment fade-up" style="margin-top:20px;">
+          <p class="lead">如果你的需求只是“快速填一份固定模板”，PPT 当然还有效。但凡你在意 <strong>内容结构、视觉统一、在线展示、技术表达、AI 协作</strong>，reveal.js 的上限明显更高。</p>
+        </div>
+        <div class="footnote"><span>不是全面取代，而是在该升级的时候升级</span><span>18</span></div>
+      </section>
+
+      <section data-background-gradient="linear-gradient(140deg, #f8f3ec 0%, #efe4d8 55%, #e9dbc9 100%)">
+        <div class="middle centered">
+          <div class="eyebrow" style="margin:0 auto 22px auto;">Final takeaway</div>
+          <h1 style="max-width:1080px; margin:0 auto 22px auto;">如果你还在用 PPT 做“网页时代的汇报”<br>那 reveal.js 值得成为你的 <span class="gradient-text">下一代演示底座</span></h1>
+          <p class="lead" style="margin:0 auto; text-align:center; max-width:980px;">它开源、成熟、可部署、可导出 PDF、可接入 AI，而且可以做得像企业内部高质量汇报一样稳重克制，并不一定要张牙舞爪。真正的关键，不在于特效有多酷，而在于表达是否更清楚、生产是否更高效。</p>
+          <div class="chip-row" style="justify-content:center; margin-top:22px;">
+            <span class="chip">先做 1 份 10 页试验版</span>
+            <span class="chip">先跑通 AI + reveal.js 工作流</span>
+            <span class="chip">再决定是否全面迁移</span>
+          </div>
+          <div class="quote" style="max-width:900px; margin:28px auto 0 auto; text-align:left;">建议的第一步：让 AI 帮你起草一份 reveal.js 单文件幻灯片，然后你亲自迭代三轮。通常到第三轮，你就会发现：原来做汇报，也可以更轻、更快、更稳。 </div>
+        </div>
+        <aside class="notes">结尾提醒：可以现场展示 HTML 版本，再说明也能导出 PDF；顺手演示一下 S 键打开讲者视图，会更有说服力。</aside>
+        <div class="footnote"><span>Official docs: https://revealjs.com/</span><span>19</span></div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/search/search.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/zoom/zoom.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      controls: true,
+      progress: true,
+      center: false,
+      slideNumber: 'c/t',
+      transition: 'slide',
+      transitionSpeed: 'default',
+      backgroundTransition: 'fade',
+      width: 1400,
+      height: 800,
+      margin: 0.04,
+      autoAnimate: true,
+      navigationMode: 'default',
+      pdfMaxPagesPerSlide: 1,
+      showNotes: false,
+      plugins: [RevealHighlight, RevealNotes, RevealSearch, RevealZoom]
+    });
+
+    document.querySelector('.reveal').addEventListener('click', function(event) {
+      if (event.button !== 0) return;
+      if (window.getSelection && String(window.getSelection()).trim()) return;
+      if (event.target.closest('a, button, input, textarea, select, summary, .controls, .progress')) return;
+      Reveal.next();
+    });
+  </script>
+</body>
+</html>
