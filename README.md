@@ -17,18 +17,19 @@ Open http://localhost:8765. Serve the site from the root; assets and existing do
 - First visit: the browser’s primary preferred language selects Chinese for `zh`, `zh-CN`, `zh-TW`, and other Chinese variants; all other languages select English.
 - The header button switches the complete homepage immediately, including greetings, clock controls, project descriptions, documents, city names, and accessibility labels.
 - Manual preference is saved as `dayx-language` in localStorage. When storage is unavailable, switching still works for the current page.
-- The existing documents retain their original languages. The presentation is labeled as Chinese in the English homepage.
+- Both privacy pages use the homepage’s visual language, local-time colors, live clock, and language preference. Original English policy text is retained verbatim, alongside a Chinese reading translation.
 
 ## Files
 
 - `index.html`: original design template plus time, sky, and interaction logic.
 - `assets/dayx/language.js`: Chinese/English copy and language detection.
+- `assets/dayx/documents.css`, `documents.js`, `document-theme.js`: shared privacy-page layout, bilingual reading content, and matching local-time colors.
 - `assets/dayx/enhancements.css`: responsive navigation, product previews, reduced-motion handling, and layout refinements.
 - `assets/dayx/*-preview.png`: screenshots of the two live websites, captured 2026-10-25 (Singapore).
 - `assets/dayx/*.woff2`: fonts embedded in the supplied design; license notices are retained in `FONT-LICENSES.txt`.
 - `assets/dayx/runtime.js`, `react*.js`: locally bundled rendering dependencies from the supplied design. The homepage requires no CDN requests.
 
-Four projects are featured: PostDiff, AI Video Costs, Screen TimeLapseZ, and InvestmentGenieTracker. Existing app screenshots, App Store destinations, reviews, privacy URLs, archives, feed, favicon, and CNAME are preserved. No project source-code links or social handles have been invented.
+Four projects are featured: PostDiff, AI Video Costs, Screen TimeLapseZ, and InvestmentGenieTracker. Existing app screenshots, App Store destinations, reviews, privacy URLs, archives, feed, favicon, and CNAME are preserved. The X profile links to @jasonamFzb24. The presentation and its homepage entry have been removed.
 
 Without JavaScript, a bilingual fallback provides project descriptions, destination links, contact information, and privacy documents.
 

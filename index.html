@@ -670,21 +670,6 @@ body{margin:0}
 </div>
 
 <div style="display: flex; flex-direction: column; border-bottom: 1px solid {{writing.line}}">
-<a class="dx-post" href="/revealjs-ai-intro.html" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 48px; padding: 32px 0; border-top: 1px solid {{writing.line}}">
-<span style="flex: 0 0 120px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{writing.muted}}">{{t.postMeta0}}</span>
-<span style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
-<span class="dx-post-title" style="font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.2">{{t.postTitle0}}</span>
-<span style="font-size: 16px; line-height: 1.7; color: {{writing.muted}}">{{t.postDesc0}}</span>
-</span>
-<span style="flex: 0 0 230px; display: flex; align-items: center; gap: 14px">
-<span aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; background: conic-gradient({{writing.accent}} 0deg {{p0.deg}}deg, {{writing.line}} {{p0.deg}}deg 360deg)"><span class="dx-hand" style="position: absolute; left: 50%; top: 2px; bottom: 50%; width: 2px; margin-left: -1px; border-radius: 1px; background: {{writing.fg}}; transform-origin: 50% 100%; transform: rotate({{p0.deg}}deg)"></span></span>
-<span style="display: flex; flex-direction: column; gap: 3px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
-<span style="font-size: 14px">{{t.readMore}}</span>
-
-</span>
-<span aria-hidden="true" class="dx-arrow" style="margin-left: auto; font-size: 18px">↗</span>
-</span>
-</a>
 <a class="dx-post" href="/post/investmentgenietracker-privacy-and-policy/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 48px; padding: 32px 0; border-top: 1px solid {{writing.line}}">
 <span style="flex: 0 0 120px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{writing.muted}}">{{t.postMeta1}}</span>
 <span style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
@@ -767,6 +752,10 @@ body{margin:0}
 <span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.code}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
 <span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">GitHub</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">@ansonsiva</span></span>
 </a>
+<a class="dx-card" href="https://x.com/jasonamFzb24" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid {{contact.line}}; border-radius: 10px">
+<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.social}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
+<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">X</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">@jasonamFzb24</span></span>
+</a>
 <a class="dx-card" href="mailto:ansonsiva@gmail.com" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid {{contact.line}}; border-radius: 10px">
 <span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.email}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
 <span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">Email</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">ansonsiva@gmail.com</span></span>
@@ -834,8 +823,8 @@ class Component extends DCLogic {
       window.applyDayxLanguage();
     };
     v.onLanguage = this._switchLanguage;
-    const words = en ? ['About', 'Works', 'Notes', 'Contact'] : ['关于', '作品', '笔记', '联系'];
-    v.sc = { aboutCn: en ? '' : words[0], aboutEn: 'About', worksCn: en ? '' : words[1], worksEn: 'Works', writingCn: en ? '' : words[2], writingEn: 'Notes', contactCn: en ? '' : words[3], contactEn: 'Elsewhere' };
+    const words = en ? ['About', 'Works', 'Documents', 'Contact'] : ['关于', '作品', '文档', '联系'];
+    v.sc = { aboutCn: en ? '' : words[0], aboutEn: 'About', worksCn: en ? '' : words[1], worksEn: 'Works', writingCn: en ? '' : words[2], writingEn: 'Documents', contactCn: en ? '' : words[3], contactEn: 'Elsewhere' };
     const d = new Date(this.state.now || Date.now());
     v.meta.date = new Intl.DateTimeFormat(en ? 'en-US' : 'zh-CN', {weekday:'short', month:'short', day:'numeric'}).format(d);
     if (en) {
@@ -1559,7 +1548,7 @@ void main() {
     const fl = cd.map((ch, i) => this.flapV(this.flapT('c' + i, ch, 'D', { delay: 200 + i * 90, step: i >= 4 ? 60 : 70, big: true }), i >= 4 ? 'fx s' : 'fx'));
 
     // departure rows: each section of the site is a "flight"; status follows the hero time
-    const flights = [[7, 9, 'ABOUT', '关于', '#about'], [9, 19, 'WORKS', '作品', '#works'], [19, 22, 'NOTES', '文章', '#writing'], [22, 24, 'CONTACT', '联系', '#contact']];
+    const flights = [[7, 9, 'ABOUT', '关于', '#about'], [9, 19, 'WORKS', '作品', '#works'], [19, 22, 'DOCS', '文章', '#writing'], [22, 24, 'CONTACT', '联系', '#contact']];
     const rows = flights.map((fz, ri) => {
       let st, tone, led, ledOn = false;
       if (H >= fz[1]) { st = 'DEPARTED'; tone = 'dim'; led = '#6A696E'; }
