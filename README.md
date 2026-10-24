@@ -42,3 +42,9 @@ Scroll positions are cached and refreshed on resize or content-size changes. Scr
 Contact: [ansonsiva@mail.grokbot.com](mailto:ansonsiva@mail.grokbot.com).
 
 An optional browser regression check is available at `tests/scroll-performance.cjs`. With Playwright installed and the local server running, use `node tests/scroll-performance.cjs`. It checks scroll render/layout budgets in a real browser. `DAYX_TEST_URL` selects another root preview URL; `DAYX_PLAYWRIGHT_MODULE` can point to an existing Playwright package. No testing dependency is needed to serve the site.
+
+## Mobile section navigation
+
+`assets/dayx/navigation.js` preserves real section links and their shareable fragments. On touch or narrow screens it explicitly sets the document scroll position and accounts for the sticky navigation height, avoiding native fragment-navigation restoration in embedded browsers. Repeated taps still reposition the viewport, and incoming fragment links wait for the rendered section. Desktop links retain their native smooth scrolling.
+
+With Playwright’s Chromium and WebKit installed and the preview server running, `node tests/mobile-navigation.cjs` checks touch navigation in normal and simulated embedded-browser conditions, plus desktop navigation.
