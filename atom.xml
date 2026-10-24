@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ansonsiva.github.io</id>
+    <id>https://www.dayxlab.com</id>
     <title>DayX</title>
     <updated>2023-02-24T09:39:28.571Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://ansonsiva.github.io"/>
-    <link rel="self" href="https://ansonsiva.github.io/atom.xml"/>
+    <link rel="alternate" href="https://www.dayxlab.com"/>
+    <link rel="self" href="https://www.dayxlab.com/atom.xml"/>
     <subtitle>不会写代码的金融从业人员不是一个好的吉他手</subtitle>
-    <logo>https://ansonsiva.github.io/images/avatar.png</logo>
-    <icon>https://ansonsiva.github.io/favicon.ico</icon>
+    <logo>https://www.dayxlab.com/images/avatar.png</logo>
+    <icon>https://www.dayxlab.com/favicon.ico</icon>
     <rights>All rights reserved 2023, DayX</rights>
     <entry>
         <title type="html"><![CDATA[InvestmentGenieTracker Privacy & Policy]]></title>
-        <id>https://ansonsiva.github.io/post/investmentgenietracker-privacy-and-policy/</id>
-        <link href="https://ansonsiva.github.io/post/investmentgenietracker-privacy-and-policy/">
+        <id>https://www.dayxlab.com/post/investmentgenietracker-privacy-and-policy/</id>
+        <link href="https://www.dayxlab.com/post/investmentgenietracker-privacy-and-policy/">
         </link>
         <updated>2023-02-24T09:07:52.000Z</updated>
         <content type="html"><![CDATA[<h1 id="privacy-policy">Privacy Policy</h1>
@@ -53,8 +53,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Privacy Policy (timelapsez and lite)]]></title>
-        <id>https://ansonsiva.github.io/post/privacy-policy-timelapsez-and-lite/</id>
-        <link href="https://ansonsiva.github.io/post/privacy-policy-timelapsez-and-lite/">
+        <id>https://www.dayxlab.com/post/privacy-policy-timelapsez-and-lite/</id>
+        <link href="https://www.dayxlab.com/post/privacy-policy-timelapsez-and-lite/">
         </link>
         <updated>2020-01-02T06:02:14.000Z</updated>
         <content type="html"><![CDATA[<h1 id="privacy-policy">Privacy Policy</h1>
