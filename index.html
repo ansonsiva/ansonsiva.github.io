@@ -1,84 +1,1732 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>DayX — Focused Apps</title>
-<meta name="description" content="Two focused apps built for clear everyday utility." />
-<link rel="canonical" href="https://www.dayxlab.com/" />
-<link rel="icon" href="/favicon.ico" /><link rel="stylesheet" href="/styles/main.css" /><link rel="stylesheet" href="/styles/site.css" />
-</head><body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="topbar"><div class="shell nav">
-  <a href="/" class="brand"><img src="/images/avatar.png" alt="DayX" /><span>DayX</span></a>
-  <nav class="nav-links"><a class="chip" href="#products">Products</a><a class="chip" href="#reviews">Reviews</a><a class="chip" href="/tags/">Privacy</a></nav>
-  <a class="btn btn-primary" href="#products">View Apps →</a>
-</div></header>
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<title>dayxlab · 一天的实验室</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jun Zheng’s personal laboratory: PostDiff, AI Video Costs, Screen TimeLapseZ, and InvestmentGenieTracker.">
+<link rel="canonical" href="https://www.dayxlab.com/">
+<link rel="icon" href="/favicon.ico">
+<link rel="alternate" type="application/atom+xml" title="DayX" href="/atom.xml">
+<meta property="og:title" content="dayxlab · Jun Zheng’s personal laboratory">
+<meta property="og:description" content="Small apps, useful websites, and experiments in everyday life.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.dayxlab.com/">
+<link rel="stylesheet" href="/assets/dayx/enhancements.css">
+<script src="/assets/dayx/language.js"></script>
+<script src="/assets/dayx/react.production.min.js" defer></script>
+<script src="/assets/dayx/react-dom.production.min.js" defer></script>
+<script src="/assets/dayx/runtime.js" defer></script>
+</head>
+<body>
+<noscript><main class="nojs-home"><h1>dayxlab · 一天的实验室</h1><p>Jun Zheng’s personal laboratory / Jun Zheng 的个人实验室</p><p>The interactive clock needs JavaScript. You can still explore every project below.<br>启用 JavaScript 可体验时钟与天空交互，也可以直接访问以下作品。</p><ul><li><a href="https://postdiff.com/">PostDiff</a> — 追踪 X（Twitter）的平台更新，整理创作者工具。更新附上官方来源，工具价格标注核验日期，让变化有据可查。 / Follow changes on X (Twitter) and discover creator tools. Platform updates link to official sources, and tool prices carry a verification date.</li><li><a href="https://aivideocosts.com/">AI Video Costs</a> — 把不同 AI 视频模型的价格换算成相同片长的成本，附上定价来源，再用预算和影片成本计算器，把创作计划算清楚。 / Compare AI video models at the same clip length, with links to pricing sources. Budget and film-cost calculators help turn an idea into a practical plan.</li><li><a href="https://apps.apple.com/app/id1440244990">Screen TimeLapseZ</a> — 将长时间的屏幕操作浓缩成延时视频，用来记录创作过程、制作教程或回看项目进展。支持轻量录制、自定义水印和多屏捕捉。 / Turn long screen sessions into compact timelapse videos for tutorials and progress logs. Lightweight recording, custom watermarks, and multi-screen capture.</li><li><a href="https://apps.apple.com/app/id6446110050">InvestmentGenieTracker</a> — 为日常快速查看打造的投资组合工具。多账户追踪、清晰图表和简洁的查看流程，让资产概况更容易读懂。 / A portfolio snapshot tool for quick daily checks. Multi-account tracking, readable charts, and a simple review flow keep the overview clear.</li></ul><p><a href="mailto:ansonsiva@gmail.com">ansonsiva@gmail.com</a> · <a href="https://github.com/ansonsiva">GitHub</a> · <a href="/archives/">Privacy documents / 隐私文档</a></p></main></noscript>
+<a class="skip-home" href="#main">Skip to content / 跳至内容</a>
+<x-dc>
+<helmet>
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/dayx/barlow-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/dayx/barlow-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/dayx/barlow.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/dayx/instrument-italic.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/dayx/instrument.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/dayx/jetbrains.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/dayx/jetbrains.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/dayx/jetbrains.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-<main id="main" class="shell">
-  <section class="section">
-    <div class="editorial">
-      <div>
-        <p class="kicker">Focused utilities</p>
-        <h1 class="hero-word">DAYX</h1>
-        <h2 class="h1">Two apps. Do the job.</h2>
-      </div>
-      <aside class="hero-aside">
-        <p>Two products</p><p>No subscriptions</p><p>Built for daily use</p>
-      </aside>
-    </div>
-    <p class="lead muted">No subscriptions, no extra noise. Just two small apps that solve specific problems.</p>
-    <div class="rule-punct"><i></i><span></span></div>
-    <div class="cta-row"><a class="btn btn-primary" href="#products">Explore products</a><a class="btn btn-secondary" href="/tags/">Privacy pages</a></div>
-  </section>
 
-  <section class="section stats">
-    <div class="grid grid-3">
-      <article class="stat-box"><p class="kicker">apps</p><p class="stat-n">2</p><p>macOS + iOS</p></article>
-      <article class="stat-box"><p class="kicker">billing</p><p class="stat-n">1x</p><p>One-time purchase</p></article>
-      <article class="stat-box"><p class="kicker">quality</p><p class="stat-n">Clean</p><p>Simple and reliable</p></article>
-    </div>
-  </section>
 
-  <section id="products" class="section">
-    <p class="kicker">Products</p><h2 class="h2">Built like tools, not toys.</h2>
-    <div class="grid grid-2">
-      <article class="card">
-        <div class="app-head"><div class="app-meta"><img src="/images/apps/screen-timelapsez/icon-512.png" alt="Screen TimeLapseZ icon" /><div><h3 class="h3">Screen TimeLapseZ</h3><p class="muted">macOS · one-time</p></div></div><span class="badge">Utilities</span></div>
-        <p class="muted">Turn long sessions into compact timelapse videos for tutorials and progress logs.</p>
-        <ul class="feat"><li>Lightweight recording</li><li>Custom watermark</li><li>Multi-screen capture</li></ul>
-        <div class="shots">
-          <img src="/images/apps/screen-timelapsez/shot-1.jpg" alt="Screen TimeLapseZ screenshot 1" />
-          <img src="/images/apps/screen-timelapsez/shot-2.jpg" alt="Screen TimeLapseZ screenshot 2" />
-          <img src="/images/apps/screen-timelapsez/shot-3.jpg" alt="Screen TimeLapseZ screenshot 3" />
-          <img src="/images/apps/screen-timelapsez/shot-4.jpg" alt="Screen TimeLapseZ screenshot 4" />
-        </div>
-        <div class="cta-row"><a class="btn btn-primary" target="_blank" rel="noreferrer" href="https://apps.apple.com/us/app/screen-timelapsez/id1440244990?l=zh-Hans-CN&mt=12">App Store</a><a class="btn btn-secondary" href="/post/privacy-policy-timelapsez-and-lite/">Privacy</a></div>
-      </article>
 
-      <article class="card">
-        <div class="app-head"><div class="app-meta"><img src="/images/apps/investment-genie/icon-512.jpg" alt="InvestmentGenieTracker icon" /><div><h3 class="h3">InvestmentGenieTracker</h3><p class="muted">iOS · one-time</p></div></div><span class="badge">Finance</span></div>
-        <p class="muted">Portfolio snapshot tool built for quick daily checks and clean readability.</p>
-        <ul class="feat"><li>Multi-account tracking</li><li>Readable charts</li><li>Fast review loop</li></ul>
-        <div class="shots four">
-          <img class="is-ios" src="/images/apps/investment-genie/shot-1.png" alt="InvestmentGenieTracker screenshot 1" />
-          <img class="is-ios" src="/images/apps/investment-genie/shot-2.png" alt="InvestmentGenieTracker screenshot 2" />
-          <img class="is-ios" src="/images/apps/investment-genie/shot-3.png" alt="InvestmentGenieTracker screenshot 3" />
-          <img class="is-ios" src="/images/apps/investment-genie/shot-4.png" alt="InvestmentGenieTracker screenshot 4" />
-        </div>
-        <div class="cta-row"><a class="btn btn-primary" target="_blank" rel="noreferrer" href="https://apps.apple.com/us/app/%E6%8A%95%E8%B5%84%E7%B2%BE%E7%81%B5/id6446110050?l=zh-Hans-CN">App Store</a><a class="btn btn-secondary" href="/post/investmentgenietracker-privacy-and-policy/">Privacy</a></div>
-      </article>
-    </div>
-  </section>
 
-  <section id="reviews" class="section">
-    <p class="kicker">Reviews</p><h2 class="h2">What users actually said.</h2>
-    <div class="grid grid-3">
-      <article class="card"><p class="quote">Pretty good, saves every hour reliably.</p><p class="muted review-meta">★★★★☆ — App Store reviewer</p></article>
-      <article class="card"><p class="quote">Worth it.</p><p class="muted review-meta">★★★★★ — App Store reviewer</p></article>
-      <article class="card"><p class="quote">Super simple. Works great.</p><p class="muted review-meta">★★★★★ — App Store reviewer</p></article>
-    </div>
-  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<style>
+body{margin:0}
+.dx,.dx *{box-sizing:border-box}
+.dx a{color:inherit;text-decoration:none}
+.dx a:hover{color:inherit}
+.dx button{font-family:inherit}
+.dx :focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:4px}
+.dx-sr{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.dx-d{display:inline-block;width:.54em;text-align:center}
+.dx-c{display:inline-block;width:.26em;text-align:center}
+.dx-blink{animation:dxblink 1s steps(1,end) infinite}
+@keyframes dxblink{0%,55%{opacity:1}56%,100%{opacity:.18}}
+.dx-pulse{animation:dxpulse 2s ease-in-out infinite}
+@keyframes dxpulse{0%,100%{opacity:1}50%{opacity:.3}}
+.dx-bob{animation:dxbob 2.4s ease-in-out infinite}
+@keyframes dxbob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.dx-spin{animation:dxspin 14s linear infinite}
+@keyframes dxspin{to{transform:rotate(360deg)}}
+.dx-ul{text-decoration:underline !important;text-decoration-color:transparent !important;text-underline-offset:6px;text-decoration-thickness:1px;transition:text-decoration-color .3s}
+.dx-ul:hover{text-decoration-color:currentColor !important}
+.dx-btn{cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .25s}
+.dx-btn:hover{transform:translateY(-1px)}
+.dx-odo{display:inline-block;height:.86em;overflow:hidden;width:.54em;text-align:center;vertical-align:top}
+.dx-odo-c{display:inline-block;height:.86em;line-height:.86em;width:.26em;text-align:center;vertical-align:top}
+.dx-reel{display:block;transition:transform 1.9s cubic-bezier(.16,1,.3,1)}
+.dx-reel span{display:block;height:.86em;line-height:.86em}
+.dx-reel-f{transition-duration:.7s}
+.dx-odo-m{display:inline-block;height:1.25em;overflow:hidden;width:.62em;text-align:center;vertical-align:top}
+.dx-reel-m{display:block;transition:transform .45s cubic-bezier(.2,.9,.2,1)}
+.dx-reel-m span{display:block;height:1.25em;line-height:1.25em}
+.fx{position:relative;flex:none;display:block;width:clamp(58px,8.4vw,120px);height:clamp(80px,11.6vw,166px);font-family:'Barlow Condensed','Oswald','Arial Narrow',sans-serif;font-weight:600;font-size:clamp(70px,10vw,144px);line-height:1;color:#F3F0E8;perspective:520px;border-radius:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 14px 24px -10px rgba(0,0,0,.6),0 2px 3px rgba(0,0,0,.4)}
+.fx.s{width:clamp(30px,3.7vw,52px);height:clamp(42px,5.2vw,72px);font-size:clamp(36px,4.5vw,62px);border-radius:5px;perspective:300px}
+.fx-h,.fx-f{position:absolute;left:0;right:0;height:50%;overflow:hidden}
+.fx-h.t,.fx-f.t{top:0;border-radius:8px 8px 0 0;background:linear-gradient(#2a2a2e,#1f1f22)}
+.fx-h.b,.fx-f.b{bottom:0;border-radius:0 0 8px 8px;background:linear-gradient(#1c1c1f,#141416)}
+.fx.s .fx-h.t,.fx.s .fx-f.t{border-radius:5px 5px 0 0}
+.fx.s .fx-h.b,.fx.s .fx-f.b{border-radius:0 0 5px 5px}
+.fx-h>span,.fx-f>span{position:absolute;left:0;right:0;height:200%;display:flex;align-items:center;justify-content:center;padding-top:.04em}
+.fx-h.t>span,.fx-f.t>span{top:0}
+.fx-h.b>span,.fx-f.b>span{bottom:0}
+.fx-f{z-index:2;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.fx-f.t{transform-origin:50% 100%;transform:rotateX(-90deg)}
+.fx-f.b{transform-origin:50% 0;transform:rotateX(0deg)}
+.fx::after{content:'';position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:#070708;z-index:3}
+.fx::before{content:'';position:absolute;left:-3px;right:-3px;top:50%;height:8px;margin-top:-4px;border-radius:2px;background:linear-gradient(90deg,#3a3a3f 0 4px,transparent 4px calc(100% - 4px),#3a3a3f calc(100% - 4px));z-index:4}
+.fx.k0 .fx-f{display:none}
+.fx-h.t{box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.fx-sh{position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.12));opacity:0;pointer-events:none}
+.fx.ka .fx-f.t{animation:fxTopA .1s cubic-bezier(.55,0,.95,.6) both}
+.fx.ka .fx-f.b{animation:fxBotA .18s cubic-bezier(.2,.9,.3,1.35) .1s both}
+.fx.kb .fx-f.t{animation:fxTopB .1s cubic-bezier(.55,0,.95,.6) both}
+.fx.kb .fx-f.b{animation:fxBotB .18s cubic-bezier(.2,.9,.3,1.35) .1s both}
+.fx.ka .fx-sh{animation:fxShA .26s ease-out both}
+.fx.kb .fx-sh{animation:fxShB .26s ease-out both}
+.fx.m.ka .fx-f.t,.fx.m.kb .fx-f.t{animation-duration:.04s}
+.fx.m.ka .fx-f.b,.fx.m.kb .fx-f.b{animation-duration:.07s;animation-delay:.04s}
+.fx.m.ka .fx-sh,.fx.m.kb .fx-sh{animation-duration:.11s}
+@keyframes fxShA{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
+@keyframes fxShB{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
+.fx.m{width:clamp(12px,1.45vw,20px);height:clamp(18px,2.15vw,30px);font-size:clamp(14px,1.75vw,24px);border-radius:3px;perspective:160px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 2px 3px rgba(0,0,0,.5)}
+.fx.m .fx-h.t,.fx.m .fx-f.t{border-radius:3px 3px 0 0}
+.fx.m .fx-h.b,.fx.m .fx-f.b{border-radius:0 0 3px 3px}
+.fx.m::before{display:none}
+.fx.m::after{height:1px;margin-top:0}
+.fx.amb{color:#F2B85B}
+.fx.dim{color:rgba(243,240,232,.55)}
+.fx-w5{width:calc(5 * clamp(12px,1.45vw,20px) + 8px)}
+.fx-w8{width:calc(8 * clamp(12px,1.45vw,20px) + 14px)}
+.fx-rowlink{transition:background-color .2s}
+.fx-rowlink:hover{background:rgba(243,240,232,.06)}
+.fx-led{flex:none;width:7px;height:7px;border-radius:50%;box-shadow:0 0 10px currentColor}
+.fx-led.on{animation:dxblink 1s steps(1,end) infinite}
+.fx-btn{display:flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid rgba(243,240,232,.2);background:transparent;color:#F3F0E8;font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em;cursor:pointer;transition:border-color .2s,color .2s}
+.fx-btn:hover{border-color:#F2B85B;color:#F2B85B}
+.fx-btn[aria-pressed="true"]{border-color:#F2B85B;color:#F2B85B}
+@keyframes fxTopA{from{transform:rotateX(0deg);filter:brightness(1)}to{transform:rotateX(-90deg);filter:brightness(.55)}}
+@keyframes fxTopB{from{transform:rotateX(0deg);filter:brightness(1)}to{transform:rotateX(-90deg);filter:brightness(.55)}}
+@keyframes fxBotA{from{transform:rotateX(90deg);filter:brightness(1.5)}to{transform:rotateX(0deg);filter:brightness(1)}}
+@keyframes fxBotB{from{transform:rotateX(90deg);filter:brightness(1.5)}to{transform:rotateX(0deg);filter:brightness(1)}}
+.fx-colon{display:flex;flex-direction:column;gap:clamp(16px,2.2vw,32px);padding:0 clamp(2px,.4vw,6px);animation:dxblink 1s steps(1,end) infinite}
+.fx-colon i{display:block;width:clamp(8px,1vw,14px);height:clamp(8px,1vw,14px);border-radius:2px;background:#F3F0E8}
+.dx-tilt{position:relative;height:100%;border-radius:8px;transition:transform .35s cubic-bezier(.2,.8,.2,1);will-change:transform}
+.dx-tilt::after{content:'';position:absolute;inset:0;border-radius:8px;pointer-events:none;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.3),rgba(255,255,255,0) 45%);opacity:0;transition:opacity .3s}
+.dx-row:hover .dx-tilt::after{opacity:1}
+.dx-post:hover .dx-post-title{font-style:italic}
+.dx-post:hover .dx-hand{animation:dxsweep 1s cubic-bezier(.2,.8,.2,1)}
+@keyframes dxsweep{from{transform:rotate(0deg)}}
+.dx-card{transition:border-color .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
+.dx-card:hover{border-color:currentColor !important;transform:translateY(-3px)}
+.dx-arrow{display:inline-block;transition:transform .3s}
+.dx-card:hover .dx-arrow,.dx-post:hover .dx-arrow{transform:translate(3px,-3px)}
+.dx-marq{display:flex;width:max-content;animation:dxmarq 52s linear infinite}
+.dx-marq-wrap:hover .dx-marq{animation-play-state:paused}
+@keyframes dxmarq{to{transform:translateX(-50%)}}
+.dx-scrub input{position:absolute;left:0;right:0;top:20px;height:46px;width:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3}
+.dx-scrub:focus-within .dx-knob{outline:2px solid currentColor;outline-offset:4px}
+.dx-cursor{position:fixed;left:0;top:0;z-index:60;width:40px;height:40px;margin:-20px 0 0 -20px;pointer-events:none;color:#fff;mix-blend-mode:difference;opacity:0;transition:opacity .3s}
+@media (hover:none),(pointer:coarse){.dx-cursor{display:none}}
+@media (max-width:720px){.dx-hide-sm{display:none !important}.dx-mk-name{display:none}}
+@media (prefers-reduced-motion:reduce){.dx-blink,.dx-pulse,.dx-bob,.dx-spin,.dx-marq,.fx-colon,.fx-led.on{animation:none}.dx *{transition:none !important}.fx .fx-f{display:none}}
+</style>
+</helmet>
+<div ref="{{setRoot}}" id="top" class="dx" style="position: relative; background: {{root.bg}}; color: {{root.fg}}; font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif; -webkit-font-smoothing: antialiased" data-canvas-width="1440" data-canvas-height="6800" data-document-role="page" data-label="首页 · 一天的实验室（可交互）">
+
+<!-- ================= NAV ================= -->
+<nav aria-label="{{t.navigation}}" style="position: sticky; top: 0; z-index: 20; background: {{nav.bg}}; color: {{nav.fg}}; border-bottom: 1px solid {{nav.line}}">
+<div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(20px, 4.5vw, 64px); min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px">
+<a href="#top" aria-label="{{t.homeLabel}}" style="display: flex; align-items: center; gap: 3px; min-height: 44px; font-family: 'Instrument Serif', 'Noto Serif SC', Georgia, serif; font-size: 28px; line-height: 1; letter-spacing: -0.01em">
+<span style="font-style: italic">day</span>
+<span aria-hidden="true" style="display: inline-block; color: {{nav.accent}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; transform: rotate({{logoRot}}deg); transition: transform .8s cubic-bezier(.3,1.6,.5,1)">×</span>
+<span>lab</span>
+</a>
+<button class="language-toggle" type="button" sc-camel-on-click="{{onLanguage}}" aria-label="{{t.switchLanguage}}" lang="{{otherLang}}">{{t.languageButton}}</button>
+<div class="dx-hide-sm" style="display: flex; align-items: center; gap: 28px; font-size: 14px">
+<a class="dx-ul" href="#about" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{nav.muted}}">07</span>{{t.navabout}}</a>
+<a class="dx-ul" href="#works" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{nav.muted}}">09</span>{{t.navworks}}</a>
+<a class="dx-ul" href="#writing" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{nav.muted}}">19</span>{{t.navwriting}}</a>
+<a class="dx-ul" href="#contact" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{nav.muted}}">22</span>{{t.navcontact}}</a>
+</div>
+<div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; letter-spacing: 0.04em">
+<span aria-hidden="true" class="dx-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: {{nav.accent}}"></span>
+<span style="color: {{nav.muted}}">LAB TIME</span>
+<span class="dx-sr">{{hud.day}} {{hud.hm}}</span>
+<span aria-hidden="true" style="display: flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums">
+<span>{{hud.day}}</span>
+<span style="display: flex">
+<span class="dx-odo-m"><span class="dx-reel-m" style="transform: {{nv.a}}"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-m"><span class="dx-reel-m" style="transform: {{nv.b}}"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
+<span style="display: inline-block; width: 0.5em; text-align: center; line-height: 1.25em">:</span>
+<span class="dx-odo-m"><span class="dx-reel-m" style="transform: {{nv.c}}"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-m"><span class="dx-reel-m" style="transform: {{nv.d}}"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
+</span>
+</span>
+</div>
+</div>
+<div aria-hidden="true" style="position: absolute; left: 0; bottom: -1px; height: 2px; width: {{hud.pct}}%; background: {{nav.accent}}"></div>
+</nav>
+
+<main id="main" tabindex="-1">
+<!-- ================= HERO · NOW ================= -->
+<section id="now" data-anchor="0" aria-label="{{t.now}}" style="position: relative; overflow: hidden; background: {{hero.midHex}}; color: {{hero.fg}}">
+<canvas class="dx-sky" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"></canvas>
+
+<div aria-hidden="true" style="position: absolute; inset: 20px; pointer-events: none">
+<span style="position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-left: 1px solid {{hero.line2}}; border-top: 1px solid {{hero.line2}}"></span>
+<span style="position: absolute; right: 0; top: 0; width: 22px; height: 22px; border-right: 1px solid {{hero.line2}}; border-top: 1px solid {{hero.line2}}"></span>
+<span style="position: absolute; left: 0; bottom: 0; width: 22px; height: 22px; border-left: 1px solid {{hero.line2}}; border-bottom: 1px solid {{hero.line2}}"></span>
+<span style="position: absolute; right: 0; bottom: 0; width: 22px; height: 22px; border-right: 1px solid {{hero.line2}}; border-bottom: 1px solid {{hero.line2}}"></span>
+</div>
+
+<div aria-hidden="true" class="dx-hide-sm" style="position: absolute; right: 30px; top: 0; bottom: 0; width: 44px; pointer-events: none">
+<sc-for list="{{altScale}}" as="a" hint-placeholder-count="15">
+<div style="position: absolute; right: 0; top: {{a.top}}%; transform: translateY(-50%); display: flex; align-items: center; gap: 6px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; color: {{hero.muted}}"><span>{{a.label}}</span><span style="width: {{a.w}}px; height: 1px; background: {{hero.muted}}"></span></div>
+</sc-for>
+</div>
+
+<sc-if value="{{trk.show}}" hint-placeholder-val="{{false}}">
+<div aria-hidden="true" style="position: absolute; left: {{trk.x}}%; top: {{trk.y}}%; width: 0; height: 0; pointer-events: none; color: {{hero.fg}}">
+<span class="dx-spin" style="position: absolute; left: -32px; top: -32px; width: 64px; height: 64px; border-radius: 50%; border: 1px dashed {{hero.line2}}"></span>
+<span style="position: absolute; left: -50px; top: 0; width: 12px; height: 1px; background: {{hero.fg}}"></span>
+<span style="position: absolute; left: 38px; top: 0; width: 12px; height: 1px; background: {{hero.fg}}"></span>
+<span style="position: absolute; left: 0; top: -50px; width: 1px; height: 12px; background: {{hero.fg}}"></span>
+<span style="position: absolute; left: 0; top: 38px; width: 1px; height: 12px; background: {{hero.fg}}"></span>
+<span style="position: absolute; left: {{trk.l}}; right: {{trk.r}}; top: 44px; white-space: nowrap; padding: 5px 9px; border-radius: 4px; border: 1px solid {{hero.line}}; background: {{hero.glass}}; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.06em">{{trk.label}}</span>
+</div>
+</sc-if>
+
+<div style="position: relative; z-index: 2; max-width: 1440px; min-height: 920px; margin: 0 auto; padding: clamp(36px, 4.5vw, 60px) clamp(20px, 4.5vw, 64px) 28px; display: flex; flex-direction: column; gap: 26px">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 16px 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{hero.muted}}">
+<span style="display: flex; align-items: center; gap: 8px; color: {{hero.fg}}"><span aria-hidden="true" class="dx-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: {{hero.accent}}"></span>{{t.localTime}}</span>
+<span>{{meta.zone}} · {{meta.utc}}</span>
+<span>{{meta.date}}</span>
+</div>
+<div class="dx-hide-sm" aria-hidden="true" style="min-width: 320px; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.04em; color: {{hero.muted}}; text-align: right">
+<sc-for list="{{hud2}}" as="r" hint-placeholder-count="4">
+<span style="white-space: pre">{{r.k}}  <span style="color: {{hero.fg}}">{{r.v}}</span></span>
+</sc-for>
+</div>
+</div>
+
+<div style="max-width: 820px; display: flex; flex-direction: column; gap: 26px">
+<div style="align-self: flex-start; max-width: 100%; display: flex; flex-direction: column; gap: 14px; padding: 14px clamp(12px, 1.4vw, 20px) 14px; border-radius: 18px; background: #0D0D0F; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.07), inset 0 2px 0 rgba(255,255,255,0.04), 0 36px 70px -28px rgba(0,0,0,0.65)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 24px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.14em; color: #F2B85B">
+<span style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" sc-camel-view-box="0 0 16 16" aria-hidden="true"><path d="M8 1.2c.6 0 1 .9 1 2v3.3l5.6 3.2v1.5L9 9.6v2.7l1.7 1.3v1.1L8 14l-2.7.7v-1.1L7 12.3V9.6l-5.6 1.6V9.7L7 6.5V3.2c0-1.1.4-2 1-2z" fill="currentColor" transform="rotate(90 8 8)"></path></svg>{{t.departures}}</span>
+<span style="color: rgba(243,240,232,0.62)">{{meta.utc}} · {{meta.year}} · {{t.dayNumber}} {{meta.doy}}</span>
+</div>
+<time datetime="{{clock.hm}}" aria-label="{{currentTimeLabel}}" style="display: flex; align-items: center; gap: clamp(4px, 0.6vw, 8px)">
+<span aria-hidden="true" class="{{f0.cls}}"><span class="fx-h t"><span>{{f0.cur}}</span></span><span class="fx-h b"><span>{{f0.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f0.prev}}</span></span><span class="fx-f b"><span>{{f0.cur}}</span></span></span>
+<span aria-hidden="true" class="{{f1.cls}}"><span class="fx-h t"><span>{{f1.cur}}</span></span><span class="fx-h b"><span>{{f1.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f1.prev}}</span></span><span class="fx-f b"><span>{{f1.cur}}</span></span></span>
+<span aria-hidden="true" class="fx-colon"><i></i><i></i></span>
+<span aria-hidden="true" class="{{f2.cls}}"><span class="fx-h t"><span>{{f2.cur}}</span></span><span class="fx-h b"><span>{{f2.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f2.prev}}</span></span><span class="fx-f b"><span>{{f2.cur}}</span></span></span>
+<span aria-hidden="true" class="{{f3.cls}}"><span class="fx-h t"><span>{{f3.cur}}</span></span><span class="fx-h b"><span>{{f3.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f3.prev}}</span></span><span class="fx-f b"><span>{{f3.cur}}</span></span></span>
+<span aria-hidden="true" style="align-self: flex-end; display: flex; gap: clamp(3px, 0.4vw, 5px); margin-left: clamp(6px, 1vw, 14px)">
+<span class="{{f4.cls}}"><span class="fx-h t"><span>{{f4.cur}}</span></span><span class="fx-h b"><span>{{f4.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f4.prev}}</span></span><span class="fx-f b"><span>{{f4.cur}}</span></span></span>
+<span class="{{f5.cls}}"><span class="fx-h t"><span>{{f5.cur}}</span></span><span class="fx-h b"><span>{{f5.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f5.prev}}</span></span><span class="fx-f b"><span>{{f5.cur}}</span></span></span>
+</span>
+</time>
+
+<div style="display: flex; flex-direction: column; padding-top: 10px; border-top: 1px solid rgba(243,240,232,0.12)">
+<div aria-hidden="true" style="display: flex; align-items: center; gap: clamp(8px, 1.2vw, 16px); padding-bottom: 4px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; color: rgba(243,240,232,0.55)">
+<span class="fx-w5">TIME</span>
+<span class="fx-w8">DESTINATION</span>
+<span class="dx-hide-sm" style="width: 34px">{{t.boardSection}}</span>
+<span style="padding-left: 15px">STATUS</span>
+</div>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
+<a href="{{r.href}}" class="fx-rowlink" sc-camel-on-mouse-enter="{{r.spin}}" sc-camel-on-focus="{{r.spin}}" aria-label="{{r.aria}}" style="display: flex; align-items: center; gap: clamp(8px, 1.2vw, 16px); min-height: 44px; padding: 0 8px; margin: 0 -8px; border-radius: 8px">
+<span aria-hidden="true" style="display: flex; gap: 2px"><sc-for list="{{r.time}}" as="q" hint-placeholder-count="5"><span class="{{q.cls}}"><span class="fx-h t"><span>{{q.cur}}</span></span><span class="fx-h b"><span>{{q.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{q.prev}}</span></span><span class="fx-f b"><span>{{q.cur}}</span></span></span></sc-for></span>
+<span aria-hidden="true" style="display: flex; gap: 2px"><sc-for list="{{r.dest}}" as="q" hint-placeholder-count="8"><span class="{{q.cls}}"><span class="fx-h t"><span>{{q.cur}}</span></span><span class="fx-h b"><span>{{q.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{q.prev}}</span></span><span class="fx-f b"><span>{{q.cur}}</span></span></span></sc-for></span>
+<span aria-hidden="true" class="dx-hide-sm" style="width: 34px; font-size: 12px; color: rgba(243,240,232,0.62)">{{r.cn}}</span>
+<span aria-hidden="true" style="display: flex; align-items: center; gap: 8px">
+<span class="{{r.ledCls}}" style="background: {{r.led}}; color: {{r.led}}"></span>
+<span style="display: flex; gap: 2px"><sc-for list="{{r.status}}" as="q" hint-placeholder-count="9"><span class="{{q.cls}}"><span class="fx-h t"><span>{{q.cur}}</span></span><span class="fx-h b"><span>{{q.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{q.prev}}</span></span><span class="fx-f b"><span>{{q.cur}}</span></span></span></sc-for></span>
+</span>
+</a>
+</sc-for>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 16px; padding-top: 8px; border-top: 1px solid rgba(243,240,232,0.12); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: rgba(243,240,232,0.62)">
+<span>{{phase.cn}} · {{t.dayElapsed}} {{clock.pct}}%</span>
+<span style="display: flex; gap: 6px">
+<button type="button" class="fx-btn" sc-camel-on-click="{{onShuffle}}">{{t.shuffle}}</button>
+<button type="button" class="fx-btn" sc-camel-on-click="{{onSound}}" aria-pressed="{{snd.on}}"><svg width="14" height="14" sc-camel-view-box="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5.2h2.2L7.4 2.5v9L4.2 8.8H2z"></path><path d="M9.6 4.8a3 3 0 0 1 0 4.4"></path><path d="M11.3 3.2a5.2 5.2 0 0 1 0 7.6"></path></svg>{{snd.label}}</button>
+</span>
+</div>
+</div>
+<h1 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.2vw, 44px); line-height: 1.3; letter-spacing: 0.01em">{{greet}}</h1>
+<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.8; color: {{hero.muted}}">{{t.intro}}</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<button type="button" class="dx-btn" sc-camel-on-click="{{onPlay}}" style="display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 20px; border-radius: 999px; border: 1px solid {{hero.fg}}; background: {{hero.fg}}; color: {{hero.inv}}; font-size: 14px">
+<svg width="12" height="12" sc-camel-view-box="0 0 12 12" aria-hidden="true"><path d="M2.5 1.5v9l8-4.5z" fill="currentColor"></path></svg>
+<span>{{ctl.playLabel}}</span>
+</button>
+<sc-if value="{{ctl.showNow}}" hint-placeholder-val="{{false}}">
+<button type="button" class="dx-btn" sc-camel-on-click="{{onBack}}" style="display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1px solid {{hero.line2}}; background: {{hero.glass}}; color: {{hero.fg}}; font-size: 14px">
+<svg width="14" height="14" sc-camel-view-box="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 7a4.5 4.5 0 1 0 1.4-3.3"></path><path d="M2.5 1.8v2.4h2.4"></path></svg>
+<span>{{t.backNow}}</span>
+</button>
+</sc-if>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: {{hero.muted}}">{{t.dragHint}}</span>
+</div>
+</div>
+
+<!-- 24h scrubber = site index -->
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding: 16px clamp(16px, 2vw, 24px) 8px; border-radius: 16px; border: 1px solid {{hero.line}}; background: {{hero.glass}}; -webkit-backdrop-filter: blur(18px) saturate(150%); backdrop-filter: blur(18px) saturate(150%)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.06em; color: {{hero.muted}}">
+<span>{{t.timelineHelp}}</span>
+<span style="color: {{hero.fg}}">{{scrub.status}}</span>
+</div>
+<div class="dx-scrub" style="position: relative; padding-top: 34px; padding-bottom: 50px">
+<sc-for list="{{marks}}" as="m" hint-placeholder-count="4">
+<a href="{{m.href}}" style="position: absolute; z-index: 4; top: -2px; left: {{m.left}}%; transform: translateX(-50%); display: flex; align-items: center; gap: 6px; padding: 6px 4px; font-size: 13px; white-space: nowrap">
+<span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: {{hero.accent}}"></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; font-weight: 600">{{m.hh}}</span>
+<span class="dx-mk-name">{{m.label}}</span>
+</a>
+<div aria-hidden="true" style="position: absolute; top: 28px; left: {{m.left}}%; width: 1px; height: 28px; background: {{hero.accent}}"></div>
+</sc-for>
+<div aria-hidden="true" style="display: flex; align-items: flex-end; height: 22px; border-right: 1px solid {{hero.muted}}">
+<sc-for list="{{ticks}}" as="k" hint-placeholder-count="96">
+<div style="flex: 1 1 0; height: {{k.h}}px; border-left: 1px solid {{k.c}}"></div>
+</sc-for>
+</div>
+<label for="dx-scrub-in" class="dx-sr">{{t.timelineLabel}}</label>
+<input id="dx-scrub-in" type="range" min="0" max="1439" step="1" value="{{scrub.val}}" aria-valuetext="{{scrub.text}}" sc-camel-on-change="{{onScrub}}">
+<sc-for list="{{hours}}" as="hl" hint-placeholder-count="9">
+<span aria-hidden="true" style="position: absolute; top: 62px; left: {{hl.left}}%; transform: translateX({{hl.tx}}%); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{hero.muted}}">{{hl.label}}</span>
+</sc-for>
+<div aria-hidden="true" style="position: absolute; top: 30px; left: {{ph.left}}%; width: 2px; margin-left: -1px; height: 30px; background: {{hero.fg}}"></div>
+<span aria-hidden="true" class="dx-knob" style="position: absolute; top: 24px; left: {{ph.left}}%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: {{hero.fg}}; box-shadow: 0 0 0 5px {{hero.glass}}"></span>
+<span aria-hidden="true" style="position: absolute; top: 82px; left: {{ph.left}}%; transform: translateX({{ph.tx}}%); padding: 3px 8px; border-radius: 3px; background: {{hero.fg}}; color: {{hero.inv}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; white-space: nowrap">{{ph.label}}</span>
+</div>
+<a href="#about" style="align-self: flex-start; display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 14px; color: {{hero.muted}}">
+<span aria-hidden="true" class="dx-bob" style="display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; border: 1px solid {{hero.line2}}; color: {{hero.fg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px">↓</span>
+<span>{{t.scrollHint}}<span style="margin-left: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: {{hero.fg}}">+{{hint.delta}}</span></span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- ================= 07:00 ABOUT ================= -->
+<section id="about" data-anchor="1" style="background: {{about.bg}}; color: {{about.fg}}">
+<div style="max-width: 1440px; margin: 0 auto; padding: clamp(96px, 11vw, 160px) clamp(20px, 4.5vw, 64px); display: flex; flex-direction: column; gap: 64px">
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid {{about.line}}">
+<p aria-label="07:00" style="margin: 0; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(80px, 11vw, 168px); line-height: 0.86; letter-spacing: -0.03em">
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oA.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oA.b}}; transition-delay: .08s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-c" aria-hidden="true">:</span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oA.c}}; transition-delay: .16s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oA.d}}; transition-delay: .24s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+</p>
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px; padding-bottom: 6px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{about.muted}}">{{t.dawn}}</span>
+<h2 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.1">{{sc.aboutCn}} <em>{{sc.aboutEn}}</em></h2>
+</div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid {{about.line}}; background: conic-gradient({{about.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{about.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(285deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{about.fg}}"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: {{about.fg}}"></div></div>
+</header>
+<div style="display: flex; flex-wrap: wrap; gap: 48px 96px">
+<p style="flex: 1 1 420px; margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(40px, 5vw, 72px); line-height: 1.18; letter-spacing: 0.01em">{{t.everyDay}}<br>{{t.anExperiment}}<span style="color: {{about.accent}}">{{t.experiment}}</span><span class="zh-period">。</span></p>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 24px; font-size: 18px; line-height: 1.85; color: {{about.muted}}">
+<p style="margin: 0">{{t.bio}}</p>
+<p style="margin: 0">{{t.philosophy}}</p>
+<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px; padding-top: 24px; border-top: 1px solid {{about.line}}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em">{{t.labSince}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: clamp(28px, 3vw, 40px); line-height: 1.3; letter-spacing: -0.02em; color: {{about.fg}}; font-variant-numeric: tabular-nums">2019 → {{meta.year}}</span>
+<span style="font-size: 14px">{{t.sinceNote}}</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= 09:00 WORKS ================= -->
+<section id="works" data-anchor="2" style="background: {{works.bg}}; color: {{works.fg}}">
+<div style="max-width: 1440px; margin: 0 auto; padding: clamp(96px, 11vw, 160px) clamp(20px, 4.5vw, 64px); display: flex; flex-direction: column; gap: 56px">
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid {{works.line}}">
+<p aria-label="09:00" style="margin: 0; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(80px, 11vw, 168px); line-height: 0.86; letter-spacing: -0.03em">
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oW.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oW.b}}; transition-delay: .08s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-c" aria-hidden="true">:</span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oW.c}}; transition-delay: .16s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oW.d}}; transition-delay: .24s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+</p>
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px; padding-bottom: 6px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{works.muted}}">{{t.daytime}}</span>
+<h2 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.1">{{sc.worksCn}} <em>{{sc.worksEn}}</em></h2>
+</div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(315deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: {{works.fg}}"></div></div>
+</header>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 40px">
+<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.8; color: {{works.muted}}">{{t.workIntro}}</p>
+<a class="dx-ul" href="https://github.com/ansonsiva" style="padding: 10px 0; font-size: 15px">{{t.allGithub}}</a>
+</div>
+
+<div style="display: flex; flex-direction: column">
+<span id="products" aria-hidden="true"></span>
+<!-- work 01 -->
+<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid {{works.line}}">
+<div style="flex: 0 0 120px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
+<span style="padding: 4px 8px; margin-left: -8px; border-radius: 4px; background: {{w0.pillBg}}; color: {{w0.pillFg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; font-variant-numeric: tabular-nums">09:30</span>
+<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(322.5deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div></div>
+<sc-if value="{{w0.on}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em">{{t.inProgress}}</span></sc-if>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{works.muted}}">{{t.pMeta0}}</span>
+<h3 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05">PostDiff</h3>
+<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: {{works.muted}}">{{t.pDesc0}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag00}}</span>
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag01}}</span>
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag02}}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
+<a class="dx-ul" href="https://postdiff.com/" target="_blank" rel="noopener noreferrer" style="padding: 10px 0">{{t.visit0}}</a>
+
+</div>
+</div>
+<a class="project-preview" href="https://postdiff.com/" target="_blank" rel="noopener noreferrer" aria-label="PostDiff">
+<div class="preview-label"><span>PostDiff<small>{{t.short0}}</small></span><span aria-hidden="true">↗</span></div>
+<div class="preview-image ">
+<img src="/assets/dayx/postdiff-preview.png" alt="{{t.previewAlt0}}" loading="lazy" width="1440" height="1000">
+</div></a>
+</article>
+<!-- work 02 -->
+<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid {{works.line}}">
+<div style="flex: 0 0 120px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
+<span style="padding: 4px 8px; margin-left: -8px; border-radius: 4px; background: {{w1.pillBg}}; color: {{w1.pillFg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; font-variant-numeric: tabular-nums">11:30</span>
+<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(352.5deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div></div>
+<sc-if value="{{w1.on}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em">{{t.inProgress}}</span></sc-if>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{works.muted}}">{{t.pMeta1}}</span>
+<h3 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05">AI Video Costs</h3>
+<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: {{works.muted}}">{{t.pDesc1}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag10}}</span>
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag11}}</span>
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag12}}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
+<a class="dx-ul" href="https://aivideocosts.com/" target="_blank" rel="noopener noreferrer" style="padding: 10px 0">{{t.visit1}}</a>
+
+</div>
+</div>
+<a class="project-preview" href="https://aivideocosts.com/" target="_blank" rel="noopener noreferrer" aria-label="AI Video Costs">
+<div class="preview-label"><span>AI Video Costs<small>{{t.short1}}</small></span><span aria-hidden="true">↗</span></div>
+<div class="preview-image ">
+<img src="/assets/dayx/aivideocosts-preview.png" alt="{{t.previewAlt1}}" loading="lazy" width="1440" height="1000">
+</div></a>
+</article>
+<!-- work 03 -->
+<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid {{works.line}}">
+<div style="flex: 0 0 120px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
+<span style="padding: 4px 8px; margin-left: -8px; border-radius: 4px; background: {{w2.pillBg}}; color: {{w2.pillFg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; font-variant-numeric: tabular-nums">14:00</span>
+<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(30deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div></div>
+<sc-if value="{{w2.on}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em">{{t.inProgress}}</span></sc-if>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{works.muted}}">{{t.pMeta2}}</span>
+<h3 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05">Screen TimeLapseZ</h3>
+<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: {{works.muted}}">{{t.pDesc2}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag20}}</span>
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag21}}</span>
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag22}}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
+<a class="dx-ul" href="https://apps.apple.com/app/id1440244990" target="_blank" rel="noopener noreferrer" style="padding: 10px 0">{{t.visit2}}</a>
+<a class="dx-ul" href="/post/privacy-policy-timelapsez-and-lite/" style="padding: 10px 0">{{t.privacy}}</a>
+</div>
+</div>
+<a class="project-preview" href="https://apps.apple.com/app/id1440244990" target="_blank" rel="noopener noreferrer" aria-label="Screen TimeLapseZ">
+<div class="preview-label"><img class="project-icon" src="/images/apps/screen-timelapsez/icon-512.png" alt="" width="48" height="48"><span>Screen TimeLapseZ<small>{{t.short2}}</small></span><span aria-hidden="true">↗</span></div>
+<div class="preview-image ">
+<img src="/images/apps/screen-timelapsez/shot-1.jpg" alt="{{t.previewAlt2}}" loading="lazy" width="1440" height="1000">
+</div></a>
+</article>
+<!-- work 04 -->
+<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid {{works.line}}; border-bottom: 1px solid {{works.line}}">
+<div style="flex: 0 0 120px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
+<span style="padding: 4px 8px; margin-left: -8px; border-radius: 4px; background: {{w3.pillBg}}; color: {{w3.pillFg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; font-variant-numeric: tabular-nums">16:30</span>
+<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(67.5deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div></div>
+<sc-if value="{{w3.on}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em">{{t.inProgress}}</span></sc-if>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{works.muted}}">{{t.pMeta3}}</span>
+<h3 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05">InvestmentGenieTracker</h3>
+<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: {{works.muted}}">{{t.pDesc3}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag30}}</span>
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag31}}</span>
+<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag32}}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
+<a class="dx-ul" href="https://apps.apple.com/app/id6446110050" target="_blank" rel="noopener noreferrer" style="padding: 10px 0">{{t.visit3}}</a>
+<a class="dx-ul" href="/post/investmentgenietracker-privacy-and-policy/" style="padding: 10px 0">{{t.privacy}}</a>
+</div>
+</div>
+<a class="project-preview" href="https://apps.apple.com/app/id6446110050" target="_blank" rel="noopener noreferrer" aria-label="InvestmentGenieTracker">
+<div class="preview-label"><img class="project-icon" src="/images/apps/investment-genie/icon-512.jpg" alt="" width="48" height="48"><span>InvestmentGenieTracker<small>{{t.short3}}</small></span><span aria-hidden="true">↗</span></div>
+<div class="preview-image phone">
+<img src="/images/apps/investment-genie/shot-1.png" alt="{{t.previewAlt3}}" loading="lazy" width="1242" height="2688">
+</div></a>
+</article>
+
+</div>
+<aside class="home-reviews" id="reviews"><h3>{{t.reviews}}</h3><div><figure><blockquote>“{{t.review0}}”</blockquote><figcaption>★★★★☆ · App Store</figcaption></figure><figure><blockquote>“{{t.review1}}”</blockquote><figcaption>★★★★★ · App Store</figcaption></figure><figure><blockquote>“{{t.review2}}”</blockquote><figcaption>★★★★★ · App Store</figcaption></figure></div></aside>
+</div>
+</section>
+
+<!-- ================= 19:00 WRITING ================= -->
+<section id="writing" data-anchor="3" style="background: {{writing.bg}}; color: {{writing.fg}}">
+<div style="max-width: 1440px; margin: 0 auto; padding: clamp(96px, 11vw, 160px) clamp(20px, 4.5vw, 64px); display: flex; flex-direction: column; gap: 56px">
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid {{writing.line}}">
+<p aria-label="19:00" style="margin: 0; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(80px, 11vw, 168px); line-height: 0.86; letter-spacing: -0.03em">
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oR.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oR.b}}; transition-delay: .08s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-c" aria-hidden="true">:</span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oR.c}}; transition-delay: .16s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oR.d}}; transition-delay: .24s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+</p>
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px; padding-bottom: 6px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{writing.muted}}">{{t.dusk}}</span>
+<h2 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.1">{{sc.writingCn}} <em>{{sc.writingEn}}</em></h2>
+</div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid {{writing.line}}; background: conic-gradient({{writing.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{writing.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(105deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{writing.fg}}"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: {{writing.fg}}"></div></div>
+</header>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 40px">
+<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.8; color: {{writing.muted}}">{{t.notesIntro}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
+<a class="dx-ul" href="/archives/" style="padding: 10px 0">{{t.archive}}</a>
+<a class="dx-ul" href="/atom.xml" style="padding: 10px 0">{{t.rss}}</a>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-bottom: 1px solid {{writing.line}}">
+<a class="dx-post" href="/revealjs-ai-intro.html" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 48px; padding: 32px 0; border-top: 1px solid {{writing.line}}">
+<span style="flex: 0 0 120px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{writing.muted}}">{{t.postMeta0}}</span>
+<span style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<span class="dx-post-title" style="font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.2">{{t.postTitle0}}</span>
+<span style="font-size: 16px; line-height: 1.7; color: {{writing.muted}}">{{t.postDesc0}}</span>
+</span>
+<span style="flex: 0 0 230px; display: flex; align-items: center; gap: 14px">
+<span aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; background: conic-gradient({{writing.accent}} 0deg {{p0.deg}}deg, {{writing.line}} {{p0.deg}}deg 360deg)"><span class="dx-hand" style="position: absolute; left: 50%; top: 2px; bottom: 50%; width: 2px; margin-left: -1px; border-radius: 1px; background: {{writing.fg}}; transform-origin: 50% 100%; transform: rotate({{p0.deg}}deg)"></span></span>
+<span style="display: flex; flex-direction: column; gap: 3px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
+<span style="font-size: 14px">{{t.readMore}}</span>
+
+</span>
+<span aria-hidden="true" class="dx-arrow" style="margin-left: auto; font-size: 18px">↗</span>
+</span>
+</a>
+<a class="dx-post" href="/post/investmentgenietracker-privacy-and-policy/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 48px; padding: 32px 0; border-top: 1px solid {{writing.line}}">
+<span style="flex: 0 0 120px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{writing.muted}}">{{t.postMeta1}}</span>
+<span style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<span class="dx-post-title" style="font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.2">{{t.postTitle1}}</span>
+<span style="font-size: 16px; line-height: 1.7; color: {{writing.muted}}">{{t.postDesc1}}</span>
+</span>
+<span style="flex: 0 0 230px; display: flex; align-items: center; gap: 14px">
+<span aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; background: conic-gradient({{writing.accent}} 0deg {{p1.deg}}deg, {{writing.line}} {{p1.deg}}deg 360deg)"><span class="dx-hand" style="position: absolute; left: 50%; top: 2px; bottom: 50%; width: 2px; margin-left: -1px; border-radius: 1px; background: {{writing.fg}}; transform-origin: 50% 100%; transform: rotate({{p1.deg}}deg)"></span></span>
+<span style="display: flex; flex-direction: column; gap: 3px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
+<span style="font-size: 14px">{{t.readMore}}</span>
+
+</span>
+<span aria-hidden="true" class="dx-arrow" style="margin-left: auto; font-size: 18px">↗</span>
+</span>
+</a>
+<a class="dx-post" href="/post/privacy-policy-timelapsez-and-lite/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 48px; padding: 32px 0; border-top: 1px solid {{writing.line}}">
+<span style="flex: 0 0 120px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{writing.muted}}">{{t.postMeta2}}</span>
+<span style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<span class="dx-post-title" style="font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.2">{{t.postTitle2}}</span>
+<span style="font-size: 16px; line-height: 1.7; color: {{writing.muted}}">{{t.postDesc2}}</span>
+</span>
+<span style="flex: 0 0 230px; display: flex; align-items: center; gap: 14px">
+<span aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; background: conic-gradient({{writing.accent}} 0deg {{p2.deg}}deg, {{writing.line}} {{p2.deg}}deg 360deg)"><span class="dx-hand" style="position: absolute; left: 50%; top: 2px; bottom: 50%; width: 2px; margin-left: -1px; border-radius: 1px; background: {{writing.fg}}; transform-origin: 50% 100%; transform: rotate({{p2.deg}}deg)"></span></span>
+<span style="display: flex; flex-direction: column; gap: 3px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
+<span style="font-size: 14px">{{t.readMore}}</span>
+
+</span>
+<span aria-hidden="true" class="dx-arrow" style="margin-left: auto; font-size: 18px">↗</span>
+</span>
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- ================= 22:00 CONTACT ================= -->
+<section id="contact" data-anchor="4" style="background: {{contact.bg}}; color: {{contact.fg}}">
+<div style="max-width: 1440px; margin: 0 auto; padding: clamp(96px, 11vw, 160px) clamp(20px, 4.5vw, 64px) clamp(64px, 7vw, 112px); display: flex; flex-direction: column; gap: 56px">
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid {{contact.line}}">
+<p aria-label="22:00" style="margin: 0; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(80px, 11vw, 168px); line-height: 0.86; letter-spacing: -0.03em">
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oC.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oC.b}}; transition-delay: .08s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-c" aria-hidden="true">:</span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oC.c}}; transition-delay: .16s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oC.d}}; transition-delay: .24s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+</p>
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px; padding-bottom: 6px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{contact.muted}}">{{t.night}}</span>
+<h2 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.1">{{sc.contactCn}} <em>{{sc.contactEn}}</em></h2>
+</div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid {{contact.line}}; background: conic-gradient({{contact.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{contact.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(150deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{contact.fg}}"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: {{contact.fg}}"></div></div>
+</header>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(40px, 5.4vw, 80px); line-height: 1.15">{{t.late}}<br>{{t.talk}}</p>
+<a class="dx-ul" href="mailto:ansonsiva@gmail.com" style="align-self: flex-start; padding-bottom: 6px; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: clamp(28px, 3.6vw, 52px); line-height: 1.2; color: {{contact.accent}}">ansonsiva@gmail.com</a>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: {{contact.muted}}">{{t.contactIntro}}</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: {{contact.muted}}">
+<span>{{t.worldIntro}}</span>
+<span>{{t.timezones}}</span>
+</div>
+<div class="dx-marq-wrap" style="overflow: hidden; padding: 16px 0; border-top: 1px solid {{contact.line}}; border-bottom: 1px solid {{contact.line}}; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)">
+<div class="dx-marq">
+<sc-for list="{{world}}" as="c" hint-placeholder-count="16">
+<span aria-hidden="{{c.dup}}" style="display: flex; align-items: center; gap: 10px; padding: 0 28px; white-space: nowrap; font-size: 15px">
+<span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: {{c.sky}}; box-shadow: 0 0 0 1px {{contact.line}}"></span>
+<span>{{c.name}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-variant-numeric: tabular-nums">{{c.hm}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{contact.muted}}">{{c.ph}}</span>
+</span>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 16px">
+<a class="dx-card" href="https://github.com/ansonsiva" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid {{contact.line}}; border-radius: 10px">
+<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.code}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
+<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">GitHub</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">@ansonsiva</span></span>
+</a>
+<a class="dx-card" href="mailto:ansonsiva@gmail.com" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid {{contact.line}}; border-radius: 10px">
+<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.email}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
+<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">Email</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">ansonsiva@gmail.com</span></span>
+</a>
+
+
+<a class="dx-card" href="/atom.xml" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid {{contact.line}}; border-radius: 10px">
+<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.feed}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
+<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">RSS</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">dayxlab.com/atom.xml</span></span>
+</a>
+</div>
+</div>
+</section>
 
 </main>
+<!-- ================= 24:00 FOOTER ================= -->
+<footer id="end" data-anchor="5" style="background: {{foot.bg}}; color: {{foot.fg}}">
+<div style="max-width: 1440px; margin: 0 auto; padding: clamp(48px, 6vw, 96px) clamp(20px, 4.5vw, 64px) 40px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{foot.muted}}">{{t.countdown}}</span>
+<p aria-label="{{countdownLabel}}" style="margin: 0 0 0 -0.04em; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(72px, 15vw, 232px); line-height: 0.86; letter-spacing: -0.02em">
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel dx-reel-f" style="transform: {{of.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel dx-reel-f" style="transform: {{of.b}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-c" aria-hidden="true">:</span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel dx-reel-f" style="transform: {{of.c}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel dx-reel-f" style="transform: {{of.d}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-c" aria-hidden="true">:</span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel dx-reel-f" style="transform: {{of.e}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo" aria-hidden="true"><span class="dx-reel dx-reel-f" style="transform: {{of.f}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
+</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-top: 24px; border-top: 1px solid {{foot.line}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.04em; color: {{foot.muted}}">
+<span>{{t.stay}} <span style="color: {{foot.fg}}; font-variant-numeric: tabular-nums">{{stay}}</span></span>
+<span>{{t.renderNote}}</span>
+<span>© {{meta.year}} dayxlab.com · Jun Zheng</span>
+<a class="dx-ul" href="#top" style="padding: 12px 0; color: {{foot.fg}}">{{t.backNow}} ↑</a>
+</div>
+</div>
+</footer>
 
-<footer class="footer"><div class="shell inner"><p>© DayX · <a href="https://www.dayxlab.com">dayxlab.com</a></p><p><a href="/archives/">Archive</a> · <a href="/tags/">Tags</a> · <a href="/atom.xml">RSS</a></p></div></footer>
+<sc-if value="{{showCursor}}" hint-placeholder-val="{{false}}">
+<div class="dx-cursor" aria-hidden="true">
+<svg width="40" height="40" sc-camel-view-box="0 0 40 40" style="position: absolute; left: 0; top: 0; transform: rotate(-90deg)"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-opacity="0.3" stroke-width="1"></circle><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="106.81" stroke-dashoffset="{{curOff}}"></circle></svg>
+<span style="position: absolute; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px 0 0 -2px; border-radius: 50%; background: currentColor"></span>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;previewHour&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-1,&quot;min&quot;:-1,&quot;max&quot;:23.75,&quot;step&quot;:0.25,&quot;section&quot;:&quot;时间&quot;,&quot;tsType&quot;:&quot;number&quot;},&quot;scrollTimelapse&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;时间&quot;},&quot;bootAnimation&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;时间&quot;},&quot;customCursor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;特效&quot;},&quot;labSince&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;section&quot;:&quot;内容&quot;},&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:6800}}">
+class Component extends DCLogic {
+
+  renderVals() {
+    const v = this.baseVals();
+    const en = window.DAYX_LANG === 'en';
+    v.t = window.DAYX_COPY[window.DAYX_LANG];
+    v.currentTimeLabel = v.t.currentTime + ' ' + v.clock.hm + ':' + v.clock.ss;
+    v.countdownLabel = v.t.timeLeft + ' ' + v.leftText;
+    v.otherLang = en ? 'zh-CN' : 'en';
+    if (!this._switchLanguage) this._switchLanguage = () => {
+      window.DAYX_LANG = window.DAYX_LANG === 'zh' ? 'en' : 'zh';
+      try { localStorage.setItem('dayx-language', window.DAYX_LANG); } catch (e) {}
+      this._wk = null; this._lastGreet = null;
+      this.forceUpdate();
+      window.applyDayxLanguage();
+    };
+    v.onLanguage = this._switchLanguage;
+    const words = en ? ['About', 'Works', 'Notes', 'Contact'] : ['关于', '作品', '笔记', '联系'];
+    v.sc = { aboutCn: en ? '' : words[0], aboutEn: 'About', worksCn: en ? '' : words[1], worksEn: 'Works', writingCn: en ? '' : words[2], writingEn: 'Notes', contactCn: en ? '' : words[3], contactEn: 'Elsewhere' };
+    const d = new Date(this.state.now || Date.now());
+    v.meta.date = new Intl.DateTimeFormat(en ? 'en-US' : 'zh-CN', {weekday:'short', month:'short', day:'numeric'}).format(d);
+    if (en) {
+      v.hud.day = { '今天':'Today', '明天':'Tomorrow', '后天':'Day after' }[v.hud.day] || 'Today';
+      v.phase.cn = v.phase.en;
+      const greetings = { MIDNIGHT:'The lab lights are still on.', DAWN:'A new day. A fresh experiment.', MORNING:'Good morning. Time to make something.', AFTERNOON:'Good afternoon. Experiments in progress.', DUSK:'Good evening. Time for a little reading.', NIGHT:'Good evening. The lab is winding down.' };
+      v.greet = greetings[v.phase.en];
+      v.snd.label = v.snd.on ? 'SOUND ON' : 'SOUND OFF';
+      v.ctl.playLabel = this._anim && this._anim.kind === 'play' ? 'Playing…' : 'Play a 24-hour timelapse';
+      v.scrub.status = (this._anim && this._anim.kind === 'play' ? 'TIMELAPSE · ' : this._ov != null ? 'PREVIEW · ' : 'LIVE · ') + v.clock.hm;
+      v.ph.label = (this._ov != null ? 'PREVIEW · ' : 'YOU ARE HERE · ') + v.clock.hm;
+      v.hint.delta = v.hint.delta.replace(' 小时 ', 'h ').replace(' 分', 'm');
+    }
+    v.rows.forEach((r,i) => { r.cn = en ? '' : words[i]; r.aria = ['07:00','09:00','19:00','22:00'][i] + ' ' + words[i]; });
+    v.marks.forEach((r,i) => { r.label = words[i]; });
+    const cities = {'上海':'Shanghai','东京':'Tokyo','新加坡':'Singapore','柏林':'Berlin','伦敦':'London','纽约':'New York','旧金山':'San Francisco','悉尼':'Sydney'};
+    v.world = v.world.map(c => Object.assign({}, c, {name:en ? cities[c.name] : c.name, ph:en ? ({'深夜':'MIDNIGHT','黎明':'DAWN','上午':'MORNING','午后':'AFTERNOON','黄昏':'DUSK','夜晚':'NIGHT'}[c.ph] || c.ph) : c.ph}));
+    v.hud2 = [{k:'DAYX',v:'PERSONAL LABORATORY'}, {k:'LOCAL',v:v.meta.zone}, {k:'WORKS',v:'02 APPS + 02 WEBSITES'}, {k:'TIME',v:v.meta.utc}];
+    return v;
+  }
+
+  // =============== lifecycle ===============
+  componentDidMount() {
+    const t = Date.now();
+    this._mountAt = t;
+    this._rev = this._rev || {};
+    this._dead = false;
+    this._reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    this._onScroll = () => {
+      if (this._sraf) return;
+      this._sraf = requestAnimationFrame(() => { this._sraf = 0; this.measure(); });
+    };
+    this._onMove = (e) => {
+      if (!this._mIn && this._cur) { this._cur.x = e.clientX; this._cur.y = e.clientY; }
+      this._mx = e.clientX; this._my = e.clientY; this._mIn = true;
+      const tg = e.target;
+      this._hov = !!(tg && tg.closest && tg.closest('a,button,input,label'));
+      const S = this._sky;
+      if (S && S.cv) {
+        const r = S.cv.getBoundingClientRect();
+        if (r.width && r.height) this._mouseN = [(e.clientX - r.left) / r.width, 1 - (e.clientY - r.top) / r.height];
+      }
+    };
+    this._onLeave = () => { this._mIn = false; this._mx = -9999; this._my = -9999; };
+    window.addEventListener('scroll', this._onScroll, true);
+    window.addEventListener('resize', this._onScroll);
+    window.addEventListener('mousemove', this._onMove, { passive: true });
+    document.addEventListener('mouseleave', this._onLeave);
+    this._tick = setInterval(() => { if (!this._dead) this.setState({ now: Date.now() }); }, 1000);
+    if ((this.props.bootAnimation ?? true) && !this._reduce && this.preview() < 0) this.tween(0, this.target(t), 2600, 'out', 'boot');
+    this._frameFn = (ts) => this.frame(ts);
+    this._loopId = requestAnimationFrame(this._frameFn);
+    let tries = 0;
+    const boot = () => {
+      if (this._dead) return;
+      if (!this.initAll() && tries++ < 40) this._bootT = setTimeout(boot, 100);
+    };
+    boot();
+    this._m = [setTimeout(() => this.measure(), 300), setTimeout(() => this.measure(), 1500)];
+    this.setState({ now: t });
+  }
+
+  componentWillUnmount() {
+    this._dead = true;
+    clearInterval(this._tick);
+    clearTimeout(this._bootT);
+    (this._m || []).forEach((id) => clearTimeout(id));
+    cancelAnimationFrame(this._loopId);
+    cancelAnimationFrame(this._sraf);
+    window.removeEventListener('scroll', this._onScroll, true);
+    window.removeEventListener('resize', this._onScroll);
+    window.removeEventListener('mousemove', this._onMove);
+    document.removeEventListener('mouseleave', this._onLeave);
+  }
+
+  initAll() {
+    const root = this._root || document.querySelector('.dx');
+    if (!root) return false;
+    this._root = root;
+    if (!this._sky && !this._skyFail) {
+      try { this.initSky(root.querySelector('.dx-sky')); } catch (e) { this._sky = null; this._skyFail = true; }
+    }
+    this.measure();
+    this.forceUpdate();
+    return true;
+  }
+
+  // =============== the render loop (sky, cursor, pumping) ===============
+  frame(ts) {
+    if (this._dead) return;
+    this._loopId = requestAnimationFrame(this._frameFn);
+    if (document.hidden) return;
+    if (!this._fpsT) { this._fpsT = ts; this._fc = 0; }
+    this._fc++;
+    if (ts - this._fpsT >= 1000) {
+      this._fps = Math.round(this._fc * 1000 / (ts - this._fpsT));
+      this._fc = 0; this._fpsT = ts;
+      const S = this._sky;
+      if (S && this._fps < 42 && S.scale > 0.4 && Date.now() - this._mountAt > 4500) S.scale *= 0.8;
+    }
+    if (this._heroVis !== false) {
+      if (this._sky) { try { this.drawSky(ts); } catch (e) { this._sky = null; this._skyFail = true; } }
+    }
+    if (!this._curEl && this._root) this._curEl = this._root.querySelector('.dx-cursor');
+    if (this._curEl) { try { this.drawCursor(); } catch (e) { this._curEl = null; } }
+    try { this._flBusy = this.stepFlaps(); } catch (e) { this._flBusy = false; }
+    const a = this._anim;
+    if (a && performance.now() - a.start >= a.dur) { this._anim = null; this.forceUpdate(); }
+    else if (this.needsPump()) this.forceUpdate();
+  }
+  needsPump() {
+    if (this._anim) return true;
+    if (Date.now() - (this._mountAt || 0) < 3400) return true;
+    if (this._flBusy) return true;
+    const n = performance.now();
+    for (const k in this._rev) { if (n - this._rev[k] < 1600) return true; }
+    return false;
+  }
+
+  // =============== WebGL sky ===============
+  vsSrc() { return 'attribute vec2 aPos;\nvoid main() { gl_Position = vec4(aPos, 0.0, 1.0); }'; }
+  fsSrc() {
+    return `#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+uniform vec2 uRes;
+uniform float uTime;
+uniform vec3 uBg;
+uniform vec3 uZen;
+uniform vec3 uGlow;
+uniform float uGlowK;
+uniform vec2 uSun;
+uniform float uSunA;
+uniform vec2 uMoon;
+uniform float uMoonA;
+uniform float uStars;
+uniform float uDay;
+uniform vec2 uMouse;
+uniform float uHz;
+float hash(vec2 p) {
+  p = fract(p * vec2(123.34, 456.21));
+  p += dot(p, p + 45.32);
+  return fract(p.x * p.y);
+}
+float noise(vec2 p) {
+  vec2 i = floor(p);
+  vec2 f = fract(p);
+  vec2 u = f * f * (3.0 - 2.0 * f);
+  float a = hash(i);
+  float b = hash(i + vec2(1.0, 0.0));
+  float c = hash(i + vec2(0.0, 1.0));
+  float d = hash(i + vec2(1.0, 1.0));
+  return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
+}
+float fbm(vec2 p) {
+  float v = 0.0;
+  float a = 0.5;
+  for (int i = 0; i < 5; i++) {
+    v += a * noise(p);
+    p = p * 2.03 + vec2(1.7, 9.2);
+    a *= 0.5;
+  }
+  return v;
+}
+void main() {
+  vec2 uv = gl_FragCoord.xy / uRes;
+  float asp = uRes.x / uRes.y;
+  vec2 par = (uMouse - 0.5) * vec2(0.03, 0.02);
+  float sy = clamp((uv.y - uHz) / max(1.0 - uHz, 0.001), 0.0, 1.0);
+  float above = step(uHz, uv.y);
+  vec2 p = vec2(uv.x * asp, uv.y);
+  vec2 sp = vec2(uSun.x * asp, uSun.y);
+  vec2 mp = vec2(uMoon.x * asp, uMoon.y);
+  vec3 sunCol = mix(uGlow * vec3(1.0, 0.82, 0.7) + 0.18, vec3(1.0, 0.98, 0.93), uDay);
+
+  vec3 col = mix(uBg, uZen, smoothstep(0.0, 1.0, pow(sy, 0.85)));
+  float side = exp(-abs(p.x - sp.x) * 1.1);
+  float hz = uv.y >= uHz ? exp(-sy * 4.0) : exp(-(uHz - uv.y) * 12.0);
+  col = mix(col, uGlow, clamp(hz * uGlowK * (0.45 + 0.55 * side), 0.0, 0.92));
+
+  if (uStars > 0.001) {
+    vec2 g = (p + par * 0.6) * 150.0;
+    vec2 id = floor(g);
+    vec2 f = fract(g) - 0.5;
+    float h = hash(id);
+    vec2 jit = vec2(hash(id + 3.1), hash(id + 7.7)) - 0.5;
+    float dd = length(f - jit * 0.6);
+    float tw = 0.5 + 0.5 * sin(uTime * (0.8 + h * 3.0) + h * 60.0);
+    float st = step(0.986, h) * (1.0 - smoothstep(0.0, 0.09, dd)) * (0.35 + 0.65 * tw);
+    col += vec3(1.0, 0.96, 0.9) * st * uStars * smoothstep(0.1, 0.45, sy) * above;
+  }
+
+  float t = uTime * 0.015;
+  vec2 cp = vec2(p.x * 1.3 + t + par.x * 2.0, sy * 3.4 - t * 0.2);
+  float c = fbm(cp + fbm(cp * 0.5 + t * 0.3));
+  float band = smoothstep(0.16, 0.42, sy) * (1.0 - smoothstep(0.6, 0.98, sy));
+  float cov = smoothstep(0.55, 0.9, c) * band * above;
+  vec3 cloud = mix(mix(uBg, uZen, 0.3), uGlow, 0.5);
+  cloud = mix(cloud, vec3(1.0), 0.35 * uDay);
+  col = mix(col, cloud, cov * 0.45);
+
+  if (uSunA > 0.001) {
+    float d = length(p - sp);
+    col += sunCol * exp(-d * d * 22.0) * 0.38 * uSunA;
+    col += sunCol * exp(-d * 6.0) * 0.10 * uSunA;
+    float r = mix(0.06, 0.042, uDay);
+    col = mix(col, sunCol, (1.0 - smoothstep(r, r + 0.004, d)) * uSunA * above);
+  }
+
+  if (uMoonA > 0.001) {
+    float d = length(p - mp);
+    vec3 mc = vec3(0.97, 0.95, 0.89);
+    col += mc * exp(-d * d * 70.0) * 0.10 * uMoonA;
+    if (d < 0.05) {
+      float disc = 1.0 - smoothstep(0.030, 0.034, d);
+      float cut = 1.0 - smoothstep(0.027, 0.031, length(p - mp - vec2(0.014, 0.007)));
+      float crater = fbm((p - mp) * 60.0) * 0.12;
+      col = mix(col, mc - crater, disc * (1.0 - cut) * uMoonA * above);
+    }
+  }
+
+  if (uHz > 0.001 && uv.y < uHz) {
+    float dy = uHz - uv.y;
+    float rip = noise(vec2(p.x * 38.0, dy * 240.0 - uTime * 1.6));
+    float rs = exp(-abs(p.x - sp.x) * 16.0 / (0.3 + dy * 6.0)) * exp(-dy * 5.0) * uSunA;
+    float rm = exp(-abs(p.x - mp.x) * 22.0 / (0.3 + dy * 6.0)) * exp(-dy * 5.0) * uMoonA;
+    col += sunCol * rs * smoothstep(0.35, 0.8, rip) * 0.9;
+    col += vec3(0.97, 0.95, 0.89) * rm * smoothstep(0.4, 0.85, rip) * 0.6;
+  }
+
+  col *= 1.0 - 0.16 * pow(length(uv - vec2(0.5, 0.55)), 2.0);
+  col += (hash(gl_FragCoord.xy + fract(uTime) * 91.0) - 0.5) * 0.03;
+  gl_FragColor = vec4(col, 1.0);
+}`;
+  }
+  initSky(cv) {
+    if (!cv) { this._skyFail = true; return; }
+    const opts = { antialias: false, alpha: false, depth: false, stencil: false, preserveDrawingBuffer: true };
+    const gl = cv.getContext('webgl', opts) || cv.getContext('experimental-webgl', opts);
+    if (!gl) { this._skyFail = true; return; }
+    const comp = (type, src) => {
+      const sh = gl.createShader(type);
+      gl.shaderSource(sh, src);
+      gl.compileShader(sh);
+      if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(sh) || 'shader');
+      return sh;
+    };
+    const prog = gl.createProgram();
+    gl.attachShader(prog, comp(gl.VERTEX_SHADER, this.vsSrc()));
+    gl.attachShader(prog, comp(gl.FRAGMENT_SHADER, this.fsSrc()));
+    gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error('link');
+    gl.useProgram(prog);
+    const buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(prog, 'aPos');
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    const U = {};
+    ['uRes', 'uTime', 'uBg', 'uZen', 'uGlow', 'uGlowK', 'uSun', 'uSunA', 'uMoon', 'uMoonA', 'uStars', 'uDay', 'uMouse', 'uHz'].forEach((n) => { U[n] = gl.getUniformLocation(prog, n); });
+    const dpr = window.devicePixelRatio || 1;
+    this._sky = { cv: cv, gl: gl, U: U, t0: performance.now(), scale: dpr >= 2 ? 0.9 : 0.75, mx: 0.5, my: 0.5, px: 0 };
+  }
+  drawSky(ts) {
+    const S = this._sky, u = this._skyU;
+    if (!S || !u) return;
+    const gl = S.gl, cv = S.cv;
+    const w = cv.clientWidth, h = cv.clientHeight;
+    if (!w || !h) return;
+    const W = Math.max(2, Math.round(w * S.scale)), H = Math.max(2, Math.round(h * S.scale));
+    if (cv.width !== W || cv.height !== H) { cv.width = W; cv.height = H; }
+    gl.viewport(0, 0, W, H);
+    const m = this._mouseN || [0.5, 0.5];
+    S.mx += (m[0] - S.mx) * 0.04;
+    S.my += (m[1] - S.my) * 0.04;
+    const U = S.U;
+    gl.uniform2f(U.uRes, W, H);
+    gl.uniform1f(U.uTime, (ts - S.t0) / 1000);
+    gl.uniform3f(U.uBg, u.bg[0], u.bg[1], u.bg[2]);
+    gl.uniform3f(U.uZen, u.zen[0], u.zen[1], u.zen[2]);
+    gl.uniform3f(U.uGlow, u.glow[0], u.glow[1], u.glow[2]);
+    gl.uniform1f(U.uGlowK, u.glowK);
+    gl.uniform2f(U.uSun, u.sun[0], u.sun[1]);
+    gl.uniform1f(U.uSunA, u.sunA);
+    gl.uniform2f(U.uMoon, u.moon[0], u.moon[1]);
+    gl.uniform1f(U.uMoonA, u.moonA);
+    gl.uniform1f(U.uStars, u.stars);
+    gl.uniform1f(U.uDay, u.day);
+    gl.uniform2f(U.uMouse, S.mx, S.my);
+    gl.uniform1f(U.uHz, u.hz);
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+    S.px = W * H;
+  }
+
+  // =============== split-flap departure board ===============
+  // Like a real Solari board, a card never jumps: it steps through its character drum one
+  // flap at a time until it reaches the target. Each step toggles the card between two
+  // identical animation names (ka / kb) so the CSS flip restarts.
+  flapSets() {
+    if (!this._sets) this._sets = { D: '0123456789', A: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:-.' };
+    return this._sets;
+  }
+  flapT(id, ch, set, o) {
+    const F = this._fl || (this._fl = {});
+    const S = this.flapSets()[set];
+    const now = performance.now();
+    let f = F[id];
+    if (!f) {
+      const start = set === 'D' ? '0' : ' ';
+      f = F[id] = { cur: start, prev: start, n: 0, tgt: ch, next: now + (o.delay || 0), extra: 0, set: set, step: o.step || 40, big: !!o.big };
+    } else if (f.tgt !== ch) {
+      f.tgt = ch;
+      if (f.next < now) f.next = now;
+    }
+    if (S.indexOf(ch) < 0 || this._reduce) { f.cur = ch; f.prev = ch; f.extra = 0; }
+    return f;
+  }
+  flapV(f, cls) {
+    return { cur: f.cur, prev: f.prev, cls: cls + ' ' + (f.n === 0 ? 'k0' : f.n % 2 ? 'ka' : 'kb') };
+  }
+  stepFlaps() {
+    const F = this._fl;
+    if (!F) return false;
+    const S = this.flapSets(), now = performance.now();
+    let busy = false, moved = 0, big = false;
+    for (const id in F) {
+      const f = F[id];
+      if (f.cur === f.tgt && f.extra <= 0) continue;
+      busy = true;
+      if (now < f.next) continue;
+      const drum = S[f.set];
+      const i = drum.indexOf(f.cur);
+      f.prev = f.cur;
+      f.cur = drum[(i + 1) % drum.length];
+      f.n++;
+      if (f.extra > 0) f.extra--;
+      f.next = now + f.step;
+      moved++;
+      if (f.big) big = true;
+    }
+    if (moved) this.click(big, moved);
+    return busy;
+  }
+  shuffle(prefix) {
+    const F = this._fl;
+    if (!F || this._reduce) return;
+    const S = this.flapSets(), now = performance.now();
+    let k = 0;
+    for (const id in F) {
+      if (prefix && id.indexOf(prefix) !== 0) continue;
+      const f = F[id];
+      f.extra = S[f.set].length;
+      f.next = Math.max(f.next, now + (k++ % 26) * 16);
+    }
+  }
+  // mechanical clatter, synthesised (off until the visitor turns it on)
+  ensureAudio() {
+    if (this._ac) return this._ac;
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    const ac = new AC();
+    const len = Math.floor(ac.sampleRate * 0.03);
+    const buf = ac.createBuffer(1, len, ac.sampleRate);
+    const d = buf.getChannelData(0);
+    for (let i = 0; i < len; i++) { const t = i / len; d[i] = (Math.random() * 2 - 1) * Math.pow(1 - t, 6); }
+    this._ab = buf;
+    this._ac = ac;
+    return ac;
+  }
+  click(big, moved) {
+    const ac = this._ac;
+    if (!ac || !this._snd || !this._ab) return;
+    const t = performance.now();
+    if (t - (this._lastClk || 0) < 22) return;
+    this._lastClk = t;
+    try {
+      const src = ac.createBufferSource();
+      src.buffer = this._ab;
+      src.playbackRate.value = (big ? 0.7 : 1.1) + Math.random() * 0.3;
+      const bp = ac.createBiquadFilter();
+      bp.type = 'bandpass';
+      bp.frequency.value = big ? 1700 : 2600;
+      bp.Q.value = 1.1;
+      const g = ac.createGain();
+      g.gain.value = Math.min(0.32, (big ? 0.16 : 0.07) * Math.sqrt(moved || 1));
+      src.connect(bp); bp.connect(g); g.connect(ac.destination);
+      src.start();
+    } catch (e) {}
+  }
+
+  // =============== cursor ===============
+  drawCursor() {
+    const el = this._curEl;
+    const c = this._cur || (this._cur = { x: -100, y: -100, s: 1 });
+    if (this._mx == null || !this._mIn) { el.style.opacity = '0'; return; }
+    c.x += (this._mx - c.x) * 0.22;
+    c.y += (this._my - c.y) * 0.22;
+    c.s += ((this._hov ? 1.9 : 1) - c.s) * 0.18;
+    el.style.transform = 'translate3d(' + c.x.toFixed(1) + 'px,' + c.y.toFixed(1) + 'px,0) scale(' + c.s.toFixed(3) + ')';
+    el.style.opacity = '1';
+  }
+
+  // =============== scroll = time ===============
+  measure() {
+    if (this._dead) return;
+    const root = this._root || document.querySelector('.dx');
+    if (!root) return;
+    let sc = root.parentElement;
+    while (sc && sc !== document.body && sc !== document.documentElement) {
+      const oy = getComputedStyle(sc).overflowY;
+      if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight + 4) break;
+      sc = sc.parentElement;
+    }
+    const isDoc = !sc || sc === document.body || sc === document.documentElement;
+    const el = isDoc ? (document.scrollingElement || document.documentElement) : sc;
+    const vh = isDoc ? window.innerHeight : el.clientHeight;
+    const top0 = isDoc ? 0 : el.getBoundingClientRect().top;
+    const nodes = root.querySelectorAll('[data-anchor]');
+    const tops = [];
+    for (let i = 0; i < nodes.length; i++) tops.push(nodes[i].getBoundingClientRect().top - top0);
+    const live = el.scrollHeight > vh * 1.6;
+    const keys = ['hero', 'about', 'works', 'writing', 'contact', 'foot'];
+    const nowP = performance.now();
+    if (!this._rev) this._rev = {};
+    for (let i = 0; i < tops.length && i < keys.length; i++) {
+      if (!this._rev[keys[i]] && (!live || tops[i] < vh * 0.86)) this._rev[keys[i]] = nowP + (live ? 0 : i * 140);
+    }
+    this._heroVis = tops.length > 1 ? tops[1] > 0 : true;
+    const max = el.scrollHeight - vh;
+    this.setState({ live: live, tops: tops, probe: vh * 0.42, st: el.scrollTop, prog: max > 0 ? Math.min(1, Math.max(0, el.scrollTop / max)) : 0 });
+  }
+
+  // =============== time ===============
+  preview() {
+    const p = Number(this.props.previewHour ?? -1);
+    return isFinite(p) && p >= 0 ? Math.min(p, 23.99) : -1;
+  }
+  realH(t) { const d = new Date(t); return d.getHours() + d.getMinutes() / 60 + d.getSeconds() / 3600; }
+  target(t) {
+    const p = this.preview();
+    if (p >= 0) return p;
+    if (this._ov != null) return (this._ov + (t - this._ovAt) / 3600000) % 24;
+    return this.realH(t);
+  }
+  ease(k, p) {
+    if (k === 'lin') return p;
+    if (k === 'cine') return 0.5 - 0.5 * Math.cos(Math.PI * p);
+    return 1 - Math.pow(1 - p, 4);
+  }
+  heroH(t) {
+    const a = this._anim;
+    if (a) {
+      const p = Math.min(1, (performance.now() - a.start) / a.dur);
+      const v = a.from + (a.to - a.from) * this.ease(a.ease, p);
+      return ((v % 24) + 24) % 24;
+    }
+    return this.target(t);
+  }
+  tween(from, to, dur, ease, kind) {
+    from = ((from % 24) + 24) % 24;
+    if (kind === 'back') { const diff = ((((to - from) % 24) + 36) % 24) - 12; to = from + diff; }
+    else { while (to <= from) to += 24; }
+    this._anim = { from: from, to: to, start: performance.now(), dur: dur, ease: ease, kind: kind };
+  }
+  makeHandlers() {
+    this._h = {
+      play: () => {
+        if (this._reduce) return;
+        const t = Date.now();
+        const from = this.heroH(t);
+        this._ov = null;
+        this.tween(from, this.target(t) + 24, 16000, 'cine', 'play');
+        this.forceUpdate();
+      },
+      back: () => {
+        const t = Date.now();
+        const from = this.heroH(t);
+        this._ov = null;
+        if (this._reduce) { this._anim = null; this.forceUpdate(); return; }
+        this.tween(from, this.target(t), 1400, 'out', 'back');
+        this.forceUpdate();
+      },
+      scrub: (e) => {
+        const v = Number(e && e.target ? e.target.value : NaN);
+        if (!isFinite(v)) return;
+        this._anim = null;
+        this._ov = v / 60;
+        this._ovAt = Date.now();
+        this.forceUpdate();
+      },
+      tiltMove: (e) => {
+        if (this._reduce) return;
+        const el = e.currentTarget;
+        const tl = el && el.querySelector('.dx-tilt');
+        if (!tl) return;
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        tl.style.transform = 'perspective(900px) rotateX(' + ((0.5 - y) * 10).toFixed(2) + 'deg) rotateY(' + ((x - 0.5) * 14).toFixed(2) + 'deg) scale(1.02)';
+        tl.style.setProperty('--mx', (x * 100).toFixed(1) + '%');
+        tl.style.setProperty('--my', (y * 100).toFixed(1) + '%');
+      },
+      tiltLeave: (e) => {
+        const tl = e.currentTarget && e.currentTarget.querySelector('.dx-tilt');
+        if (tl) tl.style.transform = '';
+      },
+      shuffle: () => {
+        const t = performance.now();
+        if (t - (this._shufT || 0) < 1200) return;
+        this._shufT = t;
+        this.shuffle('');
+      },
+      sound: () => {
+        this._snd = !this._snd;
+        if (this._snd) {
+          const ac = this.ensureAudio();
+          if (ac && ac.state === 'suspended' && ac.resume) ac.resume();
+          this.shuffle('c');
+        }
+        this.forceUpdate();
+      },
+      rowSpin: [0, 1, 2, 3].map((i) => () => {
+        const t = performance.now();
+        if (!this._rst) this._rst = [];
+        if (t - (this._rst[i] || 0) < 1600) return;
+        this._rst[i] = t;
+        this.shuffle('r' + i + '_');
+      })
+    };
+  }
+
+  // =============== color of the hour ===============
+  rgb(x) { return [parseInt(x.slice(1, 3), 16), parseInt(x.slice(3, 5), 16), parseInt(x.slice(5, 7), 16)]; }
+  hex(c) { return '#' + c.map((v) => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join(''); }
+  lum(c) {
+    const l = c.map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+    return 0.2126 * l[0] + 0.7152 * l[1] + 0.0722 * l[2];
+  }
+  table(name) {
+    if (!this._T) {
+      const raw = {
+        B: [[0, '#0B0D14'], [4.25, '#10162A'], [5.5, '#2E2A47'], [6.5, '#EBCFC2'], [8.5, '#F2EFE7'], [13, '#F7F6F2'], [16.5, '#F0E5D3'], [17.75, '#EDB98A'], [18.75, '#5A2A2C'], [20, '#1C1A2C'], [22, '#0E1018'], [24, '#0B0D14']],
+        A: [[0, '#F2B85B'], [4.25, '#9FB4FF'], [5.5, '#FF9C86'], [6.5, '#C2402A'], [8.5, '#E2471B'], [13, '#E2471B'], [16.5, '#D2470F'], [17.75, '#9E2B14'], [18.75, '#FFB067'], [20, '#FFB067'], [22, '#F2B85B'], [24, '#F2B85B']],
+        Z: [[0, '#04050A'], [4.25, '#0A1024'], [5.5, '#2A2850'], [6.5, '#B9B6D8'], [8.5, '#A9C8E6'], [13, '#9CC2E8'], [16.5, '#AFC6DE'], [17.75, '#7C86B8'], [18.75, '#2C2650'], [20, '#121327'], [22, '#070910'], [24, '#04050A']],
+        G: [[0, '#1B2A55'], [4.25, '#2B3C78'], [5.5, '#FF8C6B'], [6.5, '#FFB38F'], [8.5, '#FFF1D6'], [13, '#FFF6E2'], [16.5, '#FFD9A0'], [17.75, '#FF8A3D'], [18.75, '#E2533A'], [20, '#3C2A6B'], [22, '#1B2A55'], [24, '#1B2A55']]
+      };
+      this._T = {};
+      for (const k in raw) this._T[k] = raw[k].map((r) => [r[0], this.rgb(r[1])]);
+    }
+    return this._T[name];
+  }
+  lerpK(name, h) {
+    const K = this.table(name);
+    h = ((h % 24) + 24) % 24;
+    let i = 0;
+    while (i < K.length - 2 && K[i + 1][0] <= h) i++;
+    const a = K[i], b = K[i + 1];
+    let t = (h - a[0]) / (b[0] - a[0]);
+    t = t * t * (3 - 2 * t);
+    return [0, 1, 2].map((j) => Math.round(a[1][j] + (b[1][j] - a[1][j]) * t));
+  }
+  tok(h) {
+    const bg = this.lerpK('B', h), ac = this.lerpK('A', h);
+    const dark = this.lum(bg) < 0.2;
+    const f = dark ? [244, 240, 232] : [23, 19, 14];
+    const ra = (c, al) => 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + al + ')';
+    return {
+      bg: this.hex(bg), fg: this.hex(f), muted: ra(f, dark ? 0.66 : 0.7), line: ra(f, 0.16), faint: ra(f, 0.04),
+      accent: this.hex(ac), onAccent: this.lum(ac) > 0.179 ? '#17130E' : '#FFFFFF',
+      bandDay: ra(ac, 0.34), bandNight: ra(f, 0.1), dark: dark,
+      hatch: 'repeating-linear-gradient(135deg, ' + ra(f, 0.1) + ' 0px, ' + ra(f, 0.1) + ' 1px, transparent 1px, transparent 12px)'
+    };
+  }
+  heroTok(h) {
+    const t = this.tok(h);
+    const bg = this.rgb(t.bg), zen = this.lerpK('Z', h);
+    const mid = [0, 1, 2].map((j) => Math.round(bg[j] * 0.4 + zen[j] * 0.6));
+    const dark = this.lum(mid) < 0.179;
+    const f = dark ? [244, 240, 232] : [23, 19, 14];
+    const ra = (c, a) => 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a + ')';
+    return Object.assign({}, t, {
+      fg: this.hex(f), muted: ra(f, dark ? 0.72 : 0.74), line: ra(f, 0.2), line2: ra(f, 0.5),
+      glass: ra(mid, 0.42), inv: dark ? '#17130E' : '#F4F0E8', dark: dark,
+      bgRGB: bg, zen: zen, zenHex: this.hex(zen), midHex: this.hex(mid)
+    });
+  }
+  skyU(h, T) {
+    const e = Math.sin((h - 6) / 12 * Math.PI);
+    const hm = ((((h - 18) % 24) + 24) % 24) / 12;
+    const me = hm < 1 ? Math.sin(hm * Math.PI) : -Math.sin((hm - 1) * Math.PI);
+    const cl = (v) => Math.max(0, Math.min(1, v));
+    const n = (c) => [c[0] / 255, c[1] / 255, c[2] / 255];
+    const tt = Math.max(-0.1, Math.min(1.1, (h - 6) / 12));
+    const sunX = 0.55 + 0.39 * tt, sunY = 0.16 + e * 0.6;
+    const moonX = 0.55 + 0.39 * Math.min(1.1, hm), moonY = 0.16 + me * 0.56;
+    return {
+      e: e, me: me, hm: hm, sunX: sunX, sunY: sunY, moonX: moonX, moonY: moonY,
+      u: {
+        bg: n(T.bgRGB), zen: n(T.zen), glow: n(this.lerpK('G', h)), glowK: 0.3 + 0.7 * Math.exp(-e * e * 14),
+        sun: [sunX, sunY], sunA: cl((e + 0.04) / 0.1), moon: [moonX, moonY], moonA: cl(me / 0.12),
+        stars: T.dark ? cl((0.12 - e) / 0.32) : 0, day: cl(e * 2.5), hz: 0
+      }
+    };
+  }
+  phase(h) {
+    if (h < 5) return { cn: '深夜', en: 'MIDNIGHT', greet: '夜深了，实验室的灯还亮着。' };
+    if (h < 8) return { cn: '黎明', en: 'DAWN', greet: '天刚亮，实验室刚刚开门。' };
+    if (h < 12) return { cn: '上午', en: 'MORNING', greet: '早上好，正是做实验的时候。' };
+    if (h < 17) return { cn: '午后', en: 'AFTERNOON', greet: '午后好，实验进行到一半。' };
+    if (h < 19.5) return { cn: '黄昏', en: 'DUSK', greet: '傍晚好，适合读一点东西。' };
+    if (h < 23) return { cn: '夜晚', en: 'NIGHT', greet: '晚上好，今天的实验快收尾了。' };
+    return { cn: '深夜', en: 'MIDNIGHT', greet: '夜深了，实验室的灯还亮着。' };
+  }
+  pad(n) { return String(n).padStart(2, '0'); }
+  fmt(h) { const m = Math.floor((((h % 24) + 24) % 24) * 60 + 1e-6); return this.pad(Math.floor(m / 60) % 24) + ':' + this.pad(m % 60); }
+  hms(sec) { sec = Math.max(0, Math.floor(sec)); return this.pad(Math.floor(sec / 3600)) + ':' + this.pad(Math.floor(sec / 60) % 60) + ':' + this.pad(sec % 60); }
+
+  // =============== text effects ===============
+  scr(key, text, dur, fallbackOn) {
+    const GL = '0123456789:/<>_#=+*';
+    const t0 = this._rev[key];
+    if (!t0) {
+      if (fallbackOn) return text;
+      let o = '';
+      for (let i = 0; i < text.length; i++) o += text[i] === ' ' ? ' ' : GL[(i * 7 + text.charCodeAt(i)) % GL.length];
+      return o;
+    }
+    const p = (performance.now() - t0) / (dur || 1000);
+    if (p >= 1) return text;
+    let o = '';
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+      if (ch === ' ') { o += ' '; continue; }
+      const th = 0.15 + (i / Math.max(1, text.length)) * 0.7;
+      o += p >= th ? ch : GL[(Math.random() * GL.length) | 0];
+    }
+    return o;
+  }
+  odo(key, digits, fallbackOn) {
+    const on = !!this._rev[key] || fallbackOn;
+    const f = (ch) => 'translateY(-' + ((on ? 20 + Number(ch) : 0) * 0.86).toFixed(2) + 'em)';
+    return { a: f(digits[0]), b: f(digits[1]), c: f(digits[2]), d: f(digits[3]) };
+  }
+  world() {
+    const k = Math.floor(Date.now() / 60000);
+    if (this._wk === k && this._wl) return this._wl;
+    const cities = [['上海', 'Asia/Shanghai'], ['东京', 'Asia/Tokyo'], ['新加坡', 'Asia/Singapore'], ['柏林', 'Europe/Berlin'], ['伦敦', 'Europe/London'], ['纽约', 'America/New_York'], ['旧金山', 'America/Los_Angeles'], ['悉尼', 'Australia/Sydney']];
+    if (!this._wf) this._wf = {};
+    const out = [];
+    const d = new Date();
+    for (let i = 0; i < cities.length; i++) {
+      const c = cities[i];
+      let hh = 0, mm = 0;
+      try {
+        const fm = this._wf[c[1]] || (this._wf[c[1]] = new Intl.DateTimeFormat('en-GB', { timeZone: c[1], hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }));
+        const parts = fm.formatToParts(d);
+        for (let j = 0; j < parts.length; j++) {
+          if (parts[j].type === 'hour') hh = Number(parts[j].value) % 24;
+          if (parts[j].type === 'minute') mm = Number(parts[j].value);
+        }
+      } catch (e) { hh = d.getHours(); mm = d.getMinutes(); }
+      const h = hh + mm / 60;
+      out.push({ name: c[0], hm: this.pad(hh) + ':' + this.pad(mm), ph: this.phase(h).cn, sky: this.tok(h).bg });
+    }
+    this._wl = out.map((o) => Object.assign({ dup: false }, o)).concat(out.map((o) => Object.assign({ dup: true }, o)));
+    this._wk = k;
+    return this._wl;
+  }
+
+  // =============== render ===============
+  baseVals() {
+    const s = this.state || {};
+    if (!this._rev) this._rev = {};
+    if (!this._h || !this._h.rowSpin) this.makeHandlers();
+    if (!this._setRoot) this._setRoot = (el) => { if (el) this._root = el; };
+    if (!this._reel10) { this._reel10 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; this._reel30 = []; for (let i = 0; i < 30; i++) this._reel30.push(i % 10); }
+    const now = s.now || Date.now();
+    const mountAt = this._mountAt || now;
+    const d = new Date(now);
+    const H = this.heroH(now);
+    const live = !!s.live && (this.props.scrollTimelapse ?? true);
+    const fallbackOn = !live && Date.now() - mountAt > 5000;
+
+    // ---- scroll = time: now -> 07 -> 09 -> 19 -> 22 -> 24, always forward ----
+    const fixed = [7, 9, 19, 22, 24];
+    const hrs = [H];
+    let prev = H;
+    for (let i = 0; i < fixed.length; i++) { let v = fixed[i]; while (v <= prev) v += 24; hrs.push(v); prev = v; }
+    let lab = H;
+    const tops = s.tops || [];
+    if (live && tops.length === hrs.length) {
+      const y = s.probe || 0, st = s.st || 0;
+      const T = tops.slice();
+      T[0] = y - st;
+      let i = 0;
+      while (i < T.length - 1 && T[i + 1] <= y) i++;
+      if (i >= T.length - 1) lab = hrs[hrs.length - 1];
+      else {
+        const f = Math.max(0, Math.min(1, (y - T[i]) / Math.max(1, T[i + 1] - T[i])));
+        lab = hrs[i] + (hrs[i + 1] - hrs[i]) * f;
+      }
+    }
+    const skyH = live ? lab : H;
+
+    // ---- tokens ----
+    const L = this.tok(lab);
+    const at = (h) => (live ? L : this.tok(h));
+    const hero = this.heroTok(skyH);
+    const about = at(7.25), works = at(11), writing = at(19), contact = at(22.5), foot = at(23.75);
+    const nav = live ? L : this.tok(H);
+    const root = live ? L : foot;
+
+    // ---- sky + particles feed ----
+    const SK = this.skyU(skyH, hero);
+    this._skyU = SK.u;
+    const hm = this.fmt(H);
+    const ss = this.pad(d.getSeconds());
+    const cd = [hm[0], hm[1], hm[3], hm[4], ss[0], ss[1]];
+    const fl = cd.map((ch, i) => this.flapV(this.flapT('c' + i, ch, 'D', { delay: 200 + i * 90, step: i >= 4 ? 60 : 70, big: true }), i >= 4 ? 'fx s' : 'fx'));
+
+    // departure rows: each section of the site is a "flight"; status follows the hero time
+    const flights = [[7, 9, 'ABOUT', '关于', '#about'], [9, 19, 'WORKS', '作品', '#works'], [19, 22, 'NOTES', '文章', '#writing'], [22, 24, 'CONTACT', '联系', '#contact']];
+    const rows = flights.map((fz, ri) => {
+      let st, tone, led, ledOn = false;
+      if (H >= fz[1]) { st = 'DEPARTED'; tone = 'dim'; led = '#6A696E'; }
+      else if (H >= fz[0]) { st = 'BOARDING'; tone = 'amb'; led = '#F2B85B'; ledOn = true; }
+      else if (fz[0] - H <= 1) { st = 'GATE OPEN'; tone = 'amb'; led = '#F2B85B'; }
+      else { st = 'ON TIME'; tone = ''; led = '#7BD88F'; }
+      const mk = (str, len, key, col0, toneCls) => {
+        const p = (str + '          ').slice(0, len);
+        const out = [];
+        for (let c = 0; c < len; c++) {
+          const f = this.flapT('r' + ri + '_' + key + c, p[c], 'A', { delay: 520 + ri * 170 + (col0 + c) * 26, step: 34 });
+          out.push(this.flapV(f, 'fx m' + (toneCls ? ' ' + toneCls : '')));
+        }
+        return out;
+      };
+      const timeStr = this.pad(fz[0]) + ':00';
+      const dim = tone === 'dim' ? 'dim' : '';
+      return {
+        href: fz[4], cn: fz[3], spin: this._h.rowSpin[ri],
+        aria: timeStr + ' ' + fz[3] + ' ' + fz[2] + ' · ' + st,
+        time: mk(timeStr, 5, 't', 0, dim), dest: mk(fz[2], 8, 'd', 5, dim), status: mk(st, 9, 's', 13, tone),
+        led: led, ledCls: 'fx-led' + (ledOn ? ' on' : '')
+      };
+    });
+
+    // ---- meta ----
+    let zone = '';
+    try { zone = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { zone = ''; }
+    const off = -d.getTimezoneOffset() / 60;
+    const doy = Math.floor((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(d.getFullYear(), 0, 1)) / 86400000) + 1;
+    const wk = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][d.getDay()];
+    const meta = { zone: zone || 'LOCAL', utc: 'UTC' + (off >= 0 ? '+' : '') + off, date: wk + ' · ' + (d.getMonth() + 1) + ' 月 ' + d.getDate() + ' 日', year: d.getFullYear(), doy: doy };
+    const clock = { d0: hm[0], d1: hm[1], d2: hm[3], d3: hm[4], hm: hm, ss: ss, pct: (H / 24 * 100).toFixed(1) };
+
+    // ---- sun / moon tracker ----
+    const isSun = SK.u.sunA > 0.5 && SK.e > 0.3;
+    const isMoon = !isSun && SK.me > 0.3;
+    const tx = isSun ? SK.sunX : SK.moonX, ty = isSun ? SK.sunY : SK.moonY;
+    const elev = isSun ? SK.e * 72 : SK.me * 64;
+    const az = isSun ? 90 + (skyH - 6) / 12 * 180 : 90 + SK.hm * 180;
+    const body = isSun ? 'SUN' : 'MOON';
+    const trk = {
+      show: !!this._sky && (isSun || isMoon), x: (tx * 100).toFixed(2), y: ((1 - ty) * 100).toFixed(2),
+      label: body + ' · ELEV +' + elev.toFixed(1) + '° · AZ ' + az.toFixed(1) + '°',
+      l: tx > 0.75 ? 'auto' : '56px', r: tx > 0.75 ? '56px' : 'auto'
+    };
+    if (!this._alt) {
+      this._alt = [];
+      for (let a = 0; a <= 70; a += 5) this._alt.push({ top: ((1 - (0.16 + (a / 72) * 0.6)) * 100).toFixed(2), label: a % 15 === 0 ? a + '°' : '', w: a % 15 === 0 ? 12 : 6 });
+    }
+
+    // ---- boot log -> live readouts ----
+    const bms = Date.now() - mountAt;
+    let hud2 = [];
+    const sunLine = (isSun || !isMoon ? 'SUN' : 'MOON') + ' ELEV ' + (isSun || !isMoon ? (SK.e * 72) : (SK.me * 64)).toFixed(1) + '°';
+    if (bms < 3200 && !this._reduce) {
+      const lines = [
+        '同步时钟 ········ ' + this.fmt(this.realH(now)) + ':' + ss + ' ' + meta.utc,
+        '计算日月位置 ···· ' + sunLine,
+        '编译天空着色器 ·· ' + (this._sky ? 'WebGL OK' : (this._skyFail ? 'CSS 回退' : '…')),
+        '翻牌时钟 ········ 6 片翻牌就位',
+        '实验室就绪'
+      ];
+      for (let i = 0; i < lines.length; i++) {
+        const st0 = i * 480;
+        if (bms < st0) break;
+        const txt = lines[i];
+        const n = Math.min(txt.length, Math.floor((bms - st0) / 16));
+        hud2.push({ k: n < txt.length ? '[ .. ]' : '[ OK ]', v: txt.slice(0, n) + (n < txt.length ? '▌' : '') });
+      }
+    } else {
+      const px = this._sky && this._sky.px ? (this._sky.px / 1e6).toFixed(2) + 'M px' : '';
+      hud2 = [
+        { k: (isMoon ? 'MOON' : 'SUN') + '  ', v: 'ELEV ' + (isMoon ? '+' + (SK.me * 64).toFixed(1) : (SK.e >= 0 ? '+' : '') + (SK.e * 72).toFixed(1)) + '°  AZ ' + az.toFixed(1) + '°' },
+        { k: 'SKY  ', v: hero.bg.toUpperCase() + ' → ' + hero.zenHex.toUpperCase() },
+        { k: 'UNIX ', v: String(Math.floor(now / 1000)) },
+        { k: 'GPU  ', v: this._sky ? 'WebGL · ' + (this._fps || '—') + ' FPS · ' + px : 'CSS 回退' }
+      ];
+    }
+
+    // ---- 24h scrubber ----
+    const ticks = [];
+    for (let i = 0; i < 96; i++) {
+      const major = i % 4 === 0;
+      ticks.push({ h: major ? (i % 12 === 0 ? 22 : 14) : 7, c: i / 4 <= H ? hero.fg : (major ? hero.muted : hero.line) });
+    }
+    const marks = [[7, '关于', '#about'], [9, '作品', '#works'], [19, '文章', '#writing'], [22, '联系', '#contact']].map((m) => ({ left: m[0] / 24 * 100, hh: this.pad(m[0]), label: m[1], href: m[2] }));
+    const hours = [0, 3, 6, 9, 12, 15, 18, 21, 24].map((h) => ({ left: h / 24 * 100, tx: h === 0 ? 0 : h === 24 ? -100 : -50, label: this.pad(h) }));
+    const a = this._anim;
+    const playing = !!(a && a.kind === 'play');
+    let status;
+    if (playing) status = '延时播放中 ×' + Math.round((a.to - a.from) * 3600 / (a.dur / 1000)).toLocaleString('en-US');
+    else if (this._ov != null) status = '时光机 · ' + hm;
+    else status = '实时 · ' + hm + ':' + ss;
+    const ph = { left: H / 24 * 100, tx: H < 2 ? 0 : H > 22 ? -100 : -50, label: (this._ov != null || playing ? '时光机 · ' : '你在这里 · ') + hm };
+    const scrub = { val: Math.round(H * 60) % 1440, text: hm, status: status };
+    const ctl = { playLabel: playing ? '播放中…' : '播放 24 小时延时', showNow: this._ov != null || playing };
+    const dh = hrs[1] - H;
+    const dhH = Math.floor(dh), dhM = Math.floor((dh - dhH) * 60);
+    const hint = { to: hrs[1] >= 24 ? '明早 07:00' : ' 07:00', delta: (dhH > 0 ? dhH + ' 小时 ' : '') + dhM + ' 分' };
+
+    // ---- nav HUD ----
+    const labHm = live ? this.fmt(lab) : hm;
+    const nv = {};
+    ['a', 'b', 'c', 'd'].forEach((k, i) => { const ch = labHm[i < 2 ? i : i + 1]; nv[k] = 'translateY(-' + (Number(ch) * 1.25).toFixed(2) + 'em)'; });
+    const hud = { day: lab >= 48 ? '后天' : lab >= 24 ? '明天' : '今天', hm: labHm, pct: live ? (s.prog || 0) * 100 : H / 24 * 100 };
+    const logoRot = 45 + Math.floor(H * 60) * 6;
+
+    // ---- greeting scramble (re-decodes whenever the phase changes) ----
+    const phs = this.phase(H);
+    if (this._lastGreet !== phs.greet) { this._lastGreet = phs.greet; this._rev.greet = performance.now(); }
+    const greet = this.scr('greet', phs.greet, 700, false);
+
+    // ---- sections ----
+    const labM = ((lab % 24) + 24) % 24;
+    const row = (h) => { const on = live && labM >= h - 0.5 && labM < h + 1.5; return { on: on, pillBg: on ? works.accent : 'transparent', pillFg: on ? works.onAccent : works.fg }; };
+    const post = (min) => ({ min: min, deg: (min / 60 * 360).toFixed(1), done: this.fmt(H + min / 60) });
+    const since = Date.parse(String(this.props.labSince || '').trim());
+    let uptime;
+    if (isFinite(since) && since < now) {
+      const sec = Math.floor((now - since) / 1000);
+      const sd = new Date(since);
+      uptime = { days: Math.floor(sec / 86400).toLocaleString('en-US'), hms: this.hms(sec % 86400), since: '自 ' + sd.getFullYear() + '.' + this.pad(sd.getMonth() + 1) + '.' + this.pad(sd.getDate()) + ' 开张，每一秒都算数。' };
+    } else {
+      uptime = { days: '—', hms: '——:——:——', since: '自 [开张日期] 开张，每一秒都算数。' };
+    }
+    const sc = {
+      aboutCn: this.scr('about', '关于', 900, fallbackOn), aboutEn: this.scr('about', 'About', 900, fallbackOn),
+      worksCn: this.scr('works', '作品', 900, fallbackOn), worksEn: this.scr('works', 'Works', 900, fallbackOn),
+      writingCn: this.scr('writing', '文章', 900, fallbackOn), writingEn: this.scr('writing', 'Writing', 900, fallbackOn),
+      contactCn: this.scr('contact', '联系', 900, fallbackOn), contactEn: this.scr('contact', 'Elsewhere', 900, fallbackOn)
+    };
+
+    // ---- footer countdown ----
+    const daySec = d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
+    const leftText = this.hms(86400 - daySec);
+    const lf = leftText.replace(/:/g, '');
+    const fr = (ch) => 'translateY(-' + ((10 + Number(ch)) * 0.86).toFixed(2) + 'em)';
+    const of = { a: fr(lf[0]), b: fr(lf[1]), c: fr(lf[2]), d: fr(lf[3]), e: fr(lf[4]), f: fr(lf[5]) };
+
+    return {
+      setRoot: this._setRoot,
+      root: root, nav: nav, hero: hero, about: about, works: works, writing: writing, contact: contact, foot: foot,
+      reel10: this._reel10, reel30: this._reel30,
+      clock: clock, meta: meta, phase: phs, greet: greet,
+      f0: fl[0], f1: fl[1], f2: fl[2], f3: fl[3], f4: fl[4], f5: fl[5],
+      rows: rows, onShuffle: this._h.shuffle, onSound: this._h.sound,
+      snd: { on: !!this._snd, label: this._snd ? '声音 开' : '声音 关' },
+      trk: trk, altScale: this._alt, hud2: hud2,
+      ticks: ticks, marks: marks, hours: hours, ph: ph, scrub: scrub, ctl: ctl, hint: hint,
+      onPlay: this._h.play, onBack: this._h.back, onScrub: this._h.scrub,
+      tiltMove: this._h.tiltMove, tiltLeave: this._h.tiltLeave,
+      hud: hud, nv: nv, logoRot: logoRot,
+      oA: this.odo('about', '0700', fallbackOn), oW: this.odo('works', '0900', fallbackOn), oR: this.odo('writing', '1900', fallbackOn), oC: this.odo('contact', '2200', fallbackOn),
+      sc: sc,
+      w0: row(9.5), w1: row(11.5), w2: row(14), w3: row(16.5),
+      p0: post(8), p1: post(15), p2: post(5), p3: post(22),
+      uptime: uptime,
+      world: this.world(),
+      leftText: leftText, of: of,
+      stay: this.hms((now - mountAt) / 1000),
+      showCursor: (this.props.customCursor ?? true) && !this._reduce,
+      curOff: (106.81 * (1 - d.getSeconds() / 60)).toFixed(2)
+    };
+  }
+}
+</script>
+
+
 </body></html>
