@@ -44,3 +44,9 @@ html[lang=en] .zh-period{display:none}
  .dx nav .dx-ul{padding:8px 0!important}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-preview{transition:none}.dx-marq{animation:none}.dx-marq-wrap{overflow-x:auto!important}}
+
+#contact a[href^="mailto:"]{max-width:100%;overflow-wrap:anywhere}
+
+/* Root colors are used only by the page shell; do not invalidate descendants. */
+@property --dx-root-bg{syntax:"<color>";inherits:false;initial-value:#0b0d14}
+@property --dx-root-fg{syntax:"<color>";inherits:false;initial-value:#f4f0e8}

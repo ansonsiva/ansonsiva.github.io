@@ -6,7 +6,6 @@
 <meta name="description" content="Jun Zheng’s personal laboratory: PostDiff, AI Video Costs, Screen TimeLapseZ, and InvestmentGenieTracker.">
 <link rel="canonical" href="https://www.dayxlab.com/">
 <link rel="icon" href="/favicon.ico">
-<link rel="alternate" type="application/atom+xml" title="DayX" href="/atom.xml">
 <meta property="og:title" content="dayxlab · Jun Zheng’s personal laboratory">
 <meta property="og:description" content="Small apps, useful websites, and experiments in everyday life.">
 <meta property="og:type" content="website">
@@ -18,7 +17,7 @@
 <script src="/assets/dayx/runtime.js" defer></script>
 </head>
 <body>
-<noscript><main class="nojs-home"><h1>dayxlab · 一天的实验室</h1><p>Jun Zheng’s personal laboratory / Jun Zheng 的个人实验室</p><p>The interactive clock needs JavaScript. You can still explore every project below.<br>启用 JavaScript 可体验时钟与天空交互，也可以直接访问以下作品。</p><ul><li><a href="https://postdiff.com/">PostDiff</a> — 追踪 X（Twitter）的平台更新，整理创作者工具。更新附上官方来源，工具价格标注核验日期，让变化有据可查。 / Follow changes on X (Twitter) and discover creator tools. Platform updates link to official sources, and tool prices carry a verification date.</li><li><a href="https://aivideocosts.com/">AI Video Costs</a> — 把不同 AI 视频模型的价格换算成相同片长的成本，附上定价来源，再用预算和影片成本计算器，把创作计划算清楚。 / Compare AI video models at the same clip length, with links to pricing sources. Budget and film-cost calculators help turn an idea into a practical plan.</li><li><a href="https://apps.apple.com/app/id1440244990">Screen TimeLapseZ</a> — 将长时间的屏幕操作浓缩成延时视频，用来记录创作过程、制作教程或回看项目进展。支持轻量录制、自定义水印和多屏捕捉。 / Turn long screen sessions into compact timelapse videos for tutorials and progress logs. Lightweight recording, custom watermarks, and multi-screen capture.</li><li><a href="https://apps.apple.com/app/id6446110050">InvestmentGenieTracker</a> — 为日常快速查看打造的投资组合工具。多账户追踪、清晰图表和简洁的查看流程，让资产概况更容易读懂。 / A portfolio snapshot tool for quick daily checks. Multi-account tracking, readable charts, and a simple review flow keep the overview clear.</li></ul><p><a href="mailto:ansonsiva@gmail.com">ansonsiva@gmail.com</a> · <a href="https://github.com/ansonsiva">GitHub</a> · <a href="/archives/">Privacy documents / 隐私文档</a></p></main></noscript>
+<noscript><main class="nojs-home"><h1>dayxlab · 一天的实验室</h1><p>Jun Zheng’s personal laboratory / Jun Zheng 的个人实验室</p><p>The interactive clock needs JavaScript. You can still explore every project below.<br>启用 JavaScript 可体验时钟与天空交互，也可以直接访问以下作品。</p><ul><li><a href="https://postdiff.com/">PostDiff</a> — 追踪 X（Twitter）的平台更新，整理创作者工具。更新附上官方来源，工具价格标注核验日期，让变化有据可查。 / Follow changes on X (Twitter) and discover creator tools. Platform updates link to official sources, and tool prices carry a verification date.</li><li><a href="https://aivideocosts.com/">AI Video Costs</a> — 把不同 AI 视频模型的价格换算成相同片长的成本，附上定价来源，再用预算和影片成本计算器，把创作计划算清楚。 / Compare AI video models at the same clip length, with links to pricing sources. Budget and film-cost calculators help turn an idea into a practical plan.</li><li><a href="https://apps.apple.com/app/id1440244990">Screen TimeLapseZ</a> — 将长时间的屏幕操作浓缩成延时视频，用来记录创作过程、制作教程或回看项目进展。支持轻量录制、自定义水印和多屏捕捉。 / Turn long screen sessions into compact timelapse videos for tutorials and progress logs. Lightweight recording, custom watermarks, and multi-screen capture.</li><li><a href="https://apps.apple.com/app/id6446110050">InvestmentGenieTracker</a> — 为日常快速查看打造的投资组合工具。多账户追踪、清晰图表和简洁的查看流程，让资产概况更容易读懂。 / A portfolio snapshot tool for quick daily checks. Multi-account tracking, readable charts, and a simple review flow keep the overview clear.</li></ul><p><a href="mailto:ansonsiva@mail.grokbot.com">ansonsiva@mail.grokbot.com</a> · <a href="https://github.com/ansonsiva">GitHub</a> · <a href="/archives/">Privacy documents / 隐私文档</a></p></main></noscript>
 <a class="skip-home" href="#main">Skip to content / 跳至内容</a>
 <x-dc>
 <helmet>
@@ -294,82 +293,82 @@ body{margin:0}
 @media (prefers-reduced-motion:reduce){.dx-blink,.dx-pulse,.dx-bob,.dx-spin,.dx-marq,.fx-colon,.fx-led.on{animation:none}.dx *{transition:none !important}.fx .fx-f{display:none}}
 </style>
 </helmet>
-<div ref="{{setRoot}}" id="top" class="dx" style="position: relative; background: {{root.bg}}; color: {{root.fg}}; font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif; -webkit-font-smoothing: antialiased" data-canvas-width="1440" data-canvas-height="6800" data-document-role="page" data-label="首页 · 一天的实验室（可交互）">
+<div ref="{{setRoot}}" id="top" class="dx" style="position: relative; background: var(--dx-root-bg); color: var(--dx-root-fg); font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif; -webkit-font-smoothing: antialiased" data-canvas-width="1440" data-canvas-height="6800" data-document-role="page" data-label="首页 · 一天的实验室（可交互）">
 
 <!-- ================= NAV ================= -->
-<nav aria-label="{{t.navigation}}" style="position: sticky; top: 0; z-index: 20; background: {{nav.bg}}; color: {{nav.fg}}; border-bottom: 1px solid {{nav.line}}">
+<nav aria-label="{{t.navigation}}" style="position: sticky; top: 0; z-index: 20; background: var(--dx-nav-bg); color: var(--dx-nav-fg); border-bottom: 1px solid var(--dx-nav-line)">
 <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(20px, 4.5vw, 64px); min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px">
 <a href="#top" aria-label="{{t.homeLabel}}" style="display: flex; align-items: center; gap: 3px; min-height: 44px; font-family: 'Instrument Serif', 'Noto Serif SC', Georgia, serif; font-size: 28px; line-height: 1; letter-spacing: -0.01em">
 <span style="font-style: italic">day</span>
-<span aria-hidden="true" style="display: inline-block; color: {{nav.accent}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; transform: rotate({{logoRot}}deg); transition: transform .8s cubic-bezier(.3,1.6,.5,1)">×</span>
+<span aria-hidden="true" style="display: inline-block; color: var(--dx-nav-accent); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; transform: rotate({{logoRot}}deg); transition: transform .8s cubic-bezier(.3,1.6,.5,1)">×</span>
 <span>lab</span>
 </a>
 <button class="language-toggle" type="button" sc-camel-on-click="{{onLanguage}}" aria-label="{{t.switchLanguage}}" lang="{{otherLang}}">{{t.languageButton}}</button>
 <div class="dx-hide-sm" style="display: flex; align-items: center; gap: 28px; font-size: 14px">
-<a class="dx-ul" href="#about" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{nav.muted}}">07</span>{{t.navabout}}</a>
-<a class="dx-ul" href="#works" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{nav.muted}}">09</span>{{t.navworks}}</a>
-<a class="dx-ul" href="#writing" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{nav.muted}}">19</span>{{t.navwriting}}</a>
-<a class="dx-ul" href="#contact" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{nav.muted}}">22</span>{{t.navcontact}}</a>
+<a class="dx-ul" href="#about" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: var(--dx-nav-muted)">07</span>{{t.navabout}}</a>
+<a class="dx-ul" href="#works" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: var(--dx-nav-muted)">09</span>{{t.navworks}}</a>
+<a class="dx-ul" href="#writing" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: var(--dx-nav-muted)">19</span>{{t.navwriting}}</a>
+<a class="dx-ul" href="#contact" style="display: flex; align-items: baseline; gap: 8px; padding: 12px 0"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: var(--dx-nav-muted)">22</span>{{t.navcontact}}</a>
 </div>
 <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; letter-spacing: 0.04em">
-<span aria-hidden="true" class="dx-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: {{nav.accent}}"></span>
-<span style="color: {{nav.muted}}">LAB TIME</span>
+<span aria-hidden="true" class="dx-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: var(--dx-nav-accent)"></span>
+<span style="color: var(--dx-nav-muted)">LAB TIME</span>
 <span class="dx-sr">{{hud.day}} {{hud.hm}}</span>
 <span aria-hidden="true" style="display: flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums">
-<span>{{hud.day}}</span>
+<span data-dx-nav-day="">{{hud.day}}</span>
 <span style="display: flex">
-<span class="dx-odo-m"><span class="dx-reel-m" style="transform: {{nv.a}}"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
-<span class="dx-odo-m"><span class="dx-reel-m" style="transform: {{nv.b}}"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-m"><span class="dx-reel-m" style="transform: translateY(var(--dx-nav-a, 0em))"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-m"><span class="dx-reel-m" style="transform: translateY(var(--dx-nav-b, 0em))"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
 <span style="display: inline-block; width: 0.5em; text-align: center; line-height: 1.25em">:</span>
-<span class="dx-odo-m"><span class="dx-reel-m" style="transform: {{nv.c}}"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
-<span class="dx-odo-m"><span class="dx-reel-m" style="transform: {{nv.d}}"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-m"><span class="dx-reel-m" style="transform: translateY(var(--dx-nav-c, 0em))"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
+<span class="dx-odo-m"><span class="dx-reel-m" style="transform: translateY(var(--dx-nav-d, 0em))"><sc-for list="{{reel10}}" as="n" hint-placeholder-count="10"><span>{{n}}</span></sc-for></span></span>
 </span>
 </span>
 </div>
 </div>
-<div aria-hidden="true" style="position: absolute; left: 0; bottom: -1px; height: 2px; width: {{hud.pct}}%; background: {{nav.accent}}"></div>
+<div aria-hidden="true" style="position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; transform-origin: left; transform: scaleX(var(--dx-progress, 0)); background: var(--dx-nav-accent)"></div>
 </nav>
 
 <main id="main" tabindex="-1">
 <!-- ================= HERO · NOW ================= -->
-<section id="now" data-anchor="0" aria-label="{{t.now}}" style="position: relative; overflow: hidden; background: {{hero.midHex}}; color: {{hero.fg}}">
+<section id="now" data-anchor="0" aria-label="{{t.now}}" style="position: relative; overflow: hidden; background: var(--dx-hero-midHex); color: var(--dx-hero-fg)">
 <canvas class="dx-sky" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"></canvas>
 
 <div aria-hidden="true" style="position: absolute; inset: 20px; pointer-events: none">
-<span style="position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-left: 1px solid {{hero.line2}}; border-top: 1px solid {{hero.line2}}"></span>
-<span style="position: absolute; right: 0; top: 0; width: 22px; height: 22px; border-right: 1px solid {{hero.line2}}; border-top: 1px solid {{hero.line2}}"></span>
-<span style="position: absolute; left: 0; bottom: 0; width: 22px; height: 22px; border-left: 1px solid {{hero.line2}}; border-bottom: 1px solid {{hero.line2}}"></span>
-<span style="position: absolute; right: 0; bottom: 0; width: 22px; height: 22px; border-right: 1px solid {{hero.line2}}; border-bottom: 1px solid {{hero.line2}}"></span>
+<span style="position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-left: 1px solid var(--dx-hero-line2); border-top: 1px solid var(--dx-hero-line2)"></span>
+<span style="position: absolute; right: 0; top: 0; width: 22px; height: 22px; border-right: 1px solid var(--dx-hero-line2); border-top: 1px solid var(--dx-hero-line2)"></span>
+<span style="position: absolute; left: 0; bottom: 0; width: 22px; height: 22px; border-left: 1px solid var(--dx-hero-line2); border-bottom: 1px solid var(--dx-hero-line2)"></span>
+<span style="position: absolute; right: 0; bottom: 0; width: 22px; height: 22px; border-right: 1px solid var(--dx-hero-line2); border-bottom: 1px solid var(--dx-hero-line2)"></span>
 </div>
 
 <div aria-hidden="true" class="dx-hide-sm" style="position: absolute; right: 30px; top: 0; bottom: 0; width: 44px; pointer-events: none">
 <sc-for list="{{altScale}}" as="a" hint-placeholder-count="15">
-<div style="position: absolute; right: 0; top: {{a.top}}%; transform: translateY(-50%); display: flex; align-items: center; gap: 6px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; color: {{hero.muted}}"><span>{{a.label}}</span><span style="width: {{a.w}}px; height: 1px; background: {{hero.muted}}"></span></div>
+<div style="position: absolute; right: 0; top: {{a.top}}%; transform: translateY(-50%); display: flex; align-items: center; gap: 6px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; color: var(--dx-hero-muted)"><span>{{a.label}}</span><span style="width: {{a.w}}px; height: 1px; background: var(--dx-hero-muted)"></span></div>
 </sc-for>
 </div>
 
 <sc-if value="{{trk.show}}" hint-placeholder-val="{{false}}">
-<div aria-hidden="true" style="position: absolute; left: {{trk.x}}%; top: {{trk.y}}%; width: 0; height: 0; pointer-events: none; color: {{hero.fg}}">
-<span class="dx-spin" style="position: absolute; left: -32px; top: -32px; width: 64px; height: 64px; border-radius: 50%; border: 1px dashed {{hero.line2}}"></span>
-<span style="position: absolute; left: -50px; top: 0; width: 12px; height: 1px; background: {{hero.fg}}"></span>
-<span style="position: absolute; left: 38px; top: 0; width: 12px; height: 1px; background: {{hero.fg}}"></span>
-<span style="position: absolute; left: 0; top: -50px; width: 1px; height: 12px; background: {{hero.fg}}"></span>
-<span style="position: absolute; left: 0; top: 38px; width: 1px; height: 12px; background: {{hero.fg}}"></span>
-<span style="position: absolute; left: {{trk.l}}; right: {{trk.r}}; top: 44px; white-space: nowrap; padding: 5px 9px; border-radius: 4px; border: 1px solid {{hero.line}}; background: {{hero.glass}}; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.06em">{{trk.label}}</span>
+<div aria-hidden="true" style="position: absolute; left: var(--dx-tracker-x); top: var(--dx-tracker-y); width: 0; height: 0; pointer-events: none; color: var(--dx-hero-fg)">
+<span class="dx-spin" style="position: absolute; left: -32px; top: -32px; width: 64px; height: 64px; border-radius: 50%; border: 1px dashed var(--dx-hero-line2)"></span>
+<span style="position: absolute; left: -50px; top: 0; width: 12px; height: 1px; background: var(--dx-hero-fg)"></span>
+<span style="position: absolute; left: 38px; top: 0; width: 12px; height: 1px; background: var(--dx-hero-fg)"></span>
+<span style="position: absolute; left: 0; top: -50px; width: 1px; height: 12px; background: var(--dx-hero-fg)"></span>
+<span style="position: absolute; left: 0; top: 38px; width: 1px; height: 12px; background: var(--dx-hero-fg)"></span>
+<span style="position: absolute; left: {{trk.l}}; right: {{trk.r}}; top: 44px; white-space: nowrap; padding: 5px 9px; border-radius: 4px; border: 1px solid var(--dx-hero-line); background: var(--dx-hero-glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.06em">{{trk.label}}</span>
 </div>
 </sc-if>
 
 <div style="position: relative; z-index: 2; max-width: 1440px; min-height: 920px; margin: 0 auto; padding: clamp(36px, 4.5vw, 60px) clamp(20px, 4.5vw, 64px) 28px; display: flex; flex-direction: column; gap: 26px">
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 16px 32px">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{hero.muted}}">
-<span style="display: flex; align-items: center; gap: 8px; color: {{hero.fg}}"><span aria-hidden="true" class="dx-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: {{hero.accent}}"></span>{{t.localTime}}</span>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--dx-hero-muted)">
+<span style="display: flex; align-items: center; gap: 8px; color: var(--dx-hero-fg)"><span aria-hidden="true" class="dx-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: var(--dx-hero-accent)"></span>{{t.localTime}}</span>
 <span>{{meta.zone}} · {{meta.utc}}</span>
 <span>{{meta.date}}</span>
 </div>
-<div class="dx-hide-sm" aria-hidden="true" style="min-width: 320px; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.04em; color: {{hero.muted}}; text-align: right">
+<div class="dx-hide-sm" aria-hidden="true" style="min-width: 320px; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--dx-hero-muted); text-align: right">
 <sc-for list="{{hud2}}" as="r" hint-placeholder-count="4">
-<span style="white-space: pre">{{r.k}}  <span style="color: {{hero.fg}}">{{r.v}}</span></span>
+<span style="white-space: pre">{{r.k}}  <span style="color: var(--dx-hero-fg)">{{r.v}}</span></span>
 </sc-for>
 </div>
 </div>
@@ -381,14 +380,14 @@ body{margin:0}
 <span style="color: rgba(243,240,232,0.62)">{{meta.utc}} · {{meta.year}} · {{t.dayNumber}} {{meta.doy}}</span>
 </div>
 <time datetime="{{clock.hm}}" aria-label="{{currentTimeLabel}}" style="display: flex; align-items: center; gap: clamp(4px, 0.6vw, 8px)">
-<span aria-hidden="true" class="{{f0.cls}}"><span class="fx-h t"><span>{{f0.cur}}</span></span><span class="fx-h b"><span>{{f0.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f0.prev}}</span></span><span class="fx-f b"><span>{{f0.cur}}</span></span></span>
-<span aria-hidden="true" class="{{f1.cls}}"><span class="fx-h t"><span>{{f1.cur}}</span></span><span class="fx-h b"><span>{{f1.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f1.prev}}</span></span><span class="fx-f b"><span>{{f1.cur}}</span></span></span>
+<span aria-hidden="true" class="{{f0.cls}}" data-flap="{{f0.id}}"><span class="fx-h t"><span>{{f0.cur}}</span></span><span class="fx-h b"><span>{{f0.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f0.prev}}</span></span><span class="fx-f b"><span>{{f0.cur}}</span></span></span>
+<span aria-hidden="true" class="{{f1.cls}}" data-flap="{{f1.id}}"><span class="fx-h t"><span>{{f1.cur}}</span></span><span class="fx-h b"><span>{{f1.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f1.prev}}</span></span><span class="fx-f b"><span>{{f1.cur}}</span></span></span>
 <span aria-hidden="true" class="fx-colon"><i></i><i></i></span>
-<span aria-hidden="true" class="{{f2.cls}}"><span class="fx-h t"><span>{{f2.cur}}</span></span><span class="fx-h b"><span>{{f2.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f2.prev}}</span></span><span class="fx-f b"><span>{{f2.cur}}</span></span></span>
-<span aria-hidden="true" class="{{f3.cls}}"><span class="fx-h t"><span>{{f3.cur}}</span></span><span class="fx-h b"><span>{{f3.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f3.prev}}</span></span><span class="fx-f b"><span>{{f3.cur}}</span></span></span>
+<span aria-hidden="true" class="{{f2.cls}}" data-flap="{{f2.id}}"><span class="fx-h t"><span>{{f2.cur}}</span></span><span class="fx-h b"><span>{{f2.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f2.prev}}</span></span><span class="fx-f b"><span>{{f2.cur}}</span></span></span>
+<span aria-hidden="true" class="{{f3.cls}}" data-flap="{{f3.id}}"><span class="fx-h t"><span>{{f3.cur}}</span></span><span class="fx-h b"><span>{{f3.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f3.prev}}</span></span><span class="fx-f b"><span>{{f3.cur}}</span></span></span>
 <span aria-hidden="true" style="align-self: flex-end; display: flex; gap: clamp(3px, 0.4vw, 5px); margin-left: clamp(6px, 1vw, 14px)">
-<span class="{{f4.cls}}"><span class="fx-h t"><span>{{f4.cur}}</span></span><span class="fx-h b"><span>{{f4.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f4.prev}}</span></span><span class="fx-f b"><span>{{f4.cur}}</span></span></span>
-<span class="{{f5.cls}}"><span class="fx-h t"><span>{{f5.cur}}</span></span><span class="fx-h b"><span>{{f5.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f5.prev}}</span></span><span class="fx-f b"><span>{{f5.cur}}</span></span></span>
+<span class="{{f4.cls}}" data-flap="{{f4.id}}"><span class="fx-h t"><span>{{f4.cur}}</span></span><span class="fx-h b"><span>{{f4.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f4.prev}}</span></span><span class="fx-f b"><span>{{f4.cur}}</span></span></span>
+<span class="{{f5.cls}}" data-flap="{{f5.id}}"><span class="fx-h t"><span>{{f5.cur}}</span></span><span class="fx-h b"><span>{{f5.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{f5.prev}}</span></span><span class="fx-f b"><span>{{f5.cur}}</span></span></span>
 </span>
 </time>
 
@@ -401,12 +400,12 @@ body{margin:0}
 </div>
 <sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
 <a href="{{r.href}}" class="fx-rowlink" sc-camel-on-mouse-enter="{{r.spin}}" sc-camel-on-focus="{{r.spin}}" aria-label="{{r.aria}}" style="display: flex; align-items: center; gap: clamp(8px, 1.2vw, 16px); min-height: 44px; padding: 0 8px; margin: 0 -8px; border-radius: 8px">
-<span aria-hidden="true" style="display: flex; gap: 2px"><sc-for list="{{r.time}}" as="q" hint-placeholder-count="5"><span class="{{q.cls}}"><span class="fx-h t"><span>{{q.cur}}</span></span><span class="fx-h b"><span>{{q.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{q.prev}}</span></span><span class="fx-f b"><span>{{q.cur}}</span></span></span></sc-for></span>
-<span aria-hidden="true" style="display: flex; gap: 2px"><sc-for list="{{r.dest}}" as="q" hint-placeholder-count="8"><span class="{{q.cls}}"><span class="fx-h t"><span>{{q.cur}}</span></span><span class="fx-h b"><span>{{q.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{q.prev}}</span></span><span class="fx-f b"><span>{{q.cur}}</span></span></span></sc-for></span>
+<span aria-hidden="true" style="display: flex; gap: 2px"><sc-for list="{{r.time}}" as="q" hint-placeholder-count="5"><span class="{{q.cls}}" data-flap="{{q.id}}"><span class="fx-h t"><span>{{q.cur}}</span></span><span class="fx-h b"><span>{{q.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{q.prev}}</span></span><span class="fx-f b"><span>{{q.cur}}</span></span></span></sc-for></span>
+<span aria-hidden="true" style="display: flex; gap: 2px"><sc-for list="{{r.dest}}" as="q" hint-placeholder-count="8"><span class="{{q.cls}}" data-flap="{{q.id}}"><span class="fx-h t"><span>{{q.cur}}</span></span><span class="fx-h b"><span>{{q.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{q.prev}}</span></span><span class="fx-f b"><span>{{q.cur}}</span></span></span></sc-for></span>
 <span aria-hidden="true" class="dx-hide-sm" style="width: 34px; font-size: 12px; color: rgba(243,240,232,0.62)">{{r.cn}}</span>
 <span aria-hidden="true" style="display: flex; align-items: center; gap: 8px">
 <span class="{{r.ledCls}}" style="background: {{r.led}}; color: {{r.led}}"></span>
-<span style="display: flex; gap: 2px"><sc-for list="{{r.status}}" as="q" hint-placeholder-count="9"><span class="{{q.cls}}"><span class="fx-h t"><span>{{q.cur}}</span></span><span class="fx-h b"><span>{{q.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{q.prev}}</span></span><span class="fx-f b"><span>{{q.cur}}</span></span></span></sc-for></span>
+<span style="display: flex; gap: 2px"><sc-for list="{{r.status}}" as="q" hint-placeholder-count="9"><span class="{{q.cls}}" data-flap="{{q.id}}"><span class="fx-h t"><span>{{q.cur}}</span></span><span class="fx-h b"><span>{{q.prev}}</span><i class="fx-sh"></i></span><span class="fx-f t"><span>{{q.prev}}</span></span><span class="fx-f b"><span>{{q.cur}}</span></span></span></sc-for></span>
 </span>
 </a>
 </sc-for>
@@ -421,38 +420,38 @@ body{margin:0}
 </div>
 </div>
 <h1 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.2vw, 44px); line-height: 1.3; letter-spacing: 0.01em">{{greet}}</h1>
-<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.8; color: {{hero.muted}}">{{t.intro}}</p>
+<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.8; color: var(--dx-hero-muted)">{{t.intro}}</p>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
-<button type="button" class="dx-btn" sc-camel-on-click="{{onPlay}}" style="display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 20px; border-radius: 999px; border: 1px solid {{hero.fg}}; background: {{hero.fg}}; color: {{hero.inv}}; font-size: 14px">
+<button type="button" class="dx-btn" sc-camel-on-click="{{onPlay}}" style="display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--dx-hero-fg); background: var(--dx-hero-fg); color: var(--dx-hero-inv); font-size: 14px">
 <svg width="12" height="12" sc-camel-view-box="0 0 12 12" aria-hidden="true"><path d="M2.5 1.5v9l8-4.5z" fill="currentColor"></path></svg>
 <span>{{ctl.playLabel}}</span>
 </button>
 <sc-if value="{{ctl.showNow}}" hint-placeholder-val="{{false}}">
-<button type="button" class="dx-btn" sc-camel-on-click="{{onBack}}" style="display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1px solid {{hero.line2}}; background: {{hero.glass}}; color: {{hero.fg}}; font-size: 14px">
+<button type="button" class="dx-btn" sc-camel-on-click="{{onBack}}" style="display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--dx-hero-line2); background: var(--dx-hero-glass); color: var(--dx-hero-fg); font-size: 14px">
 <svg width="14" height="14" sc-camel-view-box="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 7a4.5 4.5 0 1 0 1.4-3.3"></path><path d="M2.5 1.8v2.4h2.4"></path></svg>
 <span>{{t.backNow}}</span>
 </button>
 </sc-if>
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: {{hero.muted}}">{{t.dragHint}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: var(--dx-hero-muted)">{{t.dragHint}}</span>
 </div>
 </div>
 
 <!-- 24h scrubber = site index -->
-<div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding: 16px clamp(16px, 2vw, 24px) 8px; border-radius: 16px; border: 1px solid {{hero.line}}; background: {{hero.glass}}; -webkit-backdrop-filter: blur(18px) saturate(150%); backdrop-filter: blur(18px) saturate(150%)">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.06em; color: {{hero.muted}}">
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding: 16px clamp(16px, 2vw, 24px) 8px; border-radius: 16px; border: 1px solid var(--dx-hero-line); background: var(--dx-hero-glass); -webkit-backdrop-filter: blur(18px) saturate(150%); backdrop-filter: blur(18px) saturate(150%)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--dx-hero-muted)">
 <span>{{t.timelineHelp}}</span>
-<span style="color: {{hero.fg}}">{{scrub.status}}</span>
+<span style="color: var(--dx-hero-fg)">{{scrub.status}}</span>
 </div>
 <div class="dx-scrub" style="position: relative; padding-top: 34px; padding-bottom: 50px">
 <sc-for list="{{marks}}" as="m" hint-placeholder-count="4">
 <a href="{{m.href}}" style="position: absolute; z-index: 4; top: -2px; left: {{m.left}}%; transform: translateX(-50%); display: flex; align-items: center; gap: 6px; padding: 6px 4px; font-size: 13px; white-space: nowrap">
-<span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: {{hero.accent}}"></span>
+<span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: var(--dx-hero-accent)"></span>
 <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; font-weight: 600">{{m.hh}}</span>
 <span class="dx-mk-name">{{m.label}}</span>
 </a>
-<div aria-hidden="true" style="position: absolute; top: 28px; left: {{m.left}}%; width: 1px; height: 28px; background: {{hero.accent}}"></div>
+<div aria-hidden="true" style="position: absolute; top: 28px; left: {{m.left}}%; width: 1px; height: 28px; background: var(--dx-hero-accent)"></div>
 </sc-for>
-<div aria-hidden="true" style="display: flex; align-items: flex-end; height: 22px; border-right: 1px solid {{hero.muted}}">
+<div aria-hidden="true" style="display: flex; align-items: flex-end; height: 22px; border-right: 1px solid var(--dx-hero-muted)">
 <sc-for list="{{ticks}}" as="k" hint-placeholder-count="96">
 <div style="flex: 1 1 0; height: {{k.h}}px; border-left: 1px solid {{k.c}}"></div>
 </sc-for>
@@ -460,24 +459,24 @@ body{margin:0}
 <label for="dx-scrub-in" class="dx-sr">{{t.timelineLabel}}</label>
 <input id="dx-scrub-in" type="range" min="0" max="1439" step="1" value="{{scrub.val}}" aria-valuetext="{{scrub.text}}" sc-camel-on-change="{{onScrub}}">
 <sc-for list="{{hours}}" as="hl" hint-placeholder-count="9">
-<span aria-hidden="true" style="position: absolute; top: 62px; left: {{hl.left}}%; transform: translateX({{hl.tx}}%); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{hero.muted}}">{{hl.label}}</span>
+<span aria-hidden="true" style="position: absolute; top: 62px; left: {{hl.left}}%; transform: translateX({{hl.tx}}%); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: var(--dx-hero-muted)">{{hl.label}}</span>
 </sc-for>
-<div aria-hidden="true" style="position: absolute; top: 30px; left: {{ph.left}}%; width: 2px; margin-left: -1px; height: 30px; background: {{hero.fg}}"></div>
-<span aria-hidden="true" class="dx-knob" style="position: absolute; top: 24px; left: {{ph.left}}%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: {{hero.fg}}; box-shadow: 0 0 0 5px {{hero.glass}}"></span>
-<span aria-hidden="true" style="position: absolute; top: 82px; left: {{ph.left}}%; transform: translateX({{ph.tx}}%); padding: 3px 8px; border-radius: 3px; background: {{hero.fg}}; color: {{hero.inv}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; white-space: nowrap">{{ph.label}}</span>
+<div aria-hidden="true" style="position: absolute; top: 30px; left: {{ph.left}}%; width: 2px; margin-left: -1px; height: 30px; background: var(--dx-hero-fg)"></div>
+<span aria-hidden="true" class="dx-knob" style="position: absolute; top: 24px; left: {{ph.left}}%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--dx-hero-fg); box-shadow: 0 0 0 5px var(--dx-hero-glass)"></span>
+<span aria-hidden="true" style="position: absolute; top: 82px; left: {{ph.left}}%; transform: translateX({{ph.tx}}%); padding: 3px 8px; border-radius: 3px; background: var(--dx-hero-fg); color: var(--dx-hero-inv); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; white-space: nowrap">{{ph.label}}</span>
 </div>
-<a href="#about" style="align-self: flex-start; display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 14px; color: {{hero.muted}}">
-<span aria-hidden="true" class="dx-bob" style="display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; border: 1px solid {{hero.line2}}; color: {{hero.fg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px">↓</span>
-<span>{{t.scrollHint}}<span style="margin-left: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: {{hero.fg}}">+{{hint.delta}}</span></span>
+<a href="#about" style="align-self: flex-start; display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 14px; color: var(--dx-hero-muted)">
+<span aria-hidden="true" class="dx-bob" style="display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--dx-hero-line2); color: var(--dx-hero-fg); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px">↓</span>
+<span>{{t.scrollHint}}<span style="margin-left: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: var(--dx-hero-fg)">+{{hint.delta}}</span></span>
 </a>
 </div>
 </div>
 </section>
 
 <!-- ================= 07:00 ABOUT ================= -->
-<section id="about" data-anchor="1" style="background: {{about.bg}}; color: {{about.fg}}">
+<section id="about" data-anchor="1" style="background: var(--dx-about-bg); color: var(--dx-about-fg)">
 <div style="max-width: 1440px; margin: 0 auto; padding: clamp(96px, 11vw, 160px) clamp(20px, 4.5vw, 64px); display: flex; flex-direction: column; gap: 64px">
-<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid {{about.line}}">
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid var(--dx-about-line)">
 <p aria-label="07:00" style="margin: 0; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(80px, 11vw, 168px); line-height: 0.86; letter-spacing: -0.03em">
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oA.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oA.b}}; transition-delay: .08s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
@@ -486,19 +485,19 @@ body{margin:0}
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oA.d}}; transition-delay: .24s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 </p>
 <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px; padding-bottom: 6px">
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{about.muted}}">{{t.dawn}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--dx-about-muted)">{{t.dawn}}</span>
 <h2 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.1">{{sc.aboutCn}} <em>{{sc.aboutEn}}</em></h2>
 </div>
-<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid {{about.line}}; background: conic-gradient({{about.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{about.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(285deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{about.fg}}"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: {{about.fg}}"></div></div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--dx-about-line); background: conic-gradient(var(--dx-about-bandDay) 0deg 90deg, transparent 90deg 270deg, var(--dx-about-bandDay) 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(285deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: var(--dx-about-fg)"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: var(--dx-about-fg)"></div></div>
 </header>
 <div style="display: flex; flex-wrap: wrap; gap: 48px 96px">
-<p style="flex: 1 1 420px; margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(40px, 5vw, 72px); line-height: 1.18; letter-spacing: 0.01em">{{t.everyDay}}<br>{{t.anExperiment}}<span style="color: {{about.accent}}">{{t.experiment}}</span><span class="zh-period">。</span></p>
-<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 24px; font-size: 18px; line-height: 1.85; color: {{about.muted}}">
+<p style="flex: 1 1 420px; margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(40px, 5vw, 72px); line-height: 1.18; letter-spacing: 0.01em">{{t.everyDay}}<br>{{t.anExperiment}}<span style="color: var(--dx-about-accent)">{{t.experiment}}</span><span class="zh-period">。</span></p>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 24px; font-size: 18px; line-height: 1.85; color: var(--dx-about-muted)">
 <p style="margin: 0">{{t.bio}}</p>
 <p style="margin: 0">{{t.philosophy}}</p>
-<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px; padding-top: 24px; border-top: 1px solid {{about.line}}">
+<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px; padding-top: 24px; border-top: 1px solid var(--dx-about-line)">
 <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em">{{t.labSince}}</span>
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: clamp(28px, 3vw, 40px); line-height: 1.3; letter-spacing: -0.02em; color: {{about.fg}}; font-variant-numeric: tabular-nums">2019 → {{meta.year}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: clamp(28px, 3vw, 40px); line-height: 1.3; letter-spacing: -0.02em; color: var(--dx-about-fg); font-variant-numeric: tabular-nums">2019 → {{meta.year}}</span>
 <span style="font-size: 14px">{{t.sinceNote}}</span>
 </div>
 </div>
@@ -507,9 +506,9 @@ body{margin:0}
 </section>
 
 <!-- ================= 09:00 WORKS ================= -->
-<section id="works" data-anchor="2" style="background: {{works.bg}}; color: {{works.fg}}">
+<section id="works" data-anchor="2" style="background: var(--dx-works-bg); color: var(--dx-works-fg)">
 <div style="max-width: 1440px; margin: 0 auto; padding: clamp(96px, 11vw, 160px) clamp(20px, 4.5vw, 64px); display: flex; flex-direction: column; gap: 56px">
-<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid {{works.line}}">
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid var(--dx-works-line)">
 <p aria-label="09:00" style="margin: 0; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(80px, 11vw, 168px); line-height: 0.86; letter-spacing: -0.03em">
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oW.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oW.b}}; transition-delay: .08s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
@@ -518,33 +517,33 @@ body{margin:0}
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oW.d}}; transition-delay: .24s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 </p>
 <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px; padding-bottom: 6px">
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{works.muted}}">{{t.daytime}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--dx-works-muted)">{{t.daytime}}</span>
 <h2 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.1">{{sc.worksCn}} <em>{{sc.worksEn}}</em></h2>
 </div>
-<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(315deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: {{works.fg}}"></div></div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--dx-works-line); background: conic-gradient(var(--dx-works-bandDay) 0deg 90deg, transparent 90deg 270deg, var(--dx-works-bandDay) 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(315deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: var(--dx-works-fg)"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: var(--dx-works-fg)"></div></div>
 </header>
 <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 40px">
-<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.8; color: {{works.muted}}">{{t.workIntro}}</p>
+<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.8; color: var(--dx-works-muted)">{{t.workIntro}}</p>
 <a class="dx-ul" href="https://github.com/ansonsiva" style="padding: 10px 0; font-size: 15px">{{t.allGithub}}</a>
 </div>
 
 <div style="display: flex; flex-direction: column">
 <span id="products" aria-hidden="true"></span>
 <!-- work 01 -->
-<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid {{works.line}}">
+<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid var(--dx-works-line)">
 <div style="flex: 0 0 120px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
 <span style="padding: 4px 8px; margin-left: -8px; border-radius: 4px; background: {{w0.pillBg}}; color: {{w0.pillFg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; font-variant-numeric: tabular-nums">09:30</span>
-<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(322.5deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div></div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--dx-works-line); background: conic-gradient(var(--dx-works-bandDay) 0deg 90deg, transparent 90deg 270deg, var(--dx-works-bandDay) 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(322.5deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: var(--dx-works-fg)"></div></div></div>
 <sc-if value="{{w0.on}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em">{{t.inProgress}}</span></sc-if>
 </div>
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{works.muted}}">{{t.pMeta0}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--dx-works-muted)">{{t.pMeta0}}</span>
 <h3 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05">PostDiff</h3>
-<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: {{works.muted}}">{{t.pDesc0}}</p>
+<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: var(--dx-works-muted)">{{t.pDesc0}}</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag00}}</span>
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag01}}</span>
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag02}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag00}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag01}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag02}}</span>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
 <a class="dx-ul" href="https://postdiff.com/" target="_blank" rel="noopener noreferrer" style="padding: 10px 0">{{t.visit0}}</a>
@@ -558,20 +557,20 @@ body{margin:0}
 </div></a>
 </article>
 <!-- work 02 -->
-<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid {{works.line}}">
+<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid var(--dx-works-line)">
 <div style="flex: 0 0 120px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
 <span style="padding: 4px 8px; margin-left: -8px; border-radius: 4px; background: {{w1.pillBg}}; color: {{w1.pillFg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; font-variant-numeric: tabular-nums">11:30</span>
-<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(352.5deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div></div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--dx-works-line); background: conic-gradient(var(--dx-works-bandDay) 0deg 90deg, transparent 90deg 270deg, var(--dx-works-bandDay) 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(352.5deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: var(--dx-works-fg)"></div></div></div>
 <sc-if value="{{w1.on}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em">{{t.inProgress}}</span></sc-if>
 </div>
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{works.muted}}">{{t.pMeta1}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--dx-works-muted)">{{t.pMeta1}}</span>
 <h3 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05">AI Video Costs</h3>
-<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: {{works.muted}}">{{t.pDesc1}}</p>
+<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: var(--dx-works-muted)">{{t.pDesc1}}</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag10}}</span>
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag11}}</span>
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag12}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag10}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag11}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag12}}</span>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
 <a class="dx-ul" href="https://aivideocosts.com/" target="_blank" rel="noopener noreferrer" style="padding: 10px 0">{{t.visit1}}</a>
@@ -585,20 +584,20 @@ body{margin:0}
 </div></a>
 </article>
 <!-- work 03 -->
-<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid {{works.line}}">
+<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid var(--dx-works-line)">
 <div style="flex: 0 0 120px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
 <span style="padding: 4px 8px; margin-left: -8px; border-radius: 4px; background: {{w2.pillBg}}; color: {{w2.pillFg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; font-variant-numeric: tabular-nums">14:00</span>
-<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(30deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div></div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--dx-works-line); background: conic-gradient(var(--dx-works-bandDay) 0deg 90deg, transparent 90deg 270deg, var(--dx-works-bandDay) 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(30deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: var(--dx-works-fg)"></div></div></div>
 <sc-if value="{{w2.on}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em">{{t.inProgress}}</span></sc-if>
 </div>
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{works.muted}}">{{t.pMeta2}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--dx-works-muted)">{{t.pMeta2}}</span>
 <h3 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05">Screen TimeLapseZ</h3>
-<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: {{works.muted}}">{{t.pDesc2}}</p>
+<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: var(--dx-works-muted)">{{t.pDesc2}}</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag20}}</span>
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag21}}</span>
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag22}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag20}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag21}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag22}}</span>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
 <a class="dx-ul" href="https://apps.apple.com/app/id1440244990" target="_blank" rel="noopener noreferrer" style="padding: 10px 0">{{t.visit2}}</a>
@@ -612,20 +611,20 @@ body{margin:0}
 </div></a>
 </article>
 <!-- work 04 -->
-<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid {{works.line}}; border-bottom: 1px solid {{works.line}}">
+<article class="dx-row" style="display: flex; flex-wrap: wrap; gap: 24px 48px; padding: 44px 0; border-top: 1px solid var(--dx-works-line); border-bottom: 1px solid var(--dx-works-line)">
 <div style="flex: 0 0 120px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
 <span style="padding: 4px 8px; margin-left: -8px; border-radius: 4px; background: {{w3.pillBg}}; color: {{w3.pillFg}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 20px; font-variant-numeric: tabular-nums">16:30</span>
-<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid {{works.line}}; background: conic-gradient({{works.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{works.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(67.5deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{works.fg}}"></div></div></div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--dx-works-line); background: conic-gradient(var(--dx-works-bandDay) 0deg 90deg, transparent 90deg 270deg, var(--dx-works-bandDay) 270deg 360deg)"><div style="position: absolute; left: 50%; top: 5px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(67.5deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: var(--dx-works-fg)"></div></div></div>
 <sc-if value="{{w3.on}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em">{{t.inProgress}}</span></sc-if>
 </div>
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{works.muted}}">{{t.pMeta3}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--dx-works-muted)">{{t.pMeta3}}</span>
 <h3 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05">InvestmentGenieTracker</h3>
-<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: {{works.muted}}">{{t.pDesc3}}</p>
+<p style="margin: 0; max-width: 34em; font-size: 17px; line-height: 1.75; color: var(--dx-works-muted)">{{t.pDesc3}}</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag30}}</span>
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag31}}</span>
-<span style="padding: 6px 10px; border: 1px solid {{works.line}}; border-radius: 999px">{{t.tag32}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag30}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag31}}</span>
+<span style="padding: 6px 10px; border: 1px solid var(--dx-works-line); border-radius: 999px">{{t.tag32}}</span>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
 <a class="dx-ul" href="https://apps.apple.com/app/id6446110050" target="_blank" rel="noopener noreferrer" style="padding: 10px 0">{{t.visit3}}</a>
@@ -645,9 +644,9 @@ body{margin:0}
 </section>
 
 <!-- ================= 19:00 WRITING ================= -->
-<section id="writing" data-anchor="3" style="background: {{writing.bg}}; color: {{writing.fg}}">
+<section id="writing" data-anchor="3" style="background: var(--dx-writing-bg); color: var(--dx-writing-fg)">
 <div style="max-width: 1440px; margin: 0 auto; padding: clamp(96px, 11vw, 160px) clamp(20px, 4.5vw, 64px); display: flex; flex-direction: column; gap: 56px">
-<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid {{writing.line}}">
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid var(--dx-writing-line)">
 <p aria-label="19:00" style="margin: 0; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(80px, 11vw, 168px); line-height: 0.86; letter-spacing: -0.03em">
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oR.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oR.b}}; transition-delay: .08s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
@@ -656,28 +655,27 @@ body{margin:0}
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oR.d}}; transition-delay: .24s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 </p>
 <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px; padding-bottom: 6px">
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{writing.muted}}">{{t.dusk}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--dx-writing-muted)">{{t.dusk}}</span>
 <h2 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.1">{{sc.writingCn}} <em>{{sc.writingEn}}</em></h2>
 </div>
-<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid {{writing.line}}; background: conic-gradient({{writing.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{writing.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(105deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{writing.fg}}"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: {{writing.fg}}"></div></div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--dx-writing-line); background: conic-gradient(var(--dx-writing-bandDay) 0deg 90deg, transparent 90deg 270deg, var(--dx-writing-bandDay) 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(105deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: var(--dx-writing-fg)"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: var(--dx-writing-fg)"></div></div>
 </header>
 <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 40px">
-<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.8; color: {{writing.muted}}">{{t.notesIntro}}</p>
+<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.8; color: var(--dx-writing-muted)">{{t.notesIntro}}</p>
 <div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
 <a class="dx-ul" href="/archives/" style="padding: 10px 0">{{t.archive}}</a>
-<a class="dx-ul" href="/atom.xml" style="padding: 10px 0">{{t.rss}}</a>
 </div>
 </div>
 
-<div style="display: flex; flex-direction: column; border-bottom: 1px solid {{writing.line}}">
-<a class="dx-post" href="/post/investmentgenietracker-privacy-and-policy/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 48px; padding: 32px 0; border-top: 1px solid {{writing.line}}">
-<span style="flex: 0 0 120px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{writing.muted}}">{{t.postMeta1}}</span>
+<div style="display: flex; flex-direction: column; border-bottom: 1px solid var(--dx-writing-line)">
+<a class="dx-post" href="/post/investmentgenietracker-privacy-and-policy/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 48px; padding: 32px 0; border-top: 1px solid var(--dx-writing-line)">
+<span style="flex: 0 0 120px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: var(--dx-writing-muted)">{{t.postMeta1}}</span>
 <span style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
 <span class="dx-post-title" style="font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.2">{{t.postTitle1}}</span>
-<span style="font-size: 16px; line-height: 1.7; color: {{writing.muted}}">{{t.postDesc1}}</span>
+<span style="font-size: 16px; line-height: 1.7; color: var(--dx-writing-muted)">{{t.postDesc1}}</span>
 </span>
 <span style="flex: 0 0 230px; display: flex; align-items: center; gap: 14px">
-<span aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; background: conic-gradient({{writing.accent}} 0deg {{p1.deg}}deg, {{writing.line}} {{p1.deg}}deg 360deg)"><span class="dx-hand" style="position: absolute; left: 50%; top: 2px; bottom: 50%; width: 2px; margin-left: -1px; border-radius: 1px; background: {{writing.fg}}; transform-origin: 50% 100%; transform: rotate({{p1.deg}}deg)"></span></span>
+<span aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; background: conic-gradient(var(--dx-writing-accent) 0deg {{p1.deg}}deg, var(--dx-writing-line) {{p1.deg}}deg 360deg)"><span class="dx-hand" style="position: absolute; left: 50%; top: 2px; bottom: 50%; width: 2px; margin-left: -1px; border-radius: 1px; background: var(--dx-writing-fg); transform-origin: 50% 100%; transform: rotate({{p1.deg}}deg)"></span></span>
 <span style="display: flex; flex-direction: column; gap: 3px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
 <span style="font-size: 14px">{{t.readMore}}</span>
 
@@ -685,14 +683,14 @@ body{margin:0}
 <span aria-hidden="true" class="dx-arrow" style="margin-left: auto; font-size: 18px">↗</span>
 </span>
 </a>
-<a class="dx-post" href="/post/privacy-policy-timelapsez-and-lite/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 48px; padding: 32px 0; border-top: 1px solid {{writing.line}}">
-<span style="flex: 0 0 120px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{writing.muted}}">{{t.postMeta2}}</span>
+<a class="dx-post" href="/post/privacy-policy-timelapsez-and-lite/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 48px; padding: 32px 0; border-top: 1px solid var(--dx-writing-line)">
+<span style="flex: 0 0 120px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: var(--dx-writing-muted)">{{t.postMeta2}}</span>
 <span style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
 <span class="dx-post-title" style="font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.2">{{t.postTitle2}}</span>
-<span style="font-size: 16px; line-height: 1.7; color: {{writing.muted}}">{{t.postDesc2}}</span>
+<span style="font-size: 16px; line-height: 1.7; color: var(--dx-writing-muted)">{{t.postDesc2}}</span>
 </span>
 <span style="flex: 0 0 230px; display: flex; align-items: center; gap: 14px">
-<span aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; background: conic-gradient({{writing.accent}} 0deg {{p2.deg}}deg, {{writing.line}} {{p2.deg}}deg 360deg)"><span class="dx-hand" style="position: absolute; left: 50%; top: 2px; bottom: 50%; width: 2px; margin-left: -1px; border-radius: 1px; background: {{writing.fg}}; transform-origin: 50% 100%; transform: rotate({{p2.deg}}deg)"></span></span>
+<span aria-hidden="true" style="position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; background: conic-gradient(var(--dx-writing-accent) 0deg {{p2.deg}}deg, var(--dx-writing-line) {{p2.deg}}deg 360deg)"><span class="dx-hand" style="position: absolute; left: 50%; top: 2px; bottom: 50%; width: 2px; margin-left: -1px; border-radius: 1px; background: var(--dx-writing-fg); transform-origin: 50% 100%; transform: rotate({{p2.deg}}deg)"></span></span>
 <span style="display: flex; flex-direction: column; gap: 3px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px">
 <span style="font-size: 14px">{{t.readMore}}</span>
 
@@ -706,9 +704,9 @@ body{margin:0}
 </section>
 
 <!-- ================= 22:00 CONTACT ================= -->
-<section id="contact" data-anchor="4" style="background: {{contact.bg}}; color: {{contact.fg}}">
+<section id="contact" data-anchor="4" style="background: var(--dx-contact-bg); color: var(--dx-contact-fg)">
 <div style="max-width: 1440px; margin: 0 auto; padding: clamp(96px, 11vw, 160px) clamp(20px, 4.5vw, 64px) clamp(64px, 7vw, 112px); display: flex; flex-direction: column; gap: 56px">
-<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid {{contact.line}}">
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; padding-bottom: 28px; border-bottom: 1px solid var(--dx-contact-line)">
 <p aria-label="22:00" style="margin: 0; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(80px, 11vw, 168px); line-height: 0.86; letter-spacing: -0.03em">
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oC.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oC.b}}; transition-delay: .08s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
@@ -717,30 +715,30 @@ body{margin:0}
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel" style="transform: {{oC.d}}; transition-delay: .24s"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 </p>
 <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 10px; padding-bottom: 6px">
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{contact.muted}}">{{t.night}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--dx-contact-muted)">{{t.night}}</span>
 <h2 style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.1">{{sc.contactCn}} <em>{{sc.contactEn}}</em></h2>
 </div>
-<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid {{contact.line}}; background: conic-gradient({{contact.bandDay}} 0deg 90deg, transparent 90deg 270deg, {{contact.bandDay}} 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(150deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: {{contact.fg}}"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: {{contact.fg}}"></div></div>
+<div aria-hidden="true" style="position: relative; flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--dx-contact-line); background: conic-gradient(var(--dx-contact-bandDay) 0deg 90deg, transparent 90deg 270deg, var(--dx-contact-bandDay) 270deg 360deg)"><div style="position: absolute; left: 50%; top: 6px; bottom: 50%; width: 0; transform-origin: 50% 100%; transform: rotate(150deg)"><div style="position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; border-radius: 1px; background: var(--dx-contact-fg)"></div></div><div style="position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: var(--dx-contact-fg)"></div></div>
 </header>
 <div style="display: flex; flex-direction: column; gap: 24px">
 <p style="margin: 0; font-family: 'Instrument Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif; font-size: clamp(40px, 5.4vw, 80px); line-height: 1.15">{{t.late}}<br>{{t.talk}}</p>
-<a class="dx-ul" href="mailto:ansonsiva@gmail.com" style="align-self: flex-start; padding-bottom: 6px; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: clamp(28px, 3.6vw, 52px); line-height: 1.2; color: {{contact.accent}}">ansonsiva@gmail.com</a>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: {{contact.muted}}">{{t.contactIntro}}</p>
+<a class="dx-ul" href="mailto:ansonsiva@mail.grokbot.com" style="align-self: flex-start; padding-bottom: 6px; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: clamp(28px, 3.6vw, 52px); line-height: 1.2; color: var(--dx-contact-accent)">ansonsiva@mail.grokbot.com</a>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--dx-contact-muted)">{{t.contactIntro}}</p>
 </div>
 
 <div style="display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: {{contact.muted}}">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--dx-contact-muted)">
 <span>{{t.worldIntro}}</span>
 <span>{{t.timezones}}</span>
 </div>
-<div class="dx-marq-wrap" style="overflow: hidden; padding: 16px 0; border-top: 1px solid {{contact.line}}; border-bottom: 1px solid {{contact.line}}; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)">
+<div class="dx-marq-wrap" style="overflow: hidden; padding: 16px 0; border-top: 1px solid var(--dx-contact-line); border-bottom: 1px solid var(--dx-contact-line); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)">
 <div class="dx-marq">
 <sc-for list="{{world}}" as="c" hint-placeholder-count="16">
 <span aria-hidden="{{c.dup}}" style="display: flex; align-items: center; gap: 10px; padding: 0 28px; white-space: nowrap; font-size: 15px">
-<span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: {{c.sky}}; box-shadow: 0 0 0 1px {{contact.line}}"></span>
+<span aria-hidden="true" style="width: 14px; height: 14px; border-radius: 50%; background: {{c.sky}}; box-shadow: 0 0 0 1px var(--dx-contact-line)"></span>
 <span>{{c.name}}</span>
 <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-variant-numeric: tabular-nums">{{c.hm}}</span>
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: {{contact.muted}}">{{c.ph}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: var(--dx-contact-muted)">{{c.ph}}</span>
 </span>
 </sc-for>
 </div>
@@ -748,34 +746,30 @@ body{margin:0}
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 16px">
-<a class="dx-card" href="https://github.com/ansonsiva" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid {{contact.line}}; border-radius: 10px">
-<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.code}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
-<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">GitHub</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">@ansonsiva</span></span>
+<a class="dx-card" href="https://github.com/ansonsiva" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid var(--dx-contact-line); border-radius: 10px">
+<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--dx-contact-muted)"><span>{{t.code}}</span><span aria-hidden="true" class="dx-arrow" style="color: var(--dx-contact-fg)">↗</span></span>
+<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">GitHub</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: var(--dx-contact-muted)">@ansonsiva</span></span>
 </a>
-<a class="dx-card" href="https://x.com/jasonamFzb24" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid {{contact.line}}; border-radius: 10px">
-<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.social}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
-<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">X</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">@jasonamFzb24</span></span>
+<a class="dx-card" href="https://x.com/jasonamFzb24" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid var(--dx-contact-line); border-radius: 10px">
+<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--dx-contact-muted)"><span>{{t.social}}</span><span aria-hidden="true" class="dx-arrow" style="color: var(--dx-contact-fg)">↗</span></span>
+<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">X</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: var(--dx-contact-muted)">@jasonamFzb24</span></span>
 </a>
-<a class="dx-card" href="mailto:ansonsiva@gmail.com" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid {{contact.line}}; border-radius: 10px">
-<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.email}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
-<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">Email</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">ansonsiva@gmail.com</span></span>
+<a class="dx-card" href="mailto:ansonsiva@mail.grokbot.com" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid var(--dx-contact-line); border-radius: 10px">
+<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--dx-contact-muted)"><span>{{t.email}}</span><span aria-hidden="true" class="dx-arrow" style="color: var(--dx-contact-fg)">↗</span></span>
+<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">Email</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: var(--dx-contact-muted)">ansonsiva@mail.grokbot.com</span></span>
 </a>
 
 
-<a class="dx-card" href="/atom.xml" style="display: flex; flex-direction: column; gap: 32px; min-height: 168px; padding: 24px; border: 1px solid {{contact.line}}; border-radius: 10px">
-<span style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: {{contact.muted}}"><span>{{t.feed}}</span><span aria-hidden="true" class="dx-arrow" style="color: {{contact.fg}}">↗</span></span>
-<span style="margin-top: auto; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1">RSS</span><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: {{contact.muted}}">dayxlab.com/atom.xml</span></span>
-</a>
 </div>
 </div>
 </section>
 
 </main>
 <!-- ================= 24:00 FOOTER ================= -->
-<footer id="end" data-anchor="5" style="background: {{foot.bg}}; color: {{foot.fg}}">
+<footer id="end" data-anchor="5" style="background: var(--dx-foot-bg); color: var(--dx-foot-fg)">
 <div style="max-width: 1440px; margin: 0 auto; padding: clamp(48px, 6vw, 96px) clamp(20px, 4.5vw, 64px) 40px; display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; flex-direction: column; gap: 16px">
-<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: {{foot.muted}}">{{t.countdown}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--dx-foot-muted)">{{t.countdown}}</span>
 <p aria-label="{{countdownLabel}}" style="margin: 0 0 0 -0.04em; display: flex; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(72px, 15vw, 232px); line-height: 0.86; letter-spacing: -0.02em">
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel dx-reel-f" style="transform: {{of.a}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel dx-reel-f" style="transform: {{of.b}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
@@ -787,11 +781,11 @@ body{margin:0}
 <span class="dx-odo" aria-hidden="true"><span class="dx-reel dx-reel-f" style="transform: {{of.f}}"><sc-for list="{{reel30}}" as="n" hint-placeholder-count="30"><span>{{n}}</span></sc-for></span></span>
 </p>
 </div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-top: 24px; border-top: 1px solid {{foot.line}}; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.04em; color: {{foot.muted}}">
-<span>{{t.stay}} <span style="color: {{foot.fg}}; font-variant-numeric: tabular-nums">{{stay}}</span></span>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-top: 24px; border-top: 1px solid var(--dx-foot-line); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.04em; color: var(--dx-foot-muted)">
+<span>{{t.stay}} <span style="color: var(--dx-foot-fg); font-variant-numeric: tabular-nums">{{stay}}</span></span>
 <span>{{t.renderNote}}</span>
 <span>© {{meta.year}} dayxlab.com · Jun Zheng</span>
-<a class="dx-ul" href="#top" style="padding: 12px 0; color: {{foot.fg}}">{{t.backNow}} ↑</a>
+<a class="dx-ul" href="#top" style="padding: 12px 0; color: var(--dx-foot-fg)">{{t.backNow}} ↑</a>
 </div>
 </div>
 </footer>
@@ -855,7 +849,7 @@ class Component extends DCLogic {
     this._reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
     this._onScroll = () => {
       if (this._sraf) return;
-      this._sraf = requestAnimationFrame(() => { this._sraf = 0; this.measure(); });
+      this._sraf = requestAnimationFrame(() => { this._sraf = 0; this.measure(false); });
     };
     this._onMove = (e) => {
       if (!this._mIn && this._cur) { this._cur.x = e.clientX; this._cur.y = e.clientY; }
@@ -869,8 +863,9 @@ class Component extends DCLogic {
       }
     };
     this._onLeave = () => { this._mIn = false; this._mx = -9999; this._my = -9999; };
-    window.addEventListener('scroll', this._onScroll, true);
-    window.addEventListener('resize', this._onScroll);
+    this._onResize = () => { this._layout = null; this._onScroll(); };
+    window.addEventListener('scroll', this._onScroll, { capture: true, passive: true });
+    window.addEventListener('resize', this._onResize);
     window.addEventListener('mousemove', this._onMove, { passive: true });
     document.addEventListener('mouseleave', this._onLeave);
     this._tick = setInterval(() => { if (!this._dead) this.setState({ now: Date.now() }); }, 1000);
@@ -895,7 +890,8 @@ class Component extends DCLogic {
     cancelAnimationFrame(this._loopId);
     cancelAnimationFrame(this._sraf);
     window.removeEventListener('scroll', this._onScroll, true);
-    window.removeEventListener('resize', this._onScroll);
+    window.removeEventListener('resize', this._onResize);
+    if (this._layoutObserver) this._layoutObserver.disconnect();
     window.removeEventListener('mousemove', this._onMove);
     document.removeEventListener('mouseleave', this._onLeave);
   }
@@ -904,6 +900,10 @@ class Component extends DCLogic {
     const root = this._root || document.querySelector('.dx');
     if (!root) return false;
     this._root = root;
+    if (!this._layoutObserver && window.ResizeObserver) {
+      this._layoutObserver = new ResizeObserver(this._onResize);
+      this._layoutObserver.observe(root);
+    }
     if (!this._sky && !this._skyFail) {
       try { this.initSky(root.querySelector('.dx-sky')); } catch (e) { this._sky = null; this._skyFail = true; }
     }
@@ -926,21 +926,23 @@ class Component extends DCLogic {
       if (S && this._fps < 42 && S.scale > 0.4 && Date.now() - this._mountAt > 4500) S.scale *= 0.8;
     }
     if (this._heroVis !== false) {
-      if (this._sky) { try { this.drawSky(ts); } catch (e) { this._sky = null; this._skyFail = true; } }
+      const skyChanged = this._skyNeedsDraw;
+      if (this._sky && (this._reduce ? skyChanged : ts - (this._lastSkyFrame || 0) >= 32)) {
+        this._lastSkyFrame = ts; this._skyNeedsDraw = false;
+        try { this.drawSky(ts); } catch (e) { this._sky = null; this._skyFail = true; } }
     }
     if (!this._curEl && this._root) this._curEl = this._root.querySelector('.dx-cursor');
     if (this._curEl) { try { this.drawCursor(); } catch (e) { this._curEl = null; } }
     try { this._flBusy = this.stepFlaps(); } catch (e) { this._flBusy = false; }
     const a = this._anim;
     if (a && performance.now() - a.start >= a.dur) { this._anim = null; this.forceUpdate(); }
-    else if (this.needsPump()) this.forceUpdate();
+    else if (this.needsPump() && ts - (this._lastReactFrame || 0) >= 32) { this._lastReactFrame = ts; this.forceUpdate(); }
   }
   needsPump() {
     if (this._anim) return true;
     if (Date.now() - (this._mountAt || 0) < 3400) return true;
-    if (this._flBusy) return true;
     const n = performance.now();
-    for (const k in this._rev) { if (n - this._rev[k] < 1600) return true; }
+    if (this._rev.greet && n - this._rev.greet < 750) return true;
     return false;
   }
 
@@ -1064,7 +1066,7 @@ void main() {
   }
   initSky(cv) {
     if (!cv) { this._skyFail = true; return; }
-    const opts = { antialias: false, alpha: false, depth: false, stencil: false, preserveDrawingBuffer: true };
+    const opts = { antialias: false, alpha: false, depth: false, stencil: false, preserveDrawingBuffer: false };
     const gl = cv.getContext('webgl', opts) || cv.getContext('experimental-webgl', opts);
     if (!gl) { this._skyFail = true; return; }
     const comp = (type, src) => {
@@ -1089,13 +1091,13 @@ void main() {
     const U = {};
     ['uRes', 'uTime', 'uBg', 'uZen', 'uGlow', 'uGlowK', 'uSun', 'uSunA', 'uMoon', 'uMoonA', 'uStars', 'uDay', 'uMouse', 'uHz'].forEach((n) => { U[n] = gl.getUniformLocation(prog, n); });
     const dpr = window.devicePixelRatio || 1;
-    this._sky = { cv: cv, gl: gl, U: U, t0: performance.now(), scale: dpr >= 2 ? 0.9 : 0.75, mx: 0.5, my: 0.5, px: 0 };
+    this._sky = { cv: cv, gl: gl, U: U, t0: performance.now(), scale: dpr >= 2 ? 0.9 : 0.75, mx: 0.5, my: 0.5, px: 0, width: cv.clientWidth, height: cv.clientHeight };
   }
   drawSky(ts) {
     const S = this._sky, u = this._skyU;
     if (!S || !u) return;
     const gl = S.gl, cv = S.cv;
-    const w = cv.clientWidth, h = cv.clientHeight;
+    const w = S.width, h = S.height;
     if (!w || !h) return;
     const W = Math.max(2, Math.round(w * S.scale)), H = Math.max(2, Math.round(h * S.scale));
     if (cv.width !== W || cv.height !== H) { cv.width = W; cv.height = H; }
@@ -1105,7 +1107,7 @@ void main() {
     S.my += (m[1] - S.my) * 0.04;
     const U = S.U;
     gl.uniform2f(U.uRes, W, H);
-    gl.uniform1f(U.uTime, (ts - S.t0) / 1000);
+    gl.uniform1f(U.uTime, this._reduce ? 0 : (ts - S.t0) / 1000);
     gl.uniform3f(U.uBg, u.bg[0], u.bg[1], u.bg[2]);
     gl.uniform3f(U.uZen, u.zen[0], u.zen[1], u.zen[2]);
     gl.uniform3f(U.uGlow, u.glow[0], u.glow[1], u.glow[2]);
@@ -1143,10 +1145,28 @@ void main() {
       if (f.next < now) f.next = now;
     }
     if (S.indexOf(ch) < 0 || this._reduce) { f.cur = ch; f.prev = ch; f.extra = 0; }
+    f.id = id;
     return f;
   }
   flapV(f, cls) {
-    return { cur: f.cur, prev: f.prev, cls: cls + ' ' + (f.n === 0 ? 'k0' : f.n % 2 ? 'ka' : 'kb') };
+    return { id: f.id, cur: f.cur, prev: f.prev, cls: cls + ' ' + (f.n === 0 ? 'k0' : f.n % 2 ? 'ka' : 'kb') };
+  }
+  // Only the four text leaves of a moving flap need to change.
+  paintFlap(f) {
+    if (!this._root) return;
+    const cache = this._flapNodes || (this._flapNodes = {});
+    let cell = cache[f.id];
+    if (!cell || !cell.el.isConnected) {
+      const el = this._root.querySelector('[data-flap="' + f.id + '"]');
+      if (!el) return;
+      const leaf = (selector) => { const span = el.querySelector(selector); return span && (span.querySelector('.sc-interp') || span); };
+      cell = cache[f.id] = { el: el, text: ['.fx-h.t > span','.fx-h.b > span','.fx-f.t > span','.fx-f.b > span'].map(leaf) };
+    }
+    const chars = [f.cur, f.prev, f.prev, f.cur];
+    cell.text.forEach((el,i) => { if (el && el.textContent !== chars[i]) el.textContent = chars[i]; });
+    cell.el.classList.remove('k0');
+    cell.el.classList.toggle('ka', f.n % 2 === 1);
+    cell.el.classList.toggle('kb', f.n % 2 === 0);
   }
   stepFlaps() {
     const F = this._fl;
@@ -1163,6 +1183,7 @@ void main() {
       f.prev = f.cur;
       f.cur = drum[(i + 1) % drum.length];
       f.n++;
+      this.paintFlap(f);
       if (f.extra > 0) f.extra--;
       f.next = now + f.step;
       moved++;
@@ -1231,33 +1252,83 @@ void main() {
   }
 
   // =============== scroll = time ===============
-  measure() {
+  measure(refresh = true) {
     if (this._dead) return;
     const root = this._root || document.querySelector('.dx');
     if (!root) return;
-    let sc = root.parentElement;
-    while (sc && sc !== document.body && sc !== document.documentElement) {
-      const oy = getComputedStyle(sc).overflowY;
-      if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight + 4) break;
-      sc = sc.parentElement;
+    let layout = this._layout;
+    if (refresh || !layout) {
+      let sc = root.parentElement;
+      while (sc && sc !== document.body && sc !== document.documentElement) {
+        const oy = getComputedStyle(sc).overflowY;
+        if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight + 4) break;
+        sc = sc.parentElement;
+      }
+      const isDoc = !sc || sc === document.body || sc === document.documentElement;
+      const el = isDoc ? (document.scrollingElement || document.documentElement) : sc;
+      const vh = isDoc ? window.innerHeight : el.clientHeight;
+      const top0 = isDoc ? 0 : el.getBoundingClientRect().top;
+      const st = el.scrollTop;
+      const anchors = Array.from(root.querySelectorAll('[data-anchor]'), el => el.getBoundingClientRect().top - top0 + st);
+      layout = this._layout = { el: el, vh: vh, anchors: anchors, max: el.scrollHeight - vh, live: el.scrollHeight > vh * 1.6 };
+      if (this._sky) { this._sky.width = this._sky.cv.clientWidth; this._sky.height = this._sky.cv.clientHeight; }
     }
-    const isDoc = !sc || sc === document.body || sc === document.documentElement;
-    const el = isDoc ? (document.scrollingElement || document.documentElement) : sc;
-    const vh = isDoc ? window.innerHeight : el.clientHeight;
-    const top0 = isDoc ? 0 : el.getBoundingClientRect().top;
-    const nodes = root.querySelectorAll('[data-anchor]');
-    const tops = [];
-    for (let i = 0; i < nodes.length; i++) tops.push(nodes[i].getBoundingClientRect().top - top0);
-    const live = el.scrollHeight > vh * 1.6;
+    const st = layout.el.scrollTop, vh = layout.vh;
+    const tops = layout.anchors.map(y => y - st);
     const keys = ['hero', 'about', 'works', 'writing', 'contact', 'foot'];
+    let revealed = false;
     const nowP = performance.now();
     if (!this._rev) this._rev = {};
     for (let i = 0; i < tops.length && i < keys.length; i++) {
-      if (!this._rev[keys[i]] && (!live || tops[i] < vh * 0.86)) this._rev[keys[i]] = nowP + (live ? 0 : i * 140);
+      if (!this._rev[keys[i]] && (!layout.live || tops[i] < vh * 0.86)) { this._rev[keys[i]] = nowP; revealed = true; }
     }
     this._heroVis = tops.length > 1 ? tops[1] > 0 : true;
-    const max = el.scrollHeight - vh;
-    this.setState({ live: live, tops: tops, probe: vh * 0.42, st: el.scrollTop, prog: max > 0 ? Math.min(1, Math.max(0, el.scrollTop / max)) : 0 });
+    this._scrollState = { live: layout.live, tops: tops, probe: vh * 0.42, st: st, prog: layout.max > 0 ? Math.min(1,Math.max(0,st / layout.max)) : 0 };
+    this.paintScroll(Date.now());
+    if (refresh || revealed) this.setState(this._scrollState);
+  }
+
+  paintScroll(now, context) {
+    if (!this._root) return;
+    const c = context || this.scrollContext(now);
+    const old = this._cssValues || (this._cssValues = {});
+    const targets = this._paletteTargets || (this._paletteTargets = {
+      root: this._root, nav: this._root.querySelector('nav'), hero: this._root.querySelector('#now'),
+      about: this._root.querySelector('#about'), works: this._root.querySelector('#works'),
+      writing: this._root.querySelector('#writing'), contact: this._root.querySelector('#contact'), foot: this._root.querySelector('#end')
+    });
+    const write = (name, value, target = this._root) => {
+      if (target && old[name] !== value) { old[name] = value; target.style.setProperty(name, value); }
+    };
+    const tops = this._scrollState && this._scrollState.tops;
+    const height = this._layout ? this._layout.vh : window.innerHeight;
+    const properties = this._paletteProperties || (this._paletteProperties = {
+      root: ['bg','fg'], nav: ['bg','fg','line','accent','muted'],
+      hero: ['fg','muted','line','line2','accent','glass','inv','midHex'],
+      about: ['bg','fg','line','muted','accent','bandDay'], works: ['bg','fg','line','muted','bandDay'],
+      writing: ['bg','fg','line','muted','accent','bandDay'], contact: ['bg','fg','line','muted','accent','bandDay'],
+      foot: ['bg','fg','line','muted']
+    });
+    ['root','nav','hero','about','works','writing','contact','foot'].forEach(name => {
+      const index = ['hero','about','works','writing','contact','foot'].indexOf(name);
+      const initialized = old['--dx-' + name + '-fg'] !== undefined;
+      if (initialized && index >= 0 && tops && (tops[index] > height + 200 || (index < tops.length - 1 && tops[index + 1] < -200))) return;
+      properties[name].forEach(key => write('--dx-' + name + '-' + key, c[name][key], targets[name]));
+    });
+    const h = c.live ? c.lab : c.H;
+    const hm = this.fmt(h);
+    ['a','b','c','d'].forEach((key,i) => { const digit = hm[i < 2 ? i : i + 1]; write('--dx-nav-' + key, (-Number(digit) * 1.25).toFixed(2) + 'em', targets.nav); });
+    write('--dx-progress', String(c.live ? (this._scrollState.prog || 0) : c.H / 24), targets.nav);
+    const day = c.lab >= 48 ? 2 : c.lab >= 24 ? 1 : 0;
+    const dayText = (window.DAYX_LANG === 'en' ? ['Today','Tomorrow','Day after'] : ['今天','明天','后天'])[day];
+    const dayEl = this._root.querySelector('[data-dx-nav-day] .sc-interp');
+    if (dayEl && dayEl.textContent !== dayText) dayEl.textContent = dayText;
+    const sky = this.skyU(c.skyH,c.hero);
+    const sun = sky.u.sunA > 0.5 && sky.e > 0.3;
+    write('--dx-tracker-x', ((sun ? sky.sunX : sky.moonX) * 100).toFixed(2) + '%', targets.hero);
+    write('--dx-tracker-y', ((1 - (sun ? sky.sunY : sky.moonY)) * 100).toFixed(2) + '%', targets.hero);
+    this._skyU = sky.u;
+    this._skyNeedsDraw = true;
   }
 
   // =============== time ===============
@@ -1497,18 +1568,10 @@ void main() {
   }
 
   // =============== render ===============
-  baseVals() {
-    const s = this.state || {};
-    if (!this._rev) this._rev = {};
-    if (!this._h || !this._h.rowSpin) this.makeHandlers();
-    if (!this._setRoot) this._setRoot = (el) => { if (el) this._root = el; };
-    if (!this._reel10) { this._reel10 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; this._reel30 = []; for (let i = 0; i < 30; i++) this._reel30.push(i % 10); }
-    const now = s.now || Date.now();
-    const mountAt = this._mountAt || now;
-    const d = new Date(now);
+  scrollContext(now) {
+    const s = Object.assign({}, this.state, this._scrollState);
     const H = this.heroH(now);
     const live = !!s.live && (this.props.scrollTimelapse ?? true);
-    const fallbackOn = !live && Date.now() - mountAt > 5000;
 
     // ---- scroll = time: now -> 07 -> 09 -> 19 -> 22 -> 24, always forward ----
     const fixed = [7, 9, 19, 22, 24];
@@ -1538,6 +1601,22 @@ void main() {
     const about = at(7.25), works = at(11), writing = at(19), contact = at(22.5), foot = at(23.75);
     const nav = live ? L : this.tok(H);
     const root = live ? L : foot;
+    return { H,live,lab,skyH,hrs,root,nav,hero,about,works,writing,contact,foot };
+
+  }
+  baseVals() {
+    const s = Object.assign({}, this.state, this._scrollState);
+    if (!this._rev) this._rev = {};
+    if (!this._h || !this._h.rowSpin) this.makeHandlers();
+    if (!this._setRoot) this._setRoot = (el) => { if (el) this._root = el; };
+    if (!this._reel10) { this._reel10 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; this._reel30 = []; for (let i = 0; i < 30; i++) this._reel30.push(i % 10); }
+    const now = s.now || Date.now();
+    const mountAt = this._mountAt || now;
+    const d = new Date(now);
+    const context = this.scrollContext(now);
+    const { H,live,lab,skyH,hrs,root,nav,hero,about,works,writing,contact,foot } = context;
+    const fallbackOn = !live && Date.now() - mountAt > 5000;
+    this.paintScroll(now, context);
 
     // ---- sky + particles feed ----
     const SK = this.skyU(skyH, hero);
