@@ -22,16 +22,16 @@ const base=process.env.DAYX_TEST_URL || 'http://127.0.0.1:8765/';
     });
     await page.goto(base);await page.waitForTimeout(3000);
     for(const id of ['works','contact','about','writing','top']){
-      await page.locator('nav a[href="#'+id+'"]').tap();await page.waitForTimeout(1600);
+      await page.locator('nav a[href="#'+id+'"]').tap();await page.waitForTimeout(200);
       const state=await page.evaluate(id=>({y:scrollY,top:document.getElementById(id).getBoundingClientRect().top,nav:document.querySelector('.dx nav').getBoundingClientRect().bottom,hash:location.hash}),id);
       assert.equal(state.hash,'#'+id);
       assert.ok(id==='top'?state.y<2:state.top>=state.nav-1&&state.top<=state.nav+40,name+' '+(restore?'embedded':'normal')+' '+id+' destination: '+JSON.stringify(state));
       results.push(name+' '+(restore?'embedded':'normal')+' '+id);
     }
     // Selecting the same fragment again must work after manually scrolling elsewhere.
-    await page.locator('nav a[href="#works"]').tap();await page.waitForTimeout(1300);
+    await page.locator('nav a[href="#works"]').tap();await page.waitForTimeout(200);
     await page.evaluate(()=>window.scrollTo({top:300,behavior:'instant'}));
-    await page.locator('nav a[href="#works"]').tap();await page.waitForTimeout(1300);
+    await page.locator('nav a[href="#works"]').tap();await page.waitForTimeout(200);
     assert.ok(await page.locator('#works').evaluate(el=>el.getBoundingClientRect().top<160));
     results.push(name+' '+(restore?'embedded':'normal')+' repeated fragment');
     assert.deepEqual(errors,[]);await context.close();
