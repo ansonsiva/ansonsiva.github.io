@@ -17,6 +17,9 @@
     // older mobile engines that do not accept the newer "instant" option.
     const previous = root.style.scrollBehavior;
     root.style.scrollBehavior = 'auto';
+    // Resolve the override before scrolling; otherwise some engines reuse the
+    // previous smooth behavior, particularly when the destination is zero.
+    void getComputedStyle(root).scrollBehavior;
     window.scrollTo(0, top);
     requestAnimationFrame(() => { root.style.scrollBehavior = previous; });
   }
